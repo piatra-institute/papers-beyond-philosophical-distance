@@ -1,0 +1,2023 @@
+schema: 1
+coverage: pending
+reviewed_manuscript_sha256: null
+claims:
+- id: intro-trolley-n
+  kind: computation
+  passage: 'In the judgments of 64,988 participants on three trolley cases [@awad2020], third-order structure is present, stable across countries and design conditions, and small: 2.38% of the multi-information.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/participants
+    reported: 64,988
+    decimals: 0
+    units: participants
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: intro-trolley-frac
+  kind: computation
+  passage: 'In the judgments of 64,988 participants on three trolley cases [@awad2020], third-order structure is present, stable across countries and design conditions, and small: 2.38% of the multi-information.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/third_order_fraction
+    reported: 2.38%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: intro-expert-n
+  kind: computation
+  passage: In the answers of 294 respondents to a survey on the foundations of consciousness science [@francken2022], third-order terms do not improve held-out prediction and no triplet of answers survives correction for multiple testing, at a sample size that detects an effect of the trolley size with probability 0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/respondents_complete
+    reported: '294'
+    decimals: 0
+    units: respondents
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: intro-expert-power
+  kind: computation
+  passage: In the answers of 294 respondents to a survey on the foundations of consciousness science [@francken2022], third-order terms do not improve held-out prediction and no triplet of answers survives correction for multiple testing, at a sample size that detects an effect of the trolley size with probability 0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/power_at_reference_median
+    reported: '0.29'
+    decimals: 2
+    units: detection probability
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; triplet test at alpha 0.05, planted effect equal to the trolley third-order information; median over 8 random triplets
+- id: parity-min
+  kind: computation
+  passage: The recorded run checks this for families of 3 to 12 commitments, 8,164 proper subfamilies in all.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/parity_pairs/rows/0/commitments
+    reported: '3'
+    decimals: 0
+    units: commitments
+    conditions: recorded run 'analysis'
+- id: parity-max
+  kind: computation
+  passage: The recorded run checks this for families of 3 to 12 commitments, 8,164 proper subfamilies in all.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/parity_pairs/rows/9/commitments
+    reported: '12'
+    decimals: 0
+    units: commitments
+    conditions: recorded run 'analysis'
+- id: parity-comparisons
+  kind: computation
+  passage: The recorded run checks this for families of 3 to 12 commitments, 8,164 proper subfamilies in all.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/parity_pairs/total_proper_subfamily_comparisons
+    reported: 8,164
+    decimals: 0
+    units: proper subfamilies
+    conditions: recorded run 'analysis'
+- id: bool-nmax
+  kind: computation
+  passage: 'For yes/no issues it covers seven classes for $n=2$ to $5$ and unrestricted commitments for $n=2$ to $4$: all 31 computed orders equal the formulas of Table 1, and for $n\le 3$ an independent enumeration of all subfamilies of atomic commitments agrees in all 24 cases.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/boolean/rows/4/issues
+    reported: '5'
+    decimals: 0
+    units: issues
+    conditions: recorded run 'analysis'
+- id: bool-unres-nmax
+  kind: computation
+  passage: 'For yes/no issues it covers seven classes for $n=2$ to $5$ and unrestricted commitments for $n=2$ to $4$: all 31 computed orders equal the formulas of Table 1, and for $n\le 3$ an independent enumeration of all subfamilies of atomic commitments agrees in all 24 cases.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/boolean/rows/38/issues
+    reported: '4'
+    decimals: 0
+    units: issues
+    conditions: recorded run 'analysis'
+- id: bool-formula-rows
+  kind: computation
+  passage: 'For yes/no issues it covers seven classes for $n=2$ to $5$ and unrestricted commitments for $n=2$ to $4$: all 31 computed orders equal the formulas of Table 1, and for $n\le 3$ an independent enumeration of all subfamilies of atomic commitments agrees in all 24 cases.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/boolean/rows_checked_against_formula
+    reported: '31'
+    decimals: 0
+    units: class-size cases
+    conditions: recorded run 'analysis'
+- id: bool-family-n
+  kind: computation
+  passage: 'For yes/no issues it covers seven classes for $n=2$ to $5$ and unrestricted commitments for $n=2$ to $4$: all 31 computed orders equal the formulas of Table 1, and for $n\le 3$ an independent enumeration of all subfamilies of atomic commitments agrees in all 24 cases.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/boolean/rows/2/issues
+    reported: '3'
+    decimals: 0
+    units: issues
+    conditions: recorded run 'analysis'
+- id: bool-crosscheck-rows
+  kind: computation
+  passage: 'For yes/no issues it covers seven classes for $n=2$ to $5$ and unrestricted commitments for $n=2$ to $4$: all 31 computed orders equal the formulas of Table 1, and for $n\le 3$ an independent enumeration of all subfamilies of atomic commitments agrees in all 24 cases.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/boolean/rows_cross_checked
+    reported: '24'
+    decimals: 0
+    units: class-size cases
+    conditions: recorded run 'analysis'
+- id: bundling-classes
+  kind: computation
+  passage: Replacing the atoms by all their conjunctions leaves the order unchanged for each of the 8 classes at $n=2$.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/bundling/classes
+    reported: '8'
+    decimals: 0
+    units: classes
+    conditions: recorded run 'analysis'
+- id: witness-nmax
+  kind: computation
+  passage: The lower-bound families (chains, parity families, double cycles, exclusion triples) are confirmed as obstructions for $n$ up to 10, and the unit-cell families on grids with three levels for $d$ up to 4.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/witnesses/implication_chain/8/issues
+    reported: '10'
+    decimals: 0
+    units: issues
+    conditions: recorded run 'analysis'
+- id: grid-dmax
+  kind: computation
+  passage: The lower-bound families (chains, parity families, double cycles, exclusion triples) are confirmed as obstructions for $n$ up to 10, and the unit-cell families on grids with three levels for $d$ up to 4.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/witnesses/grid_cube/3/dimension
+    reported: '4'
+    decimals: 0
+    units: dimensions
+    conditions: recorded run 'analysis'
+- id: single-cases
+  kind: computation
+  passage: Single-question classes, their products and $L\times L$ grids give the stated orders in all 32 cases.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/single_issue_and_products/cases
+    reported: '32'
+    decimals: 0
+    units: cases
+    conditions: recorded run 'analysis'
+- id: planar-sets
+  kind: computation
+  passage: For 1,300 random planar maps of 4 to 16 positions in general position, the computed order equals the largest empty convex polygon in every case (Figure 1c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/planar/sets_total
+    reported: 1,300
+    decimals: 0
+    units: random planar maps
+    conditions: recorded run 'analysis'; seed 20261115; points in general position
+- id: planar-mmin
+  kind: computation
+  passage: For 1,300 random planar maps of 4 to 16 positions in general position, the computed order equals the largest empty convex polygon in every case (Figure 1c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/planar/rows/0/positions
+    reported: '4'
+    decimals: 0
+    units: positions
+    conditions: recorded run 'analysis'
+- id: planar-mmax
+  kind: computation
+  passage: For 1,300 random planar maps of 4 to 16 positions in general position, the computed order equals the largest empty convex polygon in every case (Figure 1c).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/planar/rows/12/positions
+    reported: '16'
+    decimals: 0
+    units: positions
+    conditions: recorded run 'analysis'
+- id: planar-sets-per-m
+  kind: computation
+  passage: '(c) Convex regions evaluated on occupied positions in the plane: grey discs show how many of 100 random maps of each size had each order; squares show positions in convex position.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/planar/rows/0/sets
+    reported: '100'
+    decimals: 0
+    units: random maps per size
+    conditions: recorded run 'analysis'
+- id: bg-sets
+  kind: computation
+  passage: The recorded run checks the case $k=2$ of Proposition 4 on every nonempty set of admissible profiles over three issues, 255 sets of which 165 are closed under majority, and on 3,000 random sets over four issues.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/background_logic/issues_3/admissible_sets
+    reported: '255'
+    decimals: 0
+    units: admissible sets
+    conditions: recorded run 'analysis'
+- id: bg-closed
+  kind: computation
+  passage: The recorded run checks the case $k=2$ of Proposition 4 on every nonempty set of admissible profiles over three issues, 255 sets of which 165 are closed under majority, and on 3,000 random sets over four issues.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/background_logic/issues_3/majority_closed
+    reported: '165'
+    decimals: 0
+    units: majority-closed sets
+    conditions: recorded run 'analysis'
+- id: bg-sample
+  kind: computation
+  passage: The recorded run checks the case $k=2$ of Proposition 4 on every nonempty set of admissible profiles over three issues, 255 sets of which 165 are closed under majority, and on 3,000 random sets over four issues.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/background_logic/issues_4/admissible_sets
+    reported: 3,000
+    decimals: 0
+    units: random admissible sets
+    conditions: recorded run 'analysis'; seed 20261116
+- id: arc-nmax
+  kind: computation
+  passage: The recorded run confirms the propagation for chains on up to 10 issues.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/witnesses/arc_consistency_chain/8/issues
+    reported: '10'
+    decimals: 0
+    units: issues
+    conditions: recorded run 'analysis'
+- id: hull-sample
+  kind: computation
+  passage: The recorded run checks the hull identity on every nonempty set of profiles over three issues and on 3,000 random sets over four and five issues.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /theory/pairwise_hull/issues_4/supports
+    reported: 3,000
+    decimals: 0
+    units: random supports per size
+    conditions: recorded run 'analysis'; seed 20261117
+- id: data-trolley-n
+  kind: computation
+  passage: 'The analysis keeps one complete session per participant, the first in the file in which each case was answered once: 64,988 participants.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/participants
+    reported: 64,988
+    decimals: 0
+    units: participants
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: data-acc-switch
+  kind: computation
+  passage: The sacrifice was chosen by 83.4% in Switch, 74.6% in Loop and 54.6% in Footbridge, the ordering that Awad and colleagues found in every country.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/acceptance/switch
+    reported: 83.4%
+    scale: 100
+    decimals: 1
+    units: percent choosing the sacrifice
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: data-acc-loop
+  kind: computation
+  passage: The sacrifice was chosen by 83.4% in Switch, 74.6% in Loop and 54.6% in Footbridge, the ordering that Awad and colleagues found in every country.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/acceptance/loop
+    reported: 74.6%
+    scale: 100
+    decimals: 1
+    units: percent choosing the sacrifice
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: data-acc-footbridge
+  kind: computation
+  passage: The sacrifice was chosen by 83.4% in Switch, 74.6% in Loop and 54.6% in Footbridge, the ordering that Awad and colleagues found in every country.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/acceptance/footbridge
+    reported: 54.6%
+    scale: 100
+    decimals: 1
+    units: percent choosing the sacrifice
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: data-survey-total
+  kind: computation
+  passage: Its 307 respondents answered 11 questions on positions in the philosophy of mind and the science of consciousness, among them whether a philosophical zombie is possible given the laws of physics, whether Mary learns something new on first seeing red, whether machines could be conscious, and whether anything would remain to be explained once all functional properties of consciousness are explained.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/respondents_total
+    reported: '307'
+    decimals: 0
+    units: respondents
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: data-survey-items
+  kind: computation
+  passage: Its 307 respondents answered 11 questions on positions in the philosophy of mind and the science of consciousness, among them whether a philosophical zombie is possible given the laws of physics, whether Mary learns something new on first seeing red, whether machines could be conscious, and whether anything would remain to be explained once all functional properties of consciousness are explained.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/items_count
+    reported: '11'
+    decimals: 0
+    units: questions
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: data-pos-n
+  kind: computation
+  passage: The 294 respondents who answered all 11 position questions form the position battery.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/respondents_complete
+    reported: '294'
+    decimals: 0
+    units: respondents
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: data-pos-items
+  kind: computation
+  passage: The 294 respondents who answered all 11 position questions form the position battery.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/items_count
+    reported: '11'
+    decimals: 0
+    units: questions
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: data-ent-dropped
+  kind: computation
+  passage: The entity battery drops the 5 entities on which fewer than 5% of respondents departed from the majority answer (a rock, a thermostat, a monkey, other people and oneself) and keeps the other 8, with 298 complete respondents.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/dropped_count
+    reported: '5'
+    decimals: 0
+    units: entities
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: data-ent-threshold
+  kind: computation
+  passage: The entity battery drops the 5 entities on which fewer than 5% of respondents departed from the majority answer (a rock, a thermostat, a monkey, other people and oneself) and keeps the other 8, with 298 complete respondents.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/extreme_threshold
+    reported: 5%
+    scale: 100
+    decimals: 0
+    units: percent
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: data-ent-items
+  kind: computation
+  passage: The entity battery drops the 5 entities on which fewer than 5% of respondents departed from the majority answer (a rock, a thermostat, a monkey, other people and oneself) and keeps the other 8, with 298 complete respondents.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/items_count
+    reported: '8'
+    decimals: 0
+    units: entities
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: data-ent-n
+  kind: computation
+  passage: The entity battery drops the 5 entities on which fewer than 5% of respondents departed from the majority answer (a rock, a thermostat, a monkey, other people and oneself) and keeps the other 8, with 298 complete respondents.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/respondents_complete
+    reported: '298'
+    decimals: 0
+    units: respondents
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: data-trolley-n2
+  kind: computation
+  passage: For the trolley data, with three answers and 64,988 participants, the pairwise model was fitted without a penalty by iterative scaling [@darroch1972] and compared with the saturated model by ten-fold cross-validation.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/participants
+    reported: 64,988
+    decimals: 0
+    units: participants
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-multi
+  kind: computation
+  passage: The three answers carry 0.2050 bits of multi-information per participant.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/multi_information_bits
+    reported: '0.2050'
+    decimals: 4
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-pairwise
+  kind: computation
+  passage: The pairwise model accounts for 0.2001 bits, and the third-order connected information is 0.00489 bits, 2.38% of the total, with a 95% bootstrap interval from 1.99% to 2.84%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/pairwise_bits
+    reported: '0.2001'
+    decimals: 4
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-i3
+  kind: computation
+  passage: The pairwise model accounts for 0.2001 bits, and the third-order connected information is 0.00489 bits, 2.38% of the total, with a 95% bootstrap interval from 1.99% to 2.84%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/third_order_bits
+    reported: '0.00489'
+    decimals: 5
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-frac
+  kind: computation
+  passage: The pairwise model accounts for 0.2001 bits, and the third-order connected information is 0.00489 bits, 2.38% of the total, with a 95% bootstrap interval from 1.99% to 2.84%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/third_order_fraction
+    reported: 2.38%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-frac-lo
+  kind: computation
+  passage: The pairwise model accounts for 0.2001 bits, and the third-order connected information is 0.00489 bits, 2.38% of the total, with a 95% bootstrap interval from 1.99% to 2.84%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/third_order_fraction_ci95/0
+    reported: 1.99%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; 2,000 multinomial bootstrap replicates
+- id: trolley-frac-hi
+  kind: computation
+  passage: The pairwise model accounts for 0.2001 bits, and the third-order connected information is 0.00489 bits, 2.38% of the total, with a 95% bootstrap interval from 1.99% to 2.84%.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/third_order_fraction_ci95/1
+    reported: 2.84%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; 2,000 multinomial bootstrap replicates
+- id: trolley-cv-pair
+  kind: computation
+  passage: In held-out data the pairwise model improves on independent answers by 0.2001 bits per participant, and the saturated model improves on the pairwise model by 0.00487 bits per participant (standard error 0.00039), in all 10 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cross_validation/gain_pairwise_over_independent_bits
+    reported: '0.2001'
+    decimals: 4
+    units: held-out bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; ten-fold cross-validation
+- id: trolley-cv-third
+  kind: computation
+  passage: In held-out data the pairwise model improves on independent answers by 0.2001 bits per participant, and the saturated model improves on the pairwise model by 0.00487 bits per participant (standard error 0.00039), in all 10 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cross_validation/gain_third_order_over_pairwise_bits
+    reported: '0.00487'
+    decimals: 5
+    units: held-out bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; ten-fold cross-validation
+- id: trolley-cv-se
+  kind: computation
+  passage: In held-out data the pairwise model improves on independent answers by 0.2001 bits per participant, and the saturated model improves on the pairwise model by 0.00487 bits per participant (standard error 0.00039), in all 10 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cross_validation/gain_third_order_over_pairwise_se_bits
+    reported: '0.00039'
+    decimals: 5
+    units: bits per participant (standard error over folds)
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-cv-folds
+  kind: computation
+  passage: In held-out data the pairwise model improves on independent answers by 0.2001 bits per participant, and the saturated model improves on the pairwise model by 0.00487 bits per participant (standard error 0.00039), in all 10 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cross_validation/folds_third_order_better
+    reported: '10'
+    decimals: 0
+    units: folds
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-g2
+  kind: computation
+  passage: The likelihood-ratio statistic for the three-way interaction is 440 on one degree of freedom.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/g2
+    reported: '440'
+    decimals: 0
+    units: likelihood-ratio statistic (1 df)
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-001
+  kind: computation
+  passage: Rejecting the sacrifice in Switch and Loop while accepting it in Footbridge, the pattern 001, occurs at 0.734 times the frequency the pairwise model predicts (95% interval 0.708 to 0.759).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/1/ratio
+    reported: '0.734'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-001-lo
+  kind: computation
+  passage: Rejecting the sacrifice in Switch and Loop while accepting it in Footbridge, the pattern 001, occurs at 0.734 times the frequency the pairwise model predicts (95% interval 0.708 to 0.759).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/1/ratio_ci95/0
+    reported: '0.708'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: trolley-001-hi
+  kind: computation
+  passage: Rejecting the sacrifice in Switch and Loop while accepting it in Footbridge, the pattern 001, occurs at 0.734 times the frequency the pairwise model predicts (95% interval 0.708 to 0.759).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/1/ratio_ci95/1
+    reported: '0.759'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: trolley-011
+  kind: computation
+  passage: Rejecting it in Switch while accepting it in Loop and Footbridge, the pattern 011, occurs at 1.350 times the prediction (1.317 to 1.386).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/3/ratio
+    reported: '1.350'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-011-lo
+  kind: computation
+  passage: Rejecting it in Switch while accepting it in Loop and Footbridge, the pattern 011, occurs at 1.350 times the prediction (1.317 to 1.386).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/3/ratio_ci95/0
+    reported: '1.317'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: trolley-011-hi
+  kind: computation
+  passage: Rejecting it in Switch while accepting it in Loop and Footbridge, the pattern 011, occurs at 1.350 times the prediction (1.317 to 1.386).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/cells/3/ratio_ci95/1
+    reported: '1.386'
+    decimals: 3
+    units: observed / pairwise prediction
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: trolley-lambda
+  kind: computation
+  passage: In log-linear terms, the log odds ratio between the Switch and Loop answers is 1.10 larger among participants who reject the Footbridge sacrifice than among those who accept it (95% interval 1.00 to 1.21).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/log_interaction
+    reported: '1.10'
+    scale: -1
+    decimals: 2
+    units: log ratio of conditional odds ratios (reported with reversed sign)
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: trolley-lambda-lo
+  kind: computation
+  passage: In log-linear terms, the log odds ratio between the Switch and Loop answers is 1.10 larger among participants who reject the Footbridge sacrifice than among those who accept it (95% interval 1.00 to 1.21).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/log_interaction_ci95/1
+    reported: '1.00'
+    scale: -1
+    decimals: 2
+    units: log ratio (reversed sign)
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: trolley-lambda-hi
+  kind: computation
+  passage: In log-linear terms, the log odds ratio between the Switch and Loop answers is 1.10 larger among participants who reject the Footbridge sacrifice than among those who accept it (95% interval 1.00 to 1.21).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/log_interaction_ci95/0
+    reported: '1.21'
+    scale: -1
+    decimals: 2
+    units: log ratio (reversed sign)
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; bootstrap 95% interval
+- id: strata-countries
+  kind: computation
+  passage: In each of the 13 countries with at least 1,000 participants it has the same sign, with a p-value below 0.05 in all 13 and below the Bonferroni threshold in 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/strata
+    reported: '13'
+    decimals: 0
+    units: countries
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen; countries with at least 1,000 participants
+- id: strata-min
+  kind: computation
+  passage: In each of the 13 countries with at least 1,000 participants it has the same sign, with a p-value below 0.05 in all 13 and below the Bonferroni threshold in 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/min_participants
+    reported: 1,000
+    decimals: 0
+    units: participants
+    conditions: recorded run 'analysis'
+- id: strata-p05
+  kind: computation
+  passage: In each of the 13 countries with at least 1,000 participants it has the same sign, with a p-value below 0.05 in all 13 and below the Bonferroni threshold in 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/p_below_005
+    reported: '13'
+    decimals: 0
+    units: countries
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-bonf
+  kind: computation
+  passage: In each of the 13 countries with at least 1,000 participants it has the same sign, with a p-value below 0.05 in all 13 and below the Bonferroni threshold in 12.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/p_below_bonferroni
+    reported: '12'
+    decimals: 0
+    units: countries
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-within
+  kind: computation
+  passage: The participant-weighted mean of the within-country third-order information, 0.00464 bits, matches the 0.00462 bits of the same countries pooled.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/within_stratum_third_order_bits_weighted
+    reported: '0.00464'
+    decimals: 5
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-pooled
+  kind: computation
+  passage: The participant-weighted mean of the within-country third-order information, 0.00464 bits, matches the 0.00462 bits of the same countries pooled.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/country/combined_third_order_bits
+    reported: '0.00462'
+    decimals: 5
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-orders
+  kind: computation
+  passage: The sign is also the same within each of the 6 presentation orders of the three cases, each of the 8 left-right placements of the sacrifice option, both device types and both session types (before and after the main Moral Machine task), with weighted within-stratum means between 0.00421 and 0.00487 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/presentation_order/strata
+    reported: '6'
+    decimals: 0
+    units: presentation orders
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-sides
+  kind: computation
+  passage: The sign is also the same within each of the 6 presentation orders of the three cases, each of the 8 left-right placements of the sacrifice option, both device types and both session types (before and after the main Moral Machine task), with weighted within-stratum means between 0.00421 and 0.00487 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/sacrifice_side/strata
+    reported: '8'
+    decimals: 0
+    units: placements
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-min-within
+  kind: computation
+  passage: The sign is also the same within each of the 6 presentation orders of the three cases, each of the 8 left-right placements of the sacrifice option, both device types and both session types (before and after the main Moral Machine task), with weighted within-stratum means between 0.00421 and 0.00487 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/sacrifice_side/within_stratum_third_order_bits_weighted
+    reported: '0.00421'
+    decimals: 5
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: strata-max-within
+  kind: computation
+  passage: The sign is also the same within each of the 6 presentation orders of the three cases, each of the 8 left-right placements of the sacrifice option, both device types and both session types (before and after the main Moral Machine task), with weighted within-stratum means between 0.00421 and 0.00487 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/strata/after_moral_machine/within_stratum_third_order_bits_weighted
+    reported: '0.00487'
+    decimals: 5
+    units: bits per participant
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: pos-cv-pair
+  kind: computation
+  passage: In the position battery the pairwise model improves held-out log-likelihood over independent answers by 0.235 bits per respondent (standard error 0.025), in 45 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/gain_order2_over_order1_bits
+    reported: '0.235'
+    decimals: 3
+    units: held-out bits per respondent
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; nested cross-validation, 5 x 10 folds
+- id: pos-cv-pair-se
+  kind: computation
+  passage: In the position battery the pairwise model improves held-out log-likelihood over independent answers by 0.235 bits per respondent (standard error 0.025), in 45 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/gain_order2_over_order1_se_bits
+    reported: '0.025'
+    decimals: 3
+    units: bits per respondent (standard error over folds)
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-cv-pair-folds
+  kind: computation
+  passage: In the position battery the pairwise model improves held-out log-likelihood over independent answers by 0.235 bits per respondent (standard error 0.025), in 45 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/folds_order2_better
+    reported: '45'
+    decimals: 0
+    units: folds
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-cv-total
+  kind: computation
+  passage: In the position battery the pairwise model improves held-out log-likelihood over independent answers by 0.235 bits per respondent (standard error 0.025), in 45 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/folds_total
+    reported: '50'
+    decimals: 0
+    units: folds
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-cv-third
+  kind: computation
+  passage: The third-order model is worse than the pairwise model by 0.048 bits per respondent (standard error 0.008) and better in only 7 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/gain_order3_over_order2_bits
+    reported: '0.048'
+    scale: -1
+    decimals: 3
+    units: held-out bits per respondent (loss, reported with reversed sign)
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-cv-third-se
+  kind: computation
+  passage: The third-order model is worse than the pairwise model by 0.048 bits per respondent (standard error 0.008) and better in only 7 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/gain_order3_over_order2_se_bits
+    reported: '0.008'
+    decimals: 3
+    units: bits per respondent (standard error over folds)
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-cv-third-folds
+  kind: computation
+  passage: The third-order model is worse than the pairwise model by 0.048 bits per respondent (standard error 0.008) and better in only 7 of 50 folds.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/cross_validation/folds_order3_better
+    reported: '7'
+    decimals: 0
+    units: folds
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-triplets
+  kind: computation
+  passage: 'None of the 165 triplets shows third-order structure after control of the false discovery rate at 5%: the smallest simulated p-value is 0.0045, and 8 triplets fall below 0.05, about the number expected by chance.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/triplets
+    reported: '165'
+    decimals: 0
+    units: triplets
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-fdr
+  kind: computation
+  passage: 'None of the 165 triplets shows third-order structure after control of the false discovery rate at 5%: the smallest simulated p-value is 0.0045, and 8 triplets fall below 0.05, about the number expected by chance.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/fdr_q
+    reported: 5%
+    scale: 100
+    decimals: 0
+    units: false discovery rate
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-minp
+  kind: computation
+  passage: 'None of the 165 triplets shows third-order structure after control of the false discovery rate at 5%: the smallest simulated p-value is 0.0045, and 8 triplets fall below 0.05, about the number expected by chance.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/min_p_boot
+    reported: '0.0045'
+    decimals: 4
+    units: simulated p-value
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; 2,000 simulations per triplet from the fitted pairwise model
+- id: pos-p05
+  kind: computation
+  passage: 'None of the 165 triplets shows third-order structure after control of the false discovery rate at 5%: the smallest simulated p-value is 0.0045, and 8 triplets fall below 0.05, about the number expected by chance.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/p_boot_below_005
+    reported: '8'
+    decimals: 0
+    units: triplets
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-median-i3
+  kind: computation
+  passage: The median third-order information of a triplet is 0.0011 bits, below the median of 0.0025 bits expected from the fitted pairwise model and sampling noise.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/median_third_order_bits
+    reported: '0.0011'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-median-null
+  kind: computation
+  passage: The median third-order information of a triplet is 0.0011 bits, below the median of 0.0025 bits expected from the fitted pairwise model and sampling noise.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/median_null_third_order_bits
+    reported: '0.0025'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-max-i3
+  kind: computation
+  passage: The largest, 0.0196 bits, belongs to the answers on the driving case, the detection-threshold case and machine consciousness.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/triplet_tests/max_third_order_bits
+    reported: '0.0196'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: pos-avoid-null
+  kind: computation
+  passage: The position battery contains none, against 0.18 expected under the pairwise model.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/joint_avoidances/null_mean
+    reported: '0.18'
+    decimals: 2
+    units: expected joint avoidances
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; 500 simulated datasets
+- id: ent-cv-pair
+  kind: computation
+  passage: 'The entity battery has much stronger pairwise structure: the pairwise model improves on independent answers by 1.675 bits per respondent (standard error 0.059), in all 50 folds.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/gain_order2_over_order1_bits
+    reported: '1.675'
+    decimals: 3
+    units: held-out bits per respondent
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-cv-pair-se
+  kind: computation
+  passage: 'The entity battery has much stronger pairwise structure: the pairwise model improves on independent answers by 1.675 bits per respondent (standard error 0.059), in all 50 folds.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/gain_order2_over_order1_se_bits
+    reported: '0.059'
+    decimals: 3
+    units: bits per respondent (standard error over folds)
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-cv-pair-folds
+  kind: computation
+  passage: 'The entity battery has much stronger pairwise structure: the pairwise model improves on independent answers by 1.675 bits per respondent (standard error 0.059), in all 50 folds.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/folds_order2_better
+    reported: '50'
+    decimals: 0
+    units: folds
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-cv-third
+  kind: computation
+  passage: The third-order model is again worse, by 0.047 bits (standard error 0.009), better in 9 of 50 folds, and none of the 56 triplets survives control of the false discovery rate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/gain_order3_over_order2_bits
+    reported: '0.047'
+    scale: -1
+    decimals: 3
+    units: held-out bits per respondent (loss, reported with reversed sign)
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-cv-third-se
+  kind: computation
+  passage: The third-order model is again worse, by 0.047 bits (standard error 0.009), better in 9 of 50 folds, and none of the 56 triplets survives control of the false discovery rate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/gain_order3_over_order2_se_bits
+    reported: '0.009'
+    decimals: 3
+    units: bits per respondent (standard error over folds)
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-cv-third-folds
+  kind: computation
+  passage: The third-order model is again worse, by 0.047 bits (standard error 0.009), better in 9 of 50 folds, and none of the 56 triplets survives control of the false discovery rate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/cross_validation/folds_order3_better
+    reported: '9'
+    decimals: 0
+    units: folds
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-triplets
+  kind: computation
+  passage: The third-order model is again worse, by 0.047 bits (standard error 0.009), better in 9 of 50 folds, and none of the 56 triplets survives control of the false discovery rate.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/triplet_tests/triplets
+    reported: '56'
+    decimals: 0
+    units: triplets
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-avoid-obs
+  kind: computation
+  passage: The data contain 19 joint avoidances, fewer than the 30.0 expected under the pairwise model (95% simulation interval 14 to 50).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/joint_avoidances/observed
+    reported: '19'
+    decimals: 0
+    units: joint avoidances
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-avoid-null
+  kind: computation
+  passage: The data contain 19 joint avoidances, fewer than the 30.0 expected under the pairwise model (95% simulation interval 14 to 50).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/joint_avoidances/null_mean
+    reported: '30.0'
+    decimals: 1
+    units: expected joint avoidances
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases; 500 simulated datasets
+- id: ent-avoid-lo
+  kind: computation
+  passage: The data contain 19 joint avoidances, fewer than the 30.0 expected under the pairwise model (95% simulation interval 14 to 50).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/joint_avoidances/null_ci95/0
+    reported: '14'
+    decimals: 0
+    units: joint avoidances
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: ent-avoid-hi
+  kind: computation
+  passage: The data contain 19 joint avoidances, fewer than the 30.0 expected under the pairwise model (95% simulation interval 14 to 50).
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/entities/joint_avoidances/null_ci95/1
+    reported: '50'
+    decimals: 0
+    units: joint avoidances
+    conditions: survey of consciousness science, entity battery after dropping items with endorsement below 5% or above 95%, complete cases
+- id: power-80
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/bits_for_80pct_power_alpha005_median
+    reported: '0.0194'
+    decimals: 4
+    units: bits of planted third-order information
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; 8 random triplets, 4,000 simulations per step
+- id: power-80-lo
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/bits_for_80pct_power_alpha005_range/0
+    reported: '0.0184'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: power-80-hi
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/bits_for_80pct_power_alpha005_range/1
+    reported: '0.0199'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: power-triplets
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/triplets
+    reported: '8'
+    decimals: 0
+    units: triplets
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: power-bonf
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/bits_for_80pct_power_bonferroni_median
+    reported: '0.0481'
+    decimals: 4
+    units: bits
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; Bonferroni over 165 triplets
+- id: power-size
+  kind: computation
+  passage: Planting third-order structure in the fitted model of the position battery while holding every one- and two-way margin fixed (Figure 2b), the triplet test reaches 80% power at a third-order information of 0.0194 bits for one pre-specified triplet at $\alpha=0.05$ (0.0184 to 0.0199 across 8 random triplets) and 0.0481 bits after Bonferroni correction over all triplets; its size at zero effect is 0.054.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/size_at_zero_mean
+    reported: '0.054'
+    decimals: 3
+    units: rejection rate at zero effect
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: power-ref
+  kind: computation
+  passage: An effect of the size found in the trolley data is detected with probability 0.29.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/power_at_reference_median
+    reported: '0.29'
+    decimals: 2
+    units: detection probability
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: design-analytic
+  kind: computation
+  passage: Under the noncentral chi-square approximation, which gives 0.0193 bits for the 80% power threshold at the survey of consciousness researchers' sample size against 0.0194 bits by simulation, a pre-specified triplet answered by all 1,785 respondents would reveal an effect of the trolley size with probability 0.94 and an effect of 0.0032 bits with probability 0.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/check_against_simulation/analytic_alpha005
+    reported: '0.0193'
+    decimals: 4
+    units: bits
+    conditions: noncentral chi-square approximation, N = 294, alpha 0.05
+- id: design-sim
+  kind: computation
+  passage: Under the noncentral chi-square approximation, which gives 0.0193 bits for the 80% power threshold at the survey of consciousness researchers' sample size against 0.0194 bits by simulation, a pre-specified triplet answered by all 1,785 respondents would reveal an effect of the trolley size with probability 0.94 and an effect of 0.0032 bits with probability 0.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/check_against_simulation/simulated_alpha005_median
+    reported: '0.0194'
+    decimals: 4
+    units: bits
+    conditions: simulation, N = 294, alpha 0.05
+- id: design-pp-power
+  kind: computation
+  passage: Under the noncentral chi-square approximation, which gives 0.0193 bits for the 80% power threshold at the survey of consciousness researchers' sample size against 0.0194 bits by simulation, a pre-specified triplet answered by all 1,785 respondents would reveal an effect of the trolley size with probability 0.94 and an effect of 0.0032 bits with probability 0.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/philpapers_2020_full_sample/power_at_reference_alpha005
+    reported: '0.94'
+    decimals: 2
+    units: detection probability
+    conditions: noncentral chi-square approximation, N = 1,785, one pre-specified triplet, alpha 0.05, effect equal to the trolley third-order information
+- id: design-pp-80
+  kind: computation
+  passage: Under the noncentral chi-square approximation, which gives 0.0193 bits for the 80% power threshold at the survey of consciousness researchers' sample size against 0.0194 bits by simulation, a pre-specified triplet answered by all 1,785 respondents would reveal an effect of the trolley size with probability 0.94 and an effect of 0.0032 bits with probability 0.8.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/philpapers_2020_full_sample/bits_for_80pct_power_alpha005
+    reported: '0.0032'
+    decimals: 4
+    units: bits
+    conditions: noncentral chi-square approximation, N = 1,785, alpha 0.05
+- id: design-pp-triplets
+  kind: computation
+  passage: A scan of all 161,700 triplets with Bonferroni correction would reach 80% power at 0.0144 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/philpapers_2020_full_sample/triplets
+    reported: 161,700
+    decimals: 0
+    units: triplets of 100 questions
+    conditions: recorded run 'analysis'
+- id: design-pp-bonf
+  kind: computation
+  passage: A scan of all 161,700 triplets with Bonferroni correction would reach 80% power at 0.0144 bits.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /design/philpapers_2020_full_sample/bits_for_80pct_power_bonferroni
+    reported: '0.0144'
+    decimals: 4
+    units: bits
+    conditions: noncentral chi-square approximation, N = 1,785, Bonferroni over 161,700 triplets
+- id: disc-frac
+  kind: computation
+  passage: 'In lay judgments on three trolley cases, pairwise statistics carry all but 2.38% of the multi-information, and the remainder is a stable third-order term: accepting the Footbridge sacrifice while rejecting both others is rarer than the pairwise maximum-entropy model predicts.'
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/third_order_fraction
+    reported: 2.38%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: abs-trolley-n
+  kind: computation
+  passage: In the judgments of 64,988 participants on three trolley cases, third-order structure carries 2.38% of the multi-information and is stable across countries and designs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/participants
+    reported: 64,988
+    decimals: 0
+    units: participants
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: abs-trolley-frac
+  kind: computation
+  passage: In the judgments of 64,988 participants on three trolley cases, third-order structure carries 2.38% of the multi-information and is stable across countries and designs.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /trolley/information/third_order_fraction
+    reported: 2.38%
+    scale: 100
+    decimals: 2
+    units: percent of multi-information
+    conditions: Awad et al. (2020) OSF data, one complete session per participant (64,988 participants), answers 1 = sacrifice chosen
+- id: abs-expert-n
+  kind: computation
+  passage: In the answers of 294 respondents to a survey on consciousness science none is detectable, at a sample size with power 0.29 for an effect of the trolley size.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/respondents_complete
+    reported: '294'
+    decimals: 0
+    units: respondents
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases
+- id: abs-expert-power
+  kind: computation
+  passage: In the answers of 294 respondents to a survey on consciousness science none is detectable, at a sample size with power 0.29 for an effect of the trolley size.
+  evidence:
+    file: simulation/output/results.json
+    run_id: analysis
+    pointer: /consciousness/positions/power/power_at_reference_median
+    reported: '0.29'
+    decimals: 2
+    units: detection probability
+    conditions: survey of consciousness science (Francken et al. 2022 OSF data), 11 position questions, endorsement = answer 1 or 2, complete cases; triplet test at alpha 0.05, planted effect equal to the trolley third-order information; median over 8 random triplets
+- id: src-helly
+  kind: source
+  passage: If positions are points of $\mathbb R^d$ and commitments are convex regions, the order is $d+1$ by Helly's theorem [@helly1923; @danzer1963].
+  evidence:
+    citation_id: helly1923
+    locator: p. 175
+    depth: fulltext
+    verified: false
+    verification_note: Read on the GDZ page images of Jahresbericht DMV 32. Helly states the theorem for closed convex regions and arbitrary families and proves the finite case first; the paper uses the finite case for convex sets in R^d.
+    quote: Es sei in einem Raume von n Dimensionen eine beliebige Menge abgeschlossener konvexer Bereiche gegeben, von denen je n + 1 mindestens einen Punkt gemein haben. Dann existiert mindestens ein Punkt, der allen Bereichen gemein ist.
+- id: src-danzer-helly
+  kind: source
+  passage: If positions are points of $\mathbb R^d$ and commitments are convex regions, the order is $d+1$ by Helly's theorem [@helly1923; @danzer1963].
+  evidence:
+    citation_id: danzer1963
+    locator: p. 102
+    depth: fulltext
+    verified: false
+    verification_note: Read in the scan in Grünbaum's paper archive (University of Washington). The survey states Helly's theorem for finite families or compact members.
+    quote: HELLY'S THEOREM. Suppose 𝒦 is a family of at least n + 1 convex sets in affine n-space Rⁿ, and 𝒦 is finite or each member of 𝒦 is compact. Then if each n + 1 members of 𝒦 have a common point, there is a point common to all members of 𝒦.
+- id: src-averkov-def
+  kind: source
+  passage: 'This is the Helly number of $\mathcal C$: the least $k$ such that a finite family from $\mathcal C$ is compatible whenever each $k$ of its members are [@danzer1963; @averkov2013].'
+  evidence:
+    citation_id: averkov2013
+    locator: Definition 1.4, p. 2 (arXiv v3)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv 1109.6179v3, the preprint of the SIAM article; Definition 1.4 defines the Helly number of a family as the minimal k for which every empty finite intersection has an empty subintersection of k members. Version-of-record pages were not compared.
+    quote: then we define h(F) to be the minimal k as above. In all other cases we let h(F) := +∞.
+- id: src-averkov-bundling
+  kind: source
+  passage: For Helly numbers the identity is standard [@averkov2013, eq. 3.1].
+  evidence:
+    citation_id: averkov2013
+    locator: eq. (3.1), p. 5 (arXiv v3)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv v3. Equation (3.1) states that a family and the family of its finite intersections have the same Helly number, which is Proposition 2 for atlases.
+    quote: 'h(F) = h({F1 ∩ · · · ∩ Ft : t ∈ N, F1, . . . , Ft ∈ F}) (3.1) for every nonempty family F.'
+- id: src-danzer-boxes
+  kind: source
+  passage: A range on an ordinal scale, such as "agrees at least to degree four of five", is an interval of a line; intervals have order two, and so do their products, the axis-parallel boxes [@danzer1963, p. 144; @amenta2017, Theorem 2.2].
+  evidence:
+    citation_id: danzer1963
+    locator: p. 144, item (c); notation on p. 128
+    depth: fulltext
+    verified: false
+    verification_note: Read in the scan. With the notation of p. 128, gamma_2 = 1 means that every pairwise intersecting finite subfamily has a common point, so boxes have Helly number at most two.
+    quote: If 𝒫ⁿ is the family of all parallelotopes with edges parallel to the coordinate axes in Rⁿ, then γ₂(𝒫ⁿ) = 1.
+- id: src-amenta-boxes
+  kind: source
+  passage: A range on an ordinal scale, such as "agrees at least to degree four of five", is an interval of a line; intervals have order two, and so do their products, the axis-parallel boxes [@danzer1963, p. 144; @amenta2017, Theorem 2.2].
+  evidence:
+    citation_id: amenta2017
+    locator: Theorem 2.2, p. 2 (arXiv v2)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv 1508.07606v2, the preprint of the Contemporary Mathematics chapter; printed pages differ.
+    quote: Given a finite set D of axis parallel boxes in Rᵈ, the boxes in D have a common point if every two of its elements do.
+- id: src-hoffman-char
+  kind: source
+  passage: For convex sets restricted to a set of points this is Hoffman's characterization [@hoffman1979; @amenta2017, Lemma 2.7].
+  evidence:
+    citation_id: amenta2017
+    locator: Lemma 2.7, p. 4 (arXiv v2)
+    depth: fulltext
+    verified: false
+    verification_note: Hoffman (1979) itself could not be read (closed at Wiley); the statement is quoted from the survey, which attributes it to Proposition 2 of Hoffman's paper.
+    quote: 'Lemma 2.7 (Proposition 2 in [Hof79]). If S ⊂ Rᵈ, then h(S) can be computed as the supremum of the numbers h such that the following holds: there exists a set R = {x1, . . . , xh} ⊂ S such that ⋂ conv(R \ {xi}) does not intersect S.'
+- id: src-doignon
+  kind: source
+  passage: 'Convex sets restricted to the integer lattice have order $2^d$ [@doignon1973; @averkov2013], and the bound is attained on any such grid: each of the $2^d$ commitments that admits the vertices of one unit cell except one vertex is cut out by a convex region, and together they form an obstruction.'
+  evidence:
+    citation_id: averkov2013
+    locator: abstract and Remark 4.5, p. 11 (arXiv v3)
+    depth: fulltext
+    verified: false
+    verification_note: Doignon (1973) could not be read (Springer challenge, no open copy); the result h(Z^d) = 2^d is cited as stated by Averkov and by Amenta, De Loera and Soberón (arXiv v2, p. 3). The attainment on grids is verified in the recorded run.
+    quote: This shows that the result h(Zᵈ) = 2ᵈ of Doignon and the result f(Zᵈ) = 2ᵈ of Lovász are equivalent.
+- id: src-averkov-subset
+  kind: source
+  passage: 'Convex sets restricted to the integer lattice have order $2^d$ [@doignon1973; @averkov2013], and the bound is attained on any such grid: each of the $2^d$ commitments that admits the vertices of one unit cell except one vertex is cut out by a convex region, and together they form an obstruction.'
+  evidence:
+    citation_id: averkov2013
+    locator: Proposition 3.1, p. 6 (arXiv v3)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv v3. Inequality (3.4) gives that a finite grid, the lattice intersected with a box, has Helly number at most that of the lattice.
+    quote: Let S ⊆ Rᵈ, let C ⊆ Rᵈ be convex and let φ be an affine mapping on Rᵈ. Then ... h(S) ≤ |S|, (3.3) h(S ∩ C) ≤ h(S), (3.4)
+- id: src-empty-polytope
+  kind: source
+  passage: The commitments are then convex regions evaluated on $S$, and their order equals the largest number of positions of $S$ in convex position whose convex hull contains no other position of $S$ [@hoffman1979; @averkov2013; see @amenta2017, Lemma 2.6].
+  evidence:
+    citation_id: amenta2017
+    locator: Lemma 2.6 and definition on p. 3 (arXiv v2)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv v2; the lemma requires S to be discrete, which every finite set of positions is, and cites Averkov's Theorem 2.1 and Hoffman's Proposition 3. The equality is also observed in all 1,300 random planar maps of the recorded run.
+    quote: Assume S ⊂ Rᵈ is discrete, then h(S) is equal to ... (2) The supremum of the number of vertices of an S-vertex-polytope.
+- id: src-harborth
+  kind: source
+  passage: In the plane, every 10 positions in general position contain such a set of five, an empty convex pentagon [@harborth1978], and every 30 contain an empty convex hexagon [@heule2024].
+  evidence:
+    citation_id: harborth1978
+    locator: p. 116
+    depth: fulltext
+    verified: false
+    verification_note: Read on the GDZ page images of Elemente der Mathematik 33. Harborth's condition is that no point lies inside the pentagon; with no three points collinear no other point lies on its boundary either. The nine-point figure shows that ten is the least such number.
+    quote: In der Ebene sind unter n Punkten, von denen keine drei kollinear sind, genau für jedes n ≧ 10 = g(5) immer fünf Punkte zu finden, die ein konvexes Fünfeck bilden, das im Inneren keinen der n Punkte enthält.
+- id: src-heule
+  kind: source
+  passage: In the plane, every 10 positions in general position contain such a set of five, an empty convex pentagon [@harborth1978], and every 30 contain an empty convex hexagon [@heule2024].
+  evidence:
+    citation_id: heule2024
+    locator: abstract and Theorem 1, p. 2 (arXiv 2403.00737 v1)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the arXiv preprint; the Springer version returned a bot challenge. The bound was established by SAT solving with verified proofs; a 29-point set without an empty hexagon is due to Overmars.
+    quote: 'We establish the exact bound: Every 30-point set in the plane in general position contains an empty hexagon.'
+- id: src-horton
+  kind: source
+  passage: Arbitrarily large sets without an empty convex heptagon exist [@horton1983], positions in convex position give order $m$, and for $m$ uniformly random positions the largest empty convex polygon grows like $\log m/\log\log m$ [@balogh2013].
+  evidence:
+    citation_id: horton1983
+    locator: p. 482
+    depth: fulltext
+    verified: false
+    verification_note: Read in the Cambridge Core free PDF. General position is part of the definition of g(n) in the paper.
+    quote: Arbitrarily large sets containing no empty convex 7-gon are constructed, showing that g(n) does not exist for n ≥ 7.
+- id: src-balogh
+  kind: source
+  passage: Arbitrarily large sets without an empty convex heptagon exist [@horton1983], positions in convex position give order $m$, and for $m$ uniformly random positions the largest empty convex polygon grows like $\log m/\log\log m$ [@balogh2013].
+  evidence:
+    citation_id: balogh2013
+    locator: abstract and Theorem 2, p. 2 (arXiv v1)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv 1206.0805v1, the preprint; the result concerns expected size, and Theorem 2 adds that it holds with high probability.
+    quote: We show that the expected number of vertices of the largest convex hole of a set of n random points chosen independently and uniformly over R is Θ(log n/(log log n)), regardless of the shape of R.
+- id: src-gardenfors
+  kind: source
+  passage: Gärdenfors proposed that natural properties correspond to convex regions of the quality dimensions of a conceptual space [@gardenfors2000].
+  evidence:
+    citation_id: gardenfors2000
+    locator: Criterion P
+    depth: identity
+    verified: false
+    verification_note: Identity checked against Crossref and OpenLibrary. The book could not be read (lending-only scan, publisher challenge); an OpenLibrary search-inside snippet shows the wording 'criterion p A natural property is a convex region of a domain in a conceptual' in section 3.5. Cited for this well-known proposal only.
+- id: src-larose
+  kind: source
+  passage: Finite duality is equivalent to the definability of the satisfiability problem in first-order logic, a result of Atserias, and it can be decided [@larose2007, Theorem 2.5].
+  evidence:
+    citation_id: larose2007
+    locator: Theorem 2.5, p. 6; abstract
+    depth: fulltext
+    verified: false
+    verification_note: Read in the published LMCS version. The paper attributes the equivalence of first-order definability and finite duality to Atserias (2005); the abstract states decidability (NP-complete in general, polynomial for cores). The step from bounded order to finite duality in the manuscript is the paper's own short argument.
+    quote: Let A be a σ-structure. Then the following are equivalent. 1. A-CSP is first-order definable; 2. A has finite duality; 3. A has a finite complete set of obstructions consisting of trees; 4. The critical obstructions of A have bounded diameter.
+- id: src-greenberg
+  kind: source
+  passage: Greenberg's condition for majority equilibria in spatial voting, a quota above $dn/(d+1)$ for convex preferences over a $d$-dimensional compact convex set of alternatives [@greenberg1979], has the same form with $z=d+1$, the order of convex commitments in $d$ dimensions.
+  evidence:
+    citation_id: greenberg1979
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract read on the Econometric Society page: a d-majority equilibrium exists for every profile of convex and continuous preferences over a compact convex set of dimension m iff d > (m/(m+1))n. The full text (JSTOR) was not read; the comparison with Dietrich and List''s threshold is the paper''s own, and no claim is made about Greenberg''s proof method.'
+- id: src-dietrich-quota
+  kind: source
+  passage: Dietrich and List showed that a uniform quota rule, which accepts a proposition when at least $m$ of $n$ individuals accept it, turns every profile of consistent individual judgments into consistent collective judgments exactly when $m>n-n/z$, where $z$ is the size of the largest minimally inconsistent subset of the agenda [@dietrich2007, Corollary 2].
+  evidence:
+    citation_id: dietrich2007
+    locator: Corollary 2(a), Section 3.3 (accepted manuscript p. 12)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the accepted manuscript on LSE Research Online; the corollary also states that for n other than 2 and 4, propositionwise majority rule is consistent iff z <= 2.
+    quote: Corollary 2 Let z be the size of the largest minimal inconsistent set Z ⊆ X. (a) A uniform quota rule Fm is consistent if and only if m > n − n/z.
+- id: src-dietrich-preferences
+  kind: source
+  passage: For preferences over $q$ options the largest minimally inconsistent sets are cycles of $q$ pairwise preferences, so $z=q$ and the classical supermajority thresholds for acyclic collective preferences follow [@dietrich2007, Section 3.3].
+  evidence:
+    citation_id: dietrich2007
+    locator: Section 3.3 (accepted manuscript p. 13)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the accepted manuscript; the passage derives the Craven and Ferejohn-Grether supermajority thresholds n - n/k from Corollary 2.
+    quote: the largest minimal inconsistent subset of X is a set of k binary preference propositions representing a preference cycle of length k, where k is the number of options in K.
+- id: src-aspvall
+  kind: source
+  passage: A clause $a\vee b$ licenses the implications $\neg a\to b$ and $\neg b\to a$, and a set of such clauses is unsatisfiable exactly when, for some issue $x$, its implication graph contains a path from $x$ to $\neg x$ and a path from $\neg x$ to $x$ [@aspvall1979].
+  evidence:
+    citation_id: aspvall1979
+    locator: article
+    depth: identity
+    verified: false
+    verification_note: Identity checked against Crossref. The article was not read (closed); it is cited for the standard criterion that a set of two-literal clauses is satisfiable iff no variable shares a strongly connected component of the implication graph with its negation.
+- id: src-bourget2014-maps
+  kind: source
+  passage: The PhilPapers surveys report correlations between answers and factor analyses of them [@bourget2014; @bourget2023].
+  evidence:
+    citation_id: bourget2014
+    locator: Sections 3.3 and 3.10 (preprint pp. 13, 19)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the author preprint of 27 April 2013 (consc.net); version-of-record pages were not checked. Table 4 lists the 50 highest correlations between views; Section 3.10 reports exploratory factor and principal component analyses.
+    quote: To better understand these correlations, we performed exploratory factor analyses (Spearman 1904, Gorsuch 1983) and principal component analyses (Pearson 1901, Jolliffe 2002) on the target faculty responses using a range of methods.
+- id: src-bourget2014-tables
+  kind: source
+  passage: The 2009 survey published contingency tables for every pair of answers [@bourget2014], and the 2020 survey reports aggregate distributions without individual-level responses [@shi2026].
+  evidence:
+    citation_id: bourget2014
+    locator: Section 3.2 (preprint p. 12)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the author preprint; the sentence refers to the survey website, which was not checked because it serves a bot challenge.
+    quote: Contingency tables such as Table 3 are available for all answers pairs on the survey site.
+- id: src-shi-aggregate
+  kind: source
+  passage: The 2009 survey published contingency tables for every pair of answers [@bourget2014], and the 2020 survey reports aggregate distributions without individual-level responses [@shi2026].
+  evidence:
+    citation_id: shi2026
+    locator: Section 3.1 (arXiv v2 p. 3)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv 2604.23575v2; the FAccT version of record was not read. The project's repository README adds that individual-level data are available on request from the authors or from Bourget.
+    quote: The PhilPapers 2020 Survey [5] reports aggregate distributions but does not release individual-level responses linked to demographic profiles.
+- id: src-shi-benchmark
+  kind: source
+  passage: The correlation structure of philosophers' answers now also serves as a benchmark for language models that imitate philosophers [@shi2026].
+  evidence:
+    citation_id: shi2026
+    locator: abstract (arXiv v2 p. 1)
+    depth: fulltext
+    verified: false
+    verification_note: 'Read in arXiv v2: the study evaluates seven language models on 277 philosophers'' public profiles and on cross-question correlation structures, validated against the 2020 survey.'
+    quote: We find that language models substantially over-correlate philosophical judgments, producing artificial consensus across domains.
+- id: src-bourget2023-questions
+  kind: source
+  passage: The survey asked 100 questions [@bourget2023] and has 1,785 respondents [@shi2026].
+  evidence:
+    citation_id: bourget2023
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: Abstract only; the full text is behind a bot challenge at the publisher and at PhilArchive. The abstract says the survey covered around 2000 philosophers on 100 philosophical questions; the respondent count is taken from Shi and Haupt.
+- id: src-shi-n
+  kind: source
+  passage: The survey asked 100 questions [@bourget2023] and has 1,785 respondents [@shi2026].
+  evidence:
+    citation_id: shi2026
+    locator: abstract and Section 3.2 (arXiv v2 pp. 1, 4)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv v2; Bourget and Chalmers's own paper could not be read to confirm the count.
+    quote: 'We validate LLM specialist effects against two sources: PhilPapers 2020 Survey (N = 1,785) and our 277-philosopher ground truth.'
+- id: src-noichl
+  kind: source
+  passage: A bibliometric map of recent philosophy compares articles by the references they share and projects the resulting similarities onto a plane [@noichl2021].
+  evidence:
+    citation_id: noichl2021
+    locator: Sections 1 and 2.2 (manuscript pp. 2-4)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the PhilSci-Archive manuscript (accepted version per OpenAlex); version-of-record pages not checked. Similarity is bibliographic coupling compared by cosine; UMAP gives the planar map and HDBSCAN the clusters.
+    quote: When two texts cite the same third text, this increases the similarity between documents, and the resulting similarity-matrix can then be used to perform dimensionality-reduction for visualization and classification purposes.
+- id: src-malaterre
+  kind: source
+  passage: Topic models of philosophy journals map subjects instead of positions, tracing what philosophers wrote about over a century [@malaterre2019; @weatherson2022].
+  evidence:
+    citation_id: malaterre2019
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract only (no open copy): topic modeling of the complete corpus of Philosophy of Science, 1934-2015, identifying 126 topics.'
+- id: src-weatherson
+  kind: source
+  passage: Topic models of philosophy journals map subjects instead of positions, tracing what philosophers wrote about over a century [@malaterre2019; @weatherson2022].
+  evidence:
+    citation_id: weatherson2022
+    locator: Introduction
+    depth: fulltext
+    verified: false
+    verification_note: Read in the open EPUB (Fulcrum); the EPUB has no page numbers. A 90-topic LDA model of JSTOR word counts for the English-language research articles of twelve journals, 1876-2013.
+    quote: I used the data from JSTOR to build a Latent Dirichlet Allocation (LDA) model of the journals using the topicmodels package written by Bettina Grün and Kurt Hornik
+- id: src-schneidman2003-def
+  kind: source
+  passage: The multi-information of a set of answers is the sum of its connected informations [@schneidman2003; @amari2001].
+  evidence:
+    citation_id: schneidman2003
+    locator: Eqs. (5) and (6), p. 2 (arXiv physics/0307072)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the arXiv version; the PRL version was not compared.
+    quote: The connected information of order k is positive or zero; it represents the amount by which the maximum possible entropy of the system decreases when we go from knowing only the marginals of order k − 1 to knowing also the marginals of order k.
+- id: src-amari
+  kind: source
+  passage: The multi-information of a set of answers is the sum of its connected informations [@schneidman2003; @amari2001].
+  evidence:
+    citation_id: amari2001
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract only (no open copy): an orthogonal decomposition of stochastic dependency into pairwise, triplewise and higher-order parts.'
+- id: src-schneidman2006
+  kind: source
+  passage: Computed for groups of ten retinal ganglion cells, the pairwise model captured about 90% of the multi-information [@schneidman2006], and Schneidman and colleagues used three variables joined by exclusive or, whose pairwise mutual informations vanish while their multi-information is one bit, as the example of structure that pairwise statistics miss [@schneidman2003].
+  evidence:
+    citation_id: schneidman2006
+    locator: section 'Are pairwise correlations enough?' and Fig. 2c-d (PMC author manuscript)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the PMC author manuscript and the arXiv version; the cells are salamander retinal ganglion cells.
+    quote: The success of the pairwise maximum entropy models in capturing the correlation structure of the network is summarized by the fraction I(2)/IN ≈ 90% (Fig. 2c).
+- id: src-schneidman2003-xor
+  kind: source
+  passage: Computed for groups of ten retinal ganglion cells, the pairwise model captured about 90% of the multi-information [@schneidman2006], and Schneidman and colleagues used three variables joined by exclusive or, whose pairwise mutual informations vanish while their multi-information is one bit, as the example of structure that pairwise statistics miss [@schneidman2003].
+  evidence:
+    citation_id: schneidman2003
+    locator: p. 1 and Fig. 1 (arXiv physics/0307072)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the arXiv version; Fig. 1 tabulates I = 1 and third-order connected information 1 for exclusive or.
+    quote: if σ1 an σ2 are chosen at random as inputs to the XOR, then all pairwise mutual informations among the σi will be zero, although the multi–information will be one bit
+- id: src-darroch
+  kind: source
+  passage: For the trolley data, with three answers and 64,988 participants, the pairwise model was fitted without a penalty by iterative scaling [@darroch1972] and compared with the saturated model by ten-fold cross-validation.
+  evidence:
+    citation_id: darroch1972
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract only (Project Euclid blocked): iterative scaling finds distributions of product form that maximize entropy subject to linear constraints; marginal constraints are a special case. The implementation is iterative proportional fitting of the three two-way margins.'
+- id: src-awad-design
+  kind: source
+  passage: The first comes from the classic mode of the Moral Machine website, which presented three versions of the trolley case in random order [@awad2020].
+  evidence:
+    citation_id: awad2020
+    locator: Materials and Methods (PMC full text)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the PMC full text (no page breaks). The scenario descriptions (Switch, Loop, Footbridge) are in the same section.
+    quote: Users of the Classic mode are presented with the three standard trolley scenarios, in a random order. We restricted our sample to users who gave a response to all three scenarios, and to countries in which at least 200 users did so.
+- id: src-awad-order
+  kind: source
+  passage: The sacrifice was chosen by 83.4% in Switch, 74.6% in Loop and 54.6% in Footbridge, the ordering that Awad and colleagues found in every country.
+  evidence:
+    citation_id: awad2020
+    locator: Results, first paragraph (PMC full text)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the PMC full text; the paper's averages are country-level and its sample differs from the one-session-per-participant sample used here, whose percentages come from the recorded run.
+    quote: 'every country in our dataset showed the same pattern of responses: Participants endorsed sacrifice more for Switch (country-level average: 81%) than for Loop (country-level average: 72%), and for Loop more than for Footbridge (country-level average: 51%).'
+- id: src-thomson
+  kind: source
+  passage: The case goes back to Foot, and the loop and footbridge variants to Thomson [@foot2002; @thomson1985].
+  evidence:
+    citation_id: thomson1985
+    locator: pp. 1395, 1402, 1409
+    depth: fulltext
+    verified: false
+    verification_note: Read in the Yale Law School repository scan. Thomson credits Foot with the problem (p. 1395), introduces the loop variant (p. 1402) and the footbridge case, called Fat Man (p. 1409); note 14 says several cases come from her 1976 Monist paper, which was not read.
+    quote: Consider now what I shall call "the loop variant" on this case, in which the tracks do not continue to diverge—they circle back
+- id: src-foot
+  kind: source
+  passage: The case goes back to Foot, and the loop and footbridge variants to Thomson [@foot2002; @thomson1985].
+  evidence:
+    citation_id: foot2002
+    locator: reprint of the 1967 article in Virtues and Vices
+    depth: identity
+    verified: false
+    verification_note: Identity checked against Crossref (Virtues and Vices, OUP 2002, pp. 19-32); the 1967 Oxford Review original has no registry record. Thomson (1985, p. 1395) credits Foot with the problem. The chapter was not read.
+- id: src-francken-design
+  kind: source
+  passage: The second is a survey on theoretical foundations of consciousness science, promoted mainly among attendees of the 2018 and 2019 conferences of the Association for the Scientific Study of Consciousness [@francken2022].
+  evidence:
+    citation_id: francken2022
+    locator: Methods, Data collection and Participants (PMC full text)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the PMC full text; the paper analyses ASSC attendees doing consciousness research (166 respondents), while this study uses all respondents with complete answers.
+    quote: Although the promotion of the survey was mainly aimed at ASSC attendees, others could also respond.
+- id: src-liffiton-name
+  kind: source
+  passage: Under other names, obstructions are minimal unsatisfiable subsets of constraints [@liffiton2008], minimal conflict sets in diagnosis [@reiter1987], kernels of a contradiction in belief contraction [@hansson1994], minimally inconsistent subsets of an agenda in judgment aggregation [@dietrich2007], and aporetic clusters of individually plausible theses that cannot all be held [@rescher2009].
+  evidence:
+    citation_id: liffiton2008
+    locator: Definition 2, Section 2 (author preprint)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the author preprint (preprint pagination); an MUS is exactly an obstruction when the commitments are the constraints.
+    quote: A subset U ⊆ C is an MUS if U is unsatisfiable and ∀Ci ∈ U, U \{Ci } is satisfiable.
+- id: src-hansson
+  kind: source
+  passage: Under other names, obstructions are minimal unsatisfiable subsets of constraints [@liffiton2008], minimal conflict sets in diagnosis [@reiter1987], kernels of a contradiction in belief contraction [@hansson1994], minimally inconsistent subsets of an agenda in judgment aggregation [@dietrich2007], and aporetic clusters of individually plausible theses that cannot all be held [@rescher2009].
+  evidence:
+    citation_id: hansson1994
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: Abstract only (Project Euclid challenge, JSTOR closed). The definition of a kernel as a minimal subset implying a sentence and of incision functions was read in Hansson's own SEP entry 'Logic of Belief Revision', Section 5.2, which frames kernels for belief bases; obstructions correspond to kernels of a contradiction.
+- id: src-dietrich-mis
+  kind: source
+  passage: Under other names, obstructions are minimal unsatisfiable subsets of constraints [@liffiton2008], minimal conflict sets in diagnosis [@reiter1987], kernels of a contradiction in belief contraction [@hansson1994], minimally inconsistent subsets of an agenda in judgment aggregation [@dietrich2007], and aporetic clusters of individually plausible theses that cannot all be held [@rescher2009].
+  evidence:
+    citation_id: dietrich2007
+    locator: Section 2.1 (accepted manuscript p. 6)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the LSE accepted manuscript.
+    quote: S is minimal inconsistent if S is inconsistent, but every proper subset of S is consistent
+- id: src-rescher
+  kind: source
+  passage: Under other names, obstructions are minimal unsatisfiable subsets of constraints [@liffiton2008], minimal conflict sets in diagnosis [@reiter1987], kernels of a contradiction in belief contraction [@hansson1994], minimally inconsistent subsets of an agenda in judgment aggregation [@dietrich2007], and aporetic clusters of individually plausible theses that cannot all be held [@rescher2009].
+  evidence:
+    citation_id: rescher2009
+    locator: book
+    depth: identity
+    verified: false
+    verification_note: Identity checked against Crossref (JSTOR monograph record) and OpenLibrary; no accessible text (JSTOR closed, publisher site timed out). Cited for the well-known notion of aporetic clusters, sets of individually plausible but jointly inconsistent theses; chapter titles include 'The Nature of Apories' and 'Philosophical Aporetics'.
+- id: src-reiter
+  kind: source
+  passage: 'In each of these literatures a repair must remove at least one member of every obstruction: diagnoses are minimal hitting sets of the conflict sets [@reiter1987], and minimal correction sets are minimal hitting sets of the minimal unsatisfiable subsets [@liffiton2008].'
+  evidence:
+    citation_id: reiter1987
+    locator: Theorem 4.4, p. 67
+    depth: fulltext
+    verified: false
+    verification_note: Read in the scan of the published version at cs.ru.nl (the OCR renders Δ as A).
+    quote: Δ ⊆ COMPONENTS is a diagnosis for (SD, COMPONENTS, OBS) iff Δ is a minimal hitting set for the collection of conflict sets for (SD, COMPONENTS, OBS).
+- id: src-liffiton-duality
+  kind: source
+  passage: 'In each of these literatures a repair must remove at least one member of every obstruction: diagnoses are minimal hitting sets of the conflict sets [@reiter1987], and minimal correction sets are minimal hitting sets of the minimal unsatisfiable subsets [@liffiton2008].'
+  evidence:
+    citation_id: liffiton2008
+    locator: Theorem 1, Section 3 (author preprint p. 7)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the author preprint; the text attributes the proof to Birnbaum and Lozinskii (2003, Theorem 4.5).
+    quote: 1. A subset M of C is an MCS of C iff M is an irreducible hitting set of MUSes(C); 2. A subset U of C is an MUS of C iff U is an irreducible hitting set of MCSes(C).
+- id: src-schaefer
+  kind: source
+  passage: Horn rules, two-literal clauses and parity constraints are preserved, respectively, by the conjunction, the majority and the exclusive or of three answer profiles, three of the operations that make a Boolean constraint language tractable in Schaefer's classification [@schaefer1978; @chen2006].
+  evidence:
+    citation_id: schaefer1978
+    locator: article
+    depth: identity
+    verified: false
+    verification_note: Identity checked against Crossref; the paper could not be read (ACM challenge). The classification is cited as stated in Chen (2006), who notes that Schaefer formulated it in terms of properties of relations. The paper's proofs do not depend on it.
+- id: src-chen
+  kind: source
+  passage: Horn rules, two-literal clauses and parity constraints are preserved, respectively, by the conjunction, the majority and the exclusive or of three answer profiles, three of the operations that make a Boolean constraint language tractable in Schaefer's classification [@schaefer1978; @chen2006].
+  evidence:
+    citation_id: chen2006
+    locator: Theorem 3.20 and pp. 3-6 (arXiv cs/0611018)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the arXiv version. Theorem 3.20 is credited to Schaefer; pp. 3-4 state that AND preserves Horn clauses and majority preserves two-literal clauses, and p. 6 that minority preserves linear equations.
+    quote: 'The problem CSP(Γ) is polynomial-time tractable if Γ has one of the following six operations as a polymorphism: the constant operation 0, the constant operation 1, the boolean AND operation ∧, the boolean OR operation ∨, the operation majority, the operation minority.'
+- id: src-lee-2sat
+  kind: source
+  passage: Lee used the same implication paths to bound such sets by $4n-2$ clauses [@lee2009].
+  evidence:
+    citation_id: lee2009
+    locator: Proposition 1, p. 2
+    depth: fulltext
+    verified: false
+    verification_note: Read in the open PDF; the proof bounds the edges of the two directed paths in the implication graph.
+    quote: Proposition 1. Minimal unsatisfiable 2-SAT formulas have at most 4n − 2 clauses.
+- id: src-abbasizanjani
+  kind: source
+  passage: In the classification of Abbasizanjani and Kullmann, the two cycles are the cycle of equivalences $x_1\leftrightarrow x_2\leftrightarrow\dots\leftrightarrow x_n\leftrightarrow\neg x_1$, to which elimination of singular variables reduces every minimally unsatisfiable set of two-literal clauses with at least two more clauses than variables [@abbasizanjani2020]; since that elimination preserves the difference between clauses and variables, the bound of $2n$ follows.
+  evidence:
+    citation_id: abbasizanjani2020
+    locator: Section 1 (arXiv v3 p. 4)
+    depth: fulltext
+    verified: false
+    verification_note: Read in arXiv 2003.03639v3. The text states that nonsingular 2-MUs are the cycles of equivalences B_n with n variables and 2n clauses and that singular DP-reduction preserves deficiency and reduces 2-MUs of deficiency k >= 2 to B_k; the bound of 2n clauses is the paper's inference from these statements. A numeral on p. 10 conflicts with p. 4 and is not used.
+    quote: So singular DP-reduction for a 2-MU of deficiency k ≥ 2 yields some 2-MU isomorphic to Bk.
+- id: src-lee-k
+  kind: source
+  passage: 'Clauses with more literals grow faster: Lee constructed minimally unsatisfiable sets of $k$-literal clauses with a number of clauses of order $n^k$ for every $k\ge3$ [@lee2009], and at most $2^k\binom nk$ such clauses exist, so the order of $k$-literal clauses grows like $n^k$.'
+  evidence:
+    citation_id: lee2009
+    locator: abstract
+    depth: fulltext
+    verified: false
+    verification_note: Read in the open PDF; the upper bound by the number of available k-literal clauses is elementary.
+    quote: We construct minimal unsatisfiable k-SAT formulas with Ω(nk) clauses for k ≥ 3, thereby negatively answering a question of Rosenfeld.
+- id: src-baker
+  kind: source
+  passage: Baker and Pixley proved that a relation closed under such an operation is determined by its projections onto sets of $k$ coordinates [@baker1975].
+  evidence:
+    citation_id: baker1975
+    locator: Theorem 2.1, p. 167
+    depth: fulltext
+    verified: false
+    verification_note: Read in the GDZ scan (OCR by the verification pass, checked against the page image). Their d is k here, and the theorem is stated for varieties; it applies to the variety generated by the algebra whose operation preserves X.
+    quote: (2) In V, if A is a subalgebra of a direct product P=C1×⋯×Cr (r≧d), then A can be uniquely determined from a knowledge of its d-fold coordinate projections
+- id: src-feder-helly-def
+  kind: source
+  passage: 'They call it the $l$-Helly property: whenever fixing the values of some variables leaves an instance without a solution, some $l$ of those values already do.'
+  evidence:
+    citation_id: feder1998
+    locator: Section 6.1.2 (authors' full preprint p. 28)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the authors' full preprint on Vardi's page; page numbers are the preprint's and were not compared with SICOMP.
+    quote: we can require that if we have an instance and after assigning specific values to some of the variables we obtain an instance with no solution, then some l out of the specific value assignments chosen are sufficient to give an instance with no solution. We refer to this property as the l-Helly property.
+- id: src-feder-helly-thm
+  kind: source
+  passage: They proved it equivalent to an $(l+1)$-ary near-unanimity operation preserving the constraints and to strict width $l$, the property that local inference followed by greedy assignment always finds a solution [@feder1998].
+  evidence:
+    citation_id: feder1998
+    locator: Theorem 24 and Section 6.1.2 (authors' full preprint pp. 28-29)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the preprint; the l-mapping property defined on pp. 28-29 is an (l+1)-ary near-unanimity polymorphism, and strict width is defined on p. 28 through local inference followed by greedy assignment.
+    quote: Theorem 24 Strict width l, the l-Helly property, and the l-mapping property are equivalent. These properties are polynomially decidable (for a fixed l).
+- id: src-nehring
+  kind: source
+  passage: For an odd number of individuals, issue-by-issue majority voting is therefore consistent if and only if $z\le2$, the property that characterizes the median spaces of Nehring and Puppe [@nehring2007] and the case $k=2$ of Proposition 4.
+  evidence:
+    citation_id: nehring2007
+    locator: median-space characterization
+    depth: identity
+    verified: false
+    verification_note: 'The published Part I could not be read (ScienceDirect captcha). The authors'' Part II working paper (KIT, revised March 2005, p. 30) states: ''By NP, Proposition 4.1, median spaces are characterized by the property that all critical families have cardinality two. By (3.3) this implies that, e.g., issue-by-issue majority voting is consistent on any median space.'' NP there is the Part I working paper; the published numbering is not verified and no locator is cited in the manuscript.'
+- id: src-list-pettit
+  kind: source
+  passage: 'The discursive dilemma of List and Pettit is the smallest case [@list2002]: with $X$ the profiles that satisfy $r\leftrightarrow(p\wedge q)$, the majority of the admissible profiles $(1,1,1)$, $(1,0,0)$ and $(0,1,0)$ is $(1,1,0)$, which is not admissible, and $\{p,q,\neg r\}$ is an obstruction of three categorical answers.'
+  evidence:
+    citation_id: list2002
+    locator: p. 96
+    depth: fulltext
+    verified: false
+    verification_note: Read in the LSE copy of the published version; Theorem 1 (p. 100) is the impossibility result. The doctrinal paradox itself is older (Kornhauser and Sager); the manuscript attributes only the discursive dilemma to List and Pettit.
+    quote: The paradox shows that the two demands are sometimes in conflict, so that a group that tries to aggregate judgment faces a dilemma.
+- id: src-jeavons
+  kind: source
+  passage: Jeavons, Cohen and Cooper characterized algebraically the constraint types for which strong $k$-consistency is enough to ensure global consistency [@jeavons1998].
+  evidence:
+    citation_id: jeavons1998
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract only, from the archived CiteSeerX summary of the preprint (ScienceDirect captcha; authors'' FTP copy dead): an algebraic property characterizes the constraint types for which strong k-consistency ensures global consistency. The theorem and its definitions were not inspected.'
+- id: src-feder-count
+  kind: source
+  passage: Feder and Vardi characterized the problems solved by such local methods through Datalog and showed that systems of linear equations over Abelian groups, which include parity constraints, are not among them [@feder1998]; Barto and Kozik proved that every problem without this ability to count is solved by local consistency [@barto2014].
+  evidence:
+    citation_id: feder1998
+    locator: Sections 6.1 and 6.2, Theorems 16 and 30 (authors' full preprint pp. 22-34)
+    depth: fulltext
+    verified: false
+    verification_note: 'Read in the preprint: bounded width is defined through Datalog (Section 6.1, p. 22); Theorem 30 (p. 34) excludes problems with the ability to count, which include linear equations over Abelian groups (p. 31).'
+    quote: If a constraint-satisfaction problem has the ability to count, then it does not have bounded width.
+- id: src-barto
+  kind: source
+  passage: Feder and Vardi characterized the problems solved by such local methods through Datalog and showed that systems of linear equations over Abelian groups, which include parity constraints, are not among them [@feder1998]; Barto and Kozik proved that every problem without this ability to count is solved by local consistency [@barto2014].
+  evidence:
+    citation_id: barto2014
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: Abstract only (ACM challenge; repository timeout). The abstract states that problems without the ability to count are solvable by local consistency, settling the Feder-Vardi conjecture.
+- id: src-beeri
+  kind: source
+  passage: In database theory, a scheme of relations is acyclic if and only if every database over it whose relations are pairwise consistent is globally consistent [@beeri1983], and Vorob'ev characterized by a similar condition the families of marginal distributions that always extend to a joint distribution [@vorobev1962].
+  evidence:
+    citation_id: beeri1983
+    locator: Theorem 3.4, p. 488; definitions p. 485
+    depth: fulltext
+    verified: false
+    verification_note: Read in the scan of the published version (archived author page); Theorem 3.4 lists twelve equivalent conditions, including (1) acyclicity and (7) the pairwise-to-global property.
+    quote: Condition 3.7. Every pairwise consistent database over R is globally consistent.
+- id: src-vorobev
+  kind: source
+  passage: In database theory, a scheme of relations is acyclic if and only if every database over it whose relations are pairwise consistent is globally consistent [@beeri1983], and Vorob'ev characterized by a similar condition the families of marginal distributions that always extend to a joint distribution [@vorobev1962].
+  evidence:
+    citation_id: vorobev1962
+    locator: abstract
+    depth: abstract
+    verified: false
+    verification_note: 'Abstract only (Crossref deposit): a family of measures is consistent if every pair is consistent, and regularity of the complex is necessary and sufficient for extendability of every consistent family. The manuscript says only that the condition is similar to acyclicity.'
+- id: src-abramsky
+  kind: source
+  passage: 'Contextuality is the failure of such an extension: families of local data that agree wherever they overlap and admit no global assignment [@abramsky2011].'
+  evidence:
+    citation_id: abramsky2011
+    locator: Section 3, p. 12
+    depth: fulltext
+    verified: false
+    verification_note: Read in the IOP PDF; empirical models are compatible families (Section 2.5, p. 9).
+    quote: Thus the entire issue of non-locality and contextuality—i.e. the existence of empirical models that have no such realizations—is equivalently formulated as the non-existence of global sections for the corresponding compatible families.
+- id: src-dung
+  kind: source
+  passage: Dung's frameworks record conflicts as a binary attack relation, and a set of arguments is conflict-free when it contains no arguments $A$ and $B$ such that $A$ attacks $B$ [@dung1995].
+  evidence:
+    citation_id: dung1995
+    locator: Definitions 2 and 5, p. 326
+    depth: fulltext
+    verified: false
+    verification_note: Read in a course-site copy of the published version (ScienceDirect captcha).
+    quote: A set S of arguments is said to be conflict-free if there are no arguments A and B in S such that A attacks B.
+- id: src-nielsen
+  kind: source
+  passage: Conflict is pairwise by construction, so an obstruction of three arguments has to be encoded as an attack by a set of arguments, as in the framework of Nielsen and Parsons [@nielsen2007].
+  evidence:
+    citation_id: nielsen2007
+    locator: abstract and Definition 1 (author copy p. 6)
+    depth: fulltext
+    verified: false
+    verification_note: Read in the archived author copy (preprint pagination); the framework reduces to Dung's when only singleton sets attack.
+    quote: we propose a generalization of the framework of Dung, which allows for sets of arguments to attack other arguments.
+- id: illus-triad
+  kind: interpretation
+  passage: Any two of the three can be held together. All three cannot.
+  rationale: With A = pushing is permissible, B = diverting is impermissible and C = (A implies diverting is permissible), each pair has a model and the three together do not; the triad is the implication chain of Section 3.2 with n = 2.
+- id: def-commitment
+  kind: definition
+  passage: A commitment is a subset $C\subseteq\Omega$, the positions that satisfy it.
+  rationale: Set-of-models semantics for commitments over a fixed space of complete positions; all later results are stated in it.
+- id: def-compatible
+  kind: definition
+  passage: A finite family of commitments is compatible when some position satisfies all of them, that is, when their intersection is nonempty.
+  rationale: Crisp joint compatibility; graded compatibility is outside the scope (stated in the final section).
+- id: def-obstruction
+  kind: definition
+  passage: An obstruction is an incompatible family whose proper subfamilies are all compatible.
+  rationale: Minimal incompatible family; equals a minimal unsatisfiable subset when commitments are constraints.
+- id: def-order
+  kind: definition
+  passage: Its obstruction order $\omega(\mathcal C)$, or order for short, is the largest number of members of an obstruction drawn from $\mathcal C$, with $\omega(\mathcal C)=1$ if every finite family from $\mathcal C$ is compatible and $\omega(\mathcal C)=\infty$ if obstructions of every size exist.
+  rationale: The paper's name for the Helly number of a class of commitments; coined term declared in metadata.
+- id: prop1
+  kind: interpretation
+  passage: '**Proposition 1** (what a $k$-wise map decides). Every finite family from $\mathcal C$ whose subfamilies of at most $k$ members are compatible is itself compatible if and only if $\omega(\mathcal C)\le k$.'
+  rationale: Proved in the passage that follows it (an incompatible family contains an obstruction; an obstruction larger than k passes the k-wise test). Equivalent to the definition of the Helly number.
+- id: jaccard-compat
+  kind: interpretation
+  passage: For a finite $\Omega$, the Jaccard distance $d_J(A,B)=1-|A\cap B|/|A\cup B|$ between two nonempty commitments is smaller than one exactly when they are compatible.
+  rationale: 'Elementary: the distance is below one iff the intersection is nonempty; the parity pair with equal distances is checked in the recorded run (tests and /theory/parity_pairs).'
+- id: prop2
+  kind: interpretation
+  passage: '**Proposition 2** (bundling commitments into positions). Let $\mathcal C^{\cap}$ be the class of finite intersections of members of $\mathcal C$, which contains every profile an atlas can describe by conjoining commitments. Then $\omega(\mathcal C^{\cap})=\omega(\mathcal C)$.'
+  rationale: Proved in the text by the private-member argument; standard for Helly numbers (Averkov 2013, eq. 3.1); checked by family enumeration for all eight Boolean classes at n = 2 (/theory/bundling).
+- id: prop3
+  kind: interpretation
+  passage: '**Proposition 3** (reading the order from positions). Let $\mathcal C$ be closed under finite intersections and let $\mathrm{cl}(A)$ be the smallest member of $\mathcal C$ containing $A$, or $\Omega$ if there is none. Then $\omega(\mathcal C)$ is the largest size of a finite set $F\subseteq\Omega$ with $\bigcap_{p\in F}\mathrm{cl}(F\setminus\{p\})=\varnothing$.'
+  rationale: Proved in the text; Hoffman's characterization for S-convex sets. The search in simulation/atlas/setsys.py implements it and agrees with direct family enumeration on 300 random set systems (tests) and on all 24 small Boolean cases.
+- id: product-lemma
+  kind: interpretation
+  passage: An obstruction therefore lies on one question, and the order of the class is the largest of the orders $\omega(\mathcal S_q)$.
+  rationale: A family of single-question commitments is incompatible iff one question's admitted answer sets have empty intersection; verified for products of exclusion and interval classes in the recorded run (/theory/single_issue_and_products).
+- id: horn-bound
+  kind: interpretation
+  passage: A minimal unsatisfiable Horn set therefore has at most one clause per issue and one negative clause, $n+1$ in all.
+  rationale: Forward-chaining argument given in the text; the computed Horn orders equal n + 1 for n = 2 to 5 (/theory/boolean).
+- id: parity-bound
+  kind: interpretation
+  passage: At most $n+1$ points of $\{0,1\}^n$ are affinely independent.
+  rationale: Standard linear algebra over GF(2); with the preceding affine-independence argument it gives order n + 1, matched by exhaustive computation for n = 2 to 5.
+- id: twolit-bound
+  kind: interpretation
+  passage: The same holds from $\neg x$ to $x$, so every unsatisfiable set of two-literal clauses has an unsatisfiable subset of at most $2n$ clauses.
+  rationale: Path-truncation argument given in the text; the computed orders equal 2n for n = 2 to 5 and the double-cycle families are verified obstructions for n up to 10. The bound is also implied by the classification of Abbasizanjani and Kullmann, credited in the text, and Lee (2009) gives the weaker 4n - 2.
+- id: mixture
+  kind: interpretation
+  passage: The order of a union of classes can exceed the orders of its parts.
+  rationale: Categorical answers (order 2) and implications (order 1) give order n + 1, proved by the chain and the Horn bound and computed for n = 2 to 5.
+- id: occupancy-lower
+  kind: interpretation
+  passage: 'One direction is immediate: if $G\subseteq S$ is such a set, the regions $\mathrm{conv}(G\setminus\{g\})$ evaluated on $S$ admit exactly $G\setminus\{g\}$, and the $|G|$ of them form an obstruction.'
+  rationale: 'Elementary: G in convex position with no other point of S in its hull; the family''s members omit one point each, so every proper subfamily keeps a point and the whole family none.'
+- id: occupancy-30
+  kind: interpretation
+  passage: Any planar map of 30 occupied positions in general position therefore has order at least six for convex commitments.
+  rationale: Combines the lower bound just proved with Heule and Scheucher's theorem that 30 points in general position contain an empty convex hexagon.
+- id: occupancy-gap
+  kind: interpretation
+  passage: A family of regions can share points of the plane and no occupied position, which marks a combination that is possible and unoccupied; on a planar map of 30 positions in general position, no check of fewer than six regions at a time can certify all such combinations.
+  rationale: Follows from Proposition 1 applied to the class of convex regions evaluated on the occupied positions, whose order is at least six.
+- id: prop4
+  kind: interpretation
+  passage: '**Proposition 4.** If $X$ is closed under a $(k+1)$-ary near-unanimity operation applied issue by issue, every family of categorical answers that is $k$-wise compatible within $X$ is compatible within $X$. For yes/no issues and $k=2$ the converse holds: if $X$ is not closed under majority, some obstruction consists of at least three categorical answers.'
+  rationale: Proved in the text from the Baker-Pixley theorem and the closure of two-literal-clause sets under majority; the k = 2 case is checked exhaustively for three issues and on 3,000 random sets for four (/theory/background_logic).
+- id: doctrinal
+  kind: interpretation
+  passage: 'The discursive dilemma of List and Pettit is the smallest case [@list2002]: with $X$ the profiles that satisfy $r\leftrightarrow(p\wedge q)$, the majority of the admissible profiles $(1,1,1)$, $(1,0,0)$ and $(0,1,0)$ is $(1,1,0)$, which is not admissible, and $\{p,q,\neg r\}$ is an obstruction of three categorical answers.'
+  rationale: Direct computation from the definition of X; the discursive dilemma is List and Pettit's (2002) generalization of the doctrinal paradox.
+- id: z-order
+  kind: interpretation
+  passage: The number $z$ is the order of the agenda's categorical answers in the sense used here.
+  rationale: Identification of Dietrich and List's z (size of the largest minimally inconsistent subset of the agenda) with the obstruction order of the class of the agenda's propositions relative to the logically possible judgment sets.
+- id: locality-differs
+  kind: interpretation
+  passage: 'The chain of the previous section is an obstruction of $n+1$ commitments, so no check of fewer commitments detects it, yet propagation over pairs of issues refutes it: the fact $x_1$ removes the answer no from $x_2$, and so on, until the commitment $\neg x_n$ leaves $x_n$ without an answer.'
+  rationale: Arc consistency on the chain empties a domain for every n from 2 to 10 in the recorded run (/theory/witnesses/arc_consistency_chain).
+- id: locality-maps
+  kind: interpretation
+  passage: A pairwise map of questions, such as a correlation network, and a pairwise map of commitments, such as a distance matrix, therefore answer different questions, and an atlas needs to say which kind of locality it relies on.
+  rationale: Consequence of the separation shown by the chain (high commitment order, issue-local refutation) and by parity (non-local in both senses).
+- id: finite-duality-step
+  kind: interpretation
+  passage: If it does, the minimal incompatible families form finitely many patterns up to renaming of issues, which in constraint satisfaction is finite duality; conversely, under finite duality every minimal incompatible family is the image of one of finitely many patterns and so has bounded size.
+  rationale: 'The paper''s own short argument: obstructions of bounded size over a finite language are finitely many up to isomorphism, and a critical obstruction is a homomorphic image of a member of any complete set of obstructions.'
+- id: prop5
+  kind: interpretation
+  passage: '**Proposition 5** (the pairwise hull). Let $S\subseteq\{0,1\}^n$ be the set of answer profiles observed in a dataset. The profiles each pair of whose answers occurs together in some observed profile form the smallest set that contains $S$ and is closed under majority. Every distribution with the pairwise marginals of the data assigns probability zero outside this set.'
+  rationale: Proved in the text from Baker-Pixley and the closure of two-literal-clause sets under majority; checked on all 255 supports over three issues and 3,000 random supports over four and five issues (/theory/pairwise_hull).
+- id: hull-xor
+  kind: interpretation
+  passage: 'The exclusive-or example is the simplest case: if the observed profiles of three answers are exactly those with an even number of yes answers, every pair of answers occurs, the hull contains all eight profiles, and no pairwise statistic can show that the four odd profiles never occur.'
+  rationale: Direct check (tests/test_atlas.py, test_background_logic_and_hull_small and test_ipf_matches_pairwise_margins_and_xor).
+- id: mixing
+  kind: interpretation
+  passage: 'Third-order structure in population data need not reflect anyone''s commitments: a population that mixes groups with different pairwise structures can show higher-order structure that no group shows.'
+  rationale: Mixtures of exponential-family distributions leave the family in general; the trolley analysis therefore stratifies by country and design conditions.
+- id: assume-endorse
+  kind: assumption
+  passage: An answer of 1 or 2 counts as endorsement.
+  rationale: Binary coding needed for exact maximum-entropy models over all answer patterns; a finer ordinal model could change the measured structure (stated in the discussion).
+- id: assume-session
+  kind: assumption
+  passage: 'The analysis keeps one complete session per participant, the first in the file in which each case was answered once: 64,988 participants.'
+  rationale: Avoids repeated participants across training and test folds; rule implemented in simulation/fetch_data.py and recorded in data/MANIFEST.json.
+- id: assume-methods
+  kind: assumption
+  passage: For each battery, maximum-entropy models of order one (independent answers), two and three were fitted with a quadratic penalty chosen by inner cross-validation, and their held-out log-likelihood was compared over five repetitions of ten-fold cross-validation.
+  rationale: Nested cross-validation with the penalty grid 0.001-0.3 (simulation/atlas/empirical.py); a different penalty family could change the size of the third-order loss.
+- id: assume-null
+  kind: assumption
+  passage: Each triplet of answers was also tested for third-order structure by the likelihood-ratio statistic of the model without a three-way interaction, with a null distribution simulated from the triplet's marginal under the fitted pairwise model of the whole battery.
+  rationale: The marginal of a pairwise model over three items can carry a small three-way term, so the null is simulated from the fitted model; the fitted model is not refitted per simulation.
+- id: interp-trolley-shape
+  kind: interpretation
+  passage: The pairwise model captures that accepting the Footbridge sacrifice goes with accepting the other two; it underestimates how rarely people accept the Footbridge sacrifice while rejecting both others.
+  rationale: Reading of the cell ratios for the patterns 001 (0.734) and 111 and of the negative three-way interaction in the recorded results.
+- id: interp-unobserved
+  kind: interpretation
+  passage: Unobserved groups of respondents, for instance inattentive ones, could still contribute to it.
+  rationale: Stratification covers countries and design conditions only; latent groups cannot be excluded with these data.
+- id: def-joint-avoidance
+  kind: definition
+  passage: Call a combination of three answers that never occurs, although each of its three pairs of answers does, a joint avoidance; it is the empirical trace of an obstruction of order three inside the pairwise hull.
+  rationale: Coined term; computed by atlas/empirical.py joint_avoidances and compared with simulations from the fitted pairwise model.
+- id: interp-survey-null
+  kind: interpretation
+  passage: The survey therefore rules out strong third-order structure among the positions it asks about. It cannot detect structure of the strength present in the trolley judgments.
+  rationale: 'Combines the null results with the power analysis: 80% power requires about 0.0194 bits per triplet, the trolley effect is 0.00489 bits and is detected with probability 0.29.'
+- id: assume-design
+  kind: assumption
+  passage: Questions answered by fewer respondents give less power.
+  rationale: The design calculation assumes all 1,785 respondents answer the three questions of a triplet; the survey's optional questions have fewer answers.
+- id: normative-record
+  kind: normative
+  passage: With order two, pairwise compatibility suffices. With order $k$, the atlas has to record compatibility of $k$ commitments at a time, or the commitments themselves together with a decision procedure.
+  rationale: 'Recommendation derived from Proposition 1: a map that records less than k-wise compatibility for a class of order k cannot decide joint compatibility for all families.'
+- id: scope-crisp
+  kind: assumption
+  passage: 'The theory concerns crisp compatibility: a family of commitments is compatible or not.'
+  rationale: All propositions use set-of-models semantics; credences and graded commitments need a different local-to-global theory.
+- id: background-vs-commitment
+  kind: interpretation
+  passage: What counts as background changes the order. With the implications $x_1\to x_2,\dots,x_{n-1}\to x_n$ as background, the answers $x_1$ and $\neg x_n$ already conflict, an obstruction of two categorical answers; when the implications are themselves commitments under examination, every obstruction contains them, and the chain has $n+1$ members.
+  rationale: The chain's implications define a majority-closed set X, so by Proposition 4 categorical answers have order at most two within X; as commitments, the chain is the order-(n+1) obstruction of Section 3.2. Both computations are in the recorded run (/theory/boolean and /theory/witnesses).
+runs:
+- id: analysis
+  required: true
+  record: verification/analysis.json

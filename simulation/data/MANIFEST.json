@@ -1,0 +1,36 @@
+{
+  "retrieved": "2026-11-15",
+  "sources": {
+    "trolley": {
+      "url": "https://osf.io/download/c2qx5/",
+      "file": "Shared_data_allResponses.csv",
+      "project": "https://osf.io/mxa6z/",
+      "sha256": "2fe26d6382d43f532f48dead25563161229e1a9d4ed5df1989851c3bdfc5f320",
+      "citation": "Awad, Dsouza, Shariff, Rahwan and Bonnefon (2020), PNAS 117(5):2332-2337",
+      "bytes": 27579816
+    },
+    "consciousness": {
+      "url": "https://osf.io/download/ze2hx/",
+      "file": "survey_jasp.csv",
+      "project": "https://osf.io/xz3ua/",
+      "sha256": "aa82da0bc0edbd37b7b1e2d4646b1c73ba71efb246776d9d0a64ae5fd4ef8e7f",
+      "citation": "Francken, Beerendonk, Molenaar, Fahrenfort, Kiverstein, Seth and van Gaal (2022), Neuroscience of Consciousness 2022(1):niac011",
+      "bytes": 99454
+    }
+  },
+  "derived": {
+    "trolley_first_sessions.csv": {
+      "sessions_complete_single_answer": 71299,
+      "participants_used": 64988,
+      "participants_dropped_inconsistent_session_fields": 23,
+      "rule": "first complete session per UserID in file order; sessions with a repeated answer to any dilemma excluded; Outcome 1 = the sacrifice was accepted; order = presentation order by Scenario_order (S, L, F initials); sacrifice side = L when answerLeft equals Outcome",
+      "sha256": "58aad63805e2ec8eb49a3a33670a126d518a75fe0767484916077990dd3ce4b3"
+    },
+    "consciousness_items.csv": {
+      "respondents": 307,
+      "rule": "columns copied verbatim; participant numbers dropped; assc 1 = attended ASSC",
+      "sha256": "7509c8d191462e9abab8452d2331bdee367c205f6b0898b3d3cbf4e04e338468"
+    }
+  },
+  "licence_note": "Neither OSF project states a licence. The derived files are kept for reproduction with attribution to the original authors."
+}

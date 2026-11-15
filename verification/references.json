@@ -1,0 +1,2832 @@
+{
+  "schema": 1,
+  "references_sha256": "2db291433cef7b7c7cffe3b4f1f060b24d5c10e1406508d90d5dd4aed852e134",
+  "bibliography_inputs": {
+    "references.yaml": "2db291433cef7b7c7cffe3b4f1f060b24d5c10e1406508d90d5dd4aed852e134"
+  },
+  "entries": [
+    {
+      "id": "helly1923",
+      "doi": null,
+      "outcome": "unverified",
+      "compared_fields": {},
+      "registry": null,
+      "fetched_at": "2026-11-15T13:31:03.033548+00:00",
+      "record_sha256": null,
+      "suggestions": [
+        {
+          "DOI": "10.1007/bf01696777",
+          "title": [
+            "Über Systeme von abgeschlossenen Mengen mit gemeinschaftlichen Punkten"
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1515/9783112727553-010",
+          "title": [
+            "9. Trennung konvexer Mengen"
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1515/9783112727553-013",
+          "title": [
+            "12. Asymptotische Berührung konvexer Mengen"
+          ],
+          "registry": "Crossref"
+        }
+      ],
+      "message": "no DOI; identity reviewed by the referee",
+      "unverified_reason": "no_doi"
+    },
+    {
+      "id": "danzer1963",
+      "doi": "10.1090/pspum/007/0157289",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Helly's theorem and its relatives",
+          "registry": [
+            "Helly’s theorem and its relatives"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "danzer",
+          "registry": "danzer",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1963
+          ],
+          "registry": [
+            1963,
+            1963,
+            1963
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Convexity",
+          "registry": [
+            "Proceedings of Symposia in Pure Mathematics",
+            "Convexity"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "101-180",
+          "registry": "101-180",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:03.662150+00:00",
+      "record_sha256": "f433a6bd8f7718a841e99364f0ceb02418c2684700f24bbe1d9ea5d59b81b8d6",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "doignon1973",
+      "doi": "10.1007/BF01949705",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Convexity in cristallographical lattices",
+          "registry": [
+            "Convexity in cristallographical lattices"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "doignon",
+          "registry": "doignon",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1973
+          ],
+          "registry": [
+            1973,
+            1973,
+            1973
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Geometry",
+          "registry": [
+            "Journal of Geometry"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "71-85",
+          "registry": "71-85",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:04.288242+00:00",
+      "record_sha256": "ba25f44b9d5a8d7e17acbe37d895348196b36dbca8e30bea3c6ca54e8f9550ae",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "averkov2013",
+      "doi": "10.1137/110850463",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "On maximal $S$-free sets and the Helly number for the family of $S$-convex sets",
+          "registry": [
+            "On Maximal $S$-Free Sets and the Helly Number for the Family of $S$-Convex Sets"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "averkov",
+          "registry": "averkov",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2013
+          ],
+          "registry": [
+            2013,
+            2013,
+            2013,
+            2013
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "SIAM Journal on Discrete Mathematics",
+          "registry": [
+            "SIAM Journal on Discrete Mathematics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "27",
+          "registry": "27",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "1610-1624",
+          "registry": "1610-1624",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:04.843654+00:00",
+      "record_sha256": "99516666f9ff9a3489051aa792ec6f9f91b97209c9b7188701d6503f8582d392",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "hoffman1979",
+      "doi": "10.1111/j.1749-6632.1979.tb32803.x",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Binding constraints and Helly numbers",
+          "registry": [
+            "BINDING CONSTRAINTS AND HELLY NUMBERS"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "hoffman",
+          "registry": "hoffman",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1979
+          ],
+          "registry": [
+            1979,
+            1979,
+            1979,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Annals of the New York Academy of Sciences",
+          "registry": [
+            "Annals of the New York Academy of Sciences"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "319",
+          "registry": "319",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "284-288",
+          "registry": "284-288",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:05.399317+00:00",
+      "record_sha256": "32c5320b37020014e789cb264679f6716a3093f93568f25abce203b60c29cc2e",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "amenta2017",
+      "doi": "10.1090/conm/685/13718",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Helly's theorem: New variations and applications",
+          "registry": [
+            "Helly’s theorem: New variations and applications"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "amenta",
+          "registry": "amenta",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2017
+          ],
+          "registry": [
+            2017,
+            2017,
+            2017
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Algebraic and Geometric Methods in Discrete Mathematics",
+          "registry": [
+            "Contemporary Mathematics",
+            "Algebraic and Geometric Methods in Discrete Mathematics"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "55-95",
+          "registry": "55-95",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:06.236434+00:00",
+      "record_sha256": "2da1342ab7607b87e9a55094c0db1ba7381b49da8ab4bcb167c28b73995c540f",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "harborth1978",
+      "doi": null,
+      "outcome": "unverified",
+      "compared_fields": {},
+      "registry": null,
+      "fetched_at": "2026-11-15T13:31:07.554502+00:00",
+      "record_sha256": null,
+      "suggestions": [
+        {
+          "DOI": "10.1007/bf03326404",
+          "title": [
+            "Über konvexe Punktmengen konstanter Breite"
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1515/crll.1931.165.4",
+          "title": [
+            "Über den transfiniten Durchmesser (Kapazitätskonstante) von ebenen und räumlichen Punktmengen."
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1007/bf02928845",
+          "title": [
+            "Demographic implications of autocentric development"
+          ],
+          "registry": "Crossref"
+        }
+      ],
+      "message": "no DOI; identity reviewed by the referee",
+      "unverified_reason": "no_doi"
+    },
+    {
+      "id": "horton1983",
+      "doi": "10.4153/CMB-1983-077-8",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Sets with no empty convex 7-gons",
+          "registry": [
+            "Sets with No Empty Convex 7-Gons"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "horton",
+          "registry": "horton",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1983
+          ],
+          "registry": [
+            1983,
+            1983,
+            1983,
+            2018
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Canadian Mathematical Bulletin",
+          "registry": [
+            "Canadian Mathematical Bulletin"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "26",
+          "registry": "26",
+          "match": true
+        },
+        "issue": {
+          "reference": "4",
+          "registry": "4",
+          "match": true
+        },
+        "page": {
+          "reference": "482-484",
+          "registry": "482-484",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:08.232491+00:00",
+      "record_sha256": "072a40a517980fe85b93c98fd240ffc38114c9658b5bafe8e4dbb811cb2a7e43",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "heule2024",
+      "doi": "10.1007/978-3-031-57246-3_5",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Happy ending: An empty hexagon in every set of 30 points",
+          "registry": [
+            "Happy Ending: An Empty Hexagon in Every Set of 30 Points"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "heule",
+          "registry": "heule",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2024
+          ],
+          "registry": [
+            2024,
+            2024,
+            2024,
+            2024
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Tools and Algorithms for the Construction and Analysis of Systems: TACAS 2024",
+          "registry": [
+            "Lecture Notes in Computer Science",
+            "Tools and Algorithms for the Construction and Analysis of Systems"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "61-80",
+          "registry": "61-80",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:09.013234+00:00",
+      "record_sha256": "6c55b370ffad7bfa75e87ceb0c92ea73bac9a4973f5df3c4af1ca4ce13bd8923",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "balogh2013",
+      "doi": "10.1016/j.comgeo.2012.11.004",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Large convex holes in random point sets",
+          "registry": [
+            "Large convex holes in random point sets"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "balogh",
+          "registry": "balogh",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2013
+          ],
+          "registry": [
+            2013,
+            2013,
+            2013
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Computational Geometry",
+          "registry": [
+            "Computational Geometry"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "46",
+          "registry": "46",
+          "match": true
+        },
+        "issue": {
+          "reference": "6",
+          "registry": "6",
+          "match": true
+        },
+        "page": {
+          "reference": "725-733",
+          "registry": "725-733",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:09.586588+00:00",
+      "record_sha256": "c6f97fc32e02af83e4eeff93751d89ba3b2fe184e7df74f14c26be6af8196b2c",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "gardenfors2000",
+      "doi": "10.7551/mitpress/2076.001.0001",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Conceptual Spaces: The Geometry of Thought",
+          "registry": [
+            "Conceptual Spaces"
+          ],
+          "registry_subtitle": [
+            "The Geometry of Thought"
+          ],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "gardenfors",
+          "registry": "gardenfors",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2000
+          ],
+          "registry": [
+            2000,
+            2000,
+            2000
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": null,
+          "registry": [],
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:10.147933+00:00",
+      "record_sha256": "3edfbf93dd46726a21753241172b7073c881dabfde9e9f2584cef598dcbe58ec",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "larose2007",
+      "doi": "10.2168/LMCS-3(4:6)2007",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "A characterisation of first-order constraint satisfaction problems",
+          "registry": [
+            "A Characterisation of First-Order Constraint Satisfaction Problems"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "larose",
+          "registry": "larose",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2007
+          ],
+          "registry": [
+            2007,
+            2007,
+            2007
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Logical Methods in Computer Science",
+          "registry": [
+            "Logical Methods in Computer Science"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "3",
+          "registry": "Volume 3, Issue 4",
+          "match": false
+        },
+        "issue": {
+          "reference": "4",
+          "registry": null,
+          "match": false
+        },
+        "page": {
+          "reference": "1-22",
+          "registry": null,
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:10.959558+00:00",
+      "record_sha256": "2c8fb1b12ca662afec5ec3640a1641ebbc1b345775c59c5c0ffe2bd2cda250bb",
+      "suggestions": [],
+      "message": "different fields: volume, issue, page"
+    },
+    {
+      "id": "aspvall1979",
+      "doi": "10.1016/0020-0190(79)90002-4",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "A linear-time algorithm for testing the truth of certain quantified boolean formulas",
+          "registry": [
+            "A linear-time algorithm for testing the truth of certain quantified boolean formulas"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "aspvall",
+          "registry": "aspvall",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1979
+          ],
+          "registry": [
+            1979,
+            1979,
+            1979
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Information Processing Letters",
+          "registry": [
+            "Information Processing Letters"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "8",
+          "registry": "8",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "121-123",
+          "registry": "121-123",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:11.540628+00:00",
+      "record_sha256": "ed2c0e416ed950ed1e1e9f702eee2817234b8696875c35a1aa931db10d087728",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "baker1975",
+      "doi": "10.1007/BF01187059",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Polynomial interpolation and the Chinese remainder theorem for algebraic systems",
+          "registry": [
+            "Polynomial interpolation and the Chinese Remainder Theorem for algebraic systems"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "baker",
+          "registry": "baker",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1975
+          ],
+          "registry": [
+            1975,
+            1975,
+            1975
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Mathematische Zeitschrift",
+          "registry": [
+            "Mathematische Zeitschrift"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "143",
+          "registry": "143",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "165-174",
+          "registry": "165-174",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:12.172430+00:00",
+      "record_sha256": "ea5fe761c5dc947350cf01b300f51edad5cafb4cb9c7676bf0cf09b04bf572d2",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "jeavons1998",
+      "doi": "10.1016/S0004-3702(98)00022-8",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Constraints, consistency and closure",
+          "registry": [
+            "Constraints, consistency and closure"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "jeavons",
+          "registry": "jeavons",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1998
+          ],
+          "registry": [
+            1998,
+            1998,
+            1998
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Artificial Intelligence",
+          "registry": [
+            "Artificial Intelligence"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "101",
+          "registry": "101",
+          "match": true
+        },
+        "issue": {
+          "reference": "1-2",
+          "registry": "1-2",
+          "match": true
+        },
+        "page": {
+          "reference": "251-265",
+          "registry": "251-265",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:12.767306+00:00",
+      "record_sha256": "b1f97619ad7c9448a52d9434abae509bf6cc4e047f4e43a0b232b1bdab0c1d0c",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "feder1998",
+      "doi": "10.1137/S0097539794266766",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The computational structure of monotone monadic SNP and constraint satisfaction: A study through Datalog and group theory",
+          "registry": [
+            "The Computational Structure of Monotone Monadic SNP and Constraint Satisfaction: A Study through Datalog and Group Theory"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "feder",
+          "registry": "feder",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1998
+          ],
+          "registry": [
+            1998,
+            1998,
+            1998,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "SIAM Journal on Computing",
+          "registry": [
+            "SIAM Journal on Computing"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "28",
+          "registry": "28",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "57-104",
+          "registry": "57-104",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:13.327520+00:00",
+      "record_sha256": "2424898c35265c056dbe3dbcc994eca887433c3f22ccb01d998c54f6add1aa14",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "barto2014",
+      "doi": "10.1145/2556646",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Constraint satisfaction problems solvable by local consistency methods",
+          "registry": [
+            "Constraint Satisfaction Problems Solvable by Local Consistency Methods"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "barto",
+          "registry": "barto",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2014
+          ],
+          "registry": [
+            2014,
+            2014,
+            2014,
+            2014
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of the ACM",
+          "registry": [
+            "Journal of the ACM"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "61",
+          "registry": "61",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "1-19",
+          "registry": "1-19",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:13.894913+00:00",
+      "record_sha256": "6d2edca60c423a6633d1f08540b14d61edce1eeba091f7c5e1e4c1310e938de7",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "schaefer1978",
+      "doi": "10.1145/800133.804350",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "The complexity of satisfiability problems",
+          "registry": [
+            "The complexity of satisfiability problems"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "schaefer",
+          "registry": "schaefer",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1978
+          ],
+          "registry": [
+            1978,
+            1978,
+            1978
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Proceedings of the Tenth Annual ACM Symposium on Theory of Computing",
+          "registry": [
+            "Proceedings of the tenth annual ACM symposium on Theory of computing  - STOC '78"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "216-226",
+          "registry": "216-226",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:14.464856+00:00",
+      "record_sha256": "8421a9072dc97d63824bacd682030eff5ba34bb54096c1693869a57ab2f33c0e",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "chen2006",
+      "doi": "10.1145/1189056.1189076",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "A rendezvous of logic, complexity, and algebra",
+          "registry": [
+            "A rendezvous of logic, complexity, and algebra"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "chen",
+          "registry": "chen",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2006
+          ],
+          "registry": [
+            2006,
+            2006,
+            2006,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "ACM SIGACT News",
+          "registry": [
+            "ACM SIGACT News"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "37",
+          "registry": "37",
+          "match": true
+        },
+        "issue": {
+          "reference": "4",
+          "registry": "4",
+          "match": true
+        },
+        "page": {
+          "reference": "85-114",
+          "registry": "85-114",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:15.035262+00:00",
+      "record_sha256": "a4f2ebdef315535b07024efbc13bf46ceb0edae9192a3d023535f4d7f899469b",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "beeri1983",
+      "doi": "10.1145/2402.322389",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "On the desirability of acyclic database schemes",
+          "registry": [
+            "On the Desirability of Acyclic Database Schemes"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "beeri",
+          "registry": "beeri",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1983
+          ],
+          "registry": [
+            1983,
+            1983,
+            1983,
+            1983
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of the ACM",
+          "registry": [
+            "Journal of the ACM"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "30",
+          "registry": "30",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "479-513",
+          "registry": "479-513",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:15.737062+00:00",
+      "record_sha256": "2718fdf119c2ff821093d1aa5f632ae4c0521858e12566429879d24281dfcbcb",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "vorobev1962",
+      "doi": "10.1137/1107014",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Consistent families of measures and their extensions",
+          "registry": [
+            "Consistent Families of Measures and Their Extensions"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "vorob ev",
+          "registry": "vorob ev",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1962
+          ],
+          "registry": [
+            1962,
+            1962,
+            1962,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Theory of Probability and Its Applications",
+          "registry": [
+            "Theory of Probability &amp; Its Applications"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": "7",
+          "registry": "7",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "147-163",
+          "registry": "147-163",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:16.407509+00:00",
+      "record_sha256": "1ca865513ae6e3ec16742a663cd88d4a28ac64d9bfdc2a3097103495e6b27d40",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "abramsky2011",
+      "doi": "10.1088/1367-2630/13/11/113036",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The sheaf-theoretic structure of non-locality and contextuality",
+          "registry": [
+            "The sheaf-theoretic structure of non-locality and contextuality"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "abramsky",
+          "registry": "abramsky",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2011
+          ],
+          "registry": [
+            2011,
+            2011,
+            2011
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "New Journal of Physics",
+          "registry": [
+            "New Journal of Physics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "13",
+          "registry": "13",
+          "match": true
+        },
+        "issue": {
+          "reference": "11",
+          "registry": "11",
+          "match": true
+        },
+        "page": {
+          "reference": "113036",
+          "registry": "113036",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:17.045960+00:00",
+      "record_sha256": "41c8a3f7e3c9ace4f2e5564e2e2bdef3c989deb33d9963937cf3573f89bb76fb",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "reiter1987",
+      "doi": "10.1016/0004-3702(87)90062-2",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "A theory of diagnosis from first principles",
+          "registry": [
+            "A theory of diagnosis from first principles"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "reiter",
+          "registry": "reiter",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1987
+          ],
+          "registry": [
+            1987,
+            1987,
+            1987
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Artificial Intelligence",
+          "registry": [
+            "Artificial Intelligence"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "32",
+          "registry": "32",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "57-95",
+          "registry": "57-95",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:17.604806+00:00",
+      "record_sha256": "dce0064e8870d7d8756f461d0afbb2b9854204706fe63588e02b63cf11494ccd",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "hansson1994",
+      "doi": "10.2307/2275912",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Kernel contraction",
+          "registry": [
+            "Kernel contraction"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "hansson",
+          "registry": "hansson",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1994
+          ],
+          "registry": [
+            1994,
+            1994,
+            1994,
+            2014
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Symbolic Logic",
+          "registry": [
+            "Journal of Symbolic Logic"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "59",
+          "registry": "59",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "845-859",
+          "registry": "845-859",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:18.179878+00:00",
+      "record_sha256": "976d5c7d4b17514b2b519bfa3365135ffb19b63a08ae0e2dd84eb5379c7b48ac",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "liffiton2008",
+      "doi": "10.1007/s10817-007-9084-z",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Algorithms for computing minimal unsatisfiable subsets of constraints",
+          "registry": [
+            "Algorithms for Computing Minimal Unsatisfiable Subsets of Constraints"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "liffiton",
+          "registry": "liffiton",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2008
+          ],
+          "registry": [
+            2007,
+            2007,
+            2008,
+            2007
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Automated Reasoning",
+          "registry": [
+            "Journal of Automated Reasoning"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "40",
+          "registry": "40",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "1-33",
+          "registry": "1-33",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:18.867285+00:00",
+      "record_sha256": "202cbd9c9e8f8e3182a307b7cd65722eaeeb729bdb1f3580b8885a777065b270",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "dung1995",
+      "doi": "10.1016/0004-3702(94)00041-X",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games",
+          "registry": [
+            "On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "dung",
+          "registry": "dung",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1995
+          ],
+          "registry": [
+            1995,
+            1995,
+            1995
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Artificial Intelligence",
+          "registry": [
+            "Artificial Intelligence"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "77",
+          "registry": "77",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "321-357",
+          "registry": "321-357",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:19.527065+00:00",
+      "record_sha256": "d2274215b0a200c3baddd059d7e34234fd4bd28c051303a78bb7372484fb4860",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "nielsen2007",
+      "doi": "10.1007/978-3-540-75526-5_4",
+      "outcome": "unverified",
+      "compared_fields": {
+        "title": {
+          "reference": "A generalization of Dung's abstract framework for argumentation: Arguing with sets of attacking arguments",
+          "registry": [
+            "A Generalization of Dung’s Abstract Framework for Argumentation: Arguing with Sets of Attacking Arguments"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "nielsen",
+          "registry": "nielsen",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2007
+          ],
+          "registry": [],
+          "match": false
+        },
+        "container-title": {
+          "reference": "Argumentation in Multi-Agent Systems: Third International Workshop, ArgMAS 2006",
+          "registry": [
+            "Lecture Notes in Computer Science",
+            "Argumentation in Multi-Agent Systems"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "54-73",
+          "registry": "54-73",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:21.666849+00:00",
+      "record_sha256": "5934186aab054c789862db509ccb9b4a235ddd191b6ca06794cf32cbe32377a9",
+      "suggestions": [
+        {
+          "DOI": "10.1007/978-3-540-75526-5_4",
+          "title": [
+            "A Generalization of Dung’s Abstract Framework for Argumentation: Arguing with Sets of Attacking Arguments"
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1016/j.artint.2026.104558",
+          "title": [
+            "Sets attacking sets in abstract argumentation – redefining ABA+ semantics via hyper argumentation frameworks"
+          ],
+          "registry": "Crossref"
+        },
+        {
+          "DOI": "10.1080/00028533.1977.11951099",
+          "title": [
+            "Characteristics of Arguments and Arguing"
+          ],
+          "registry": "Crossref"
+        }
+      ],
+      "message": "unverified: identity comparison lacks a title, first author or publication year; rerun papers refs --verify --refresh",
+      "unverified_reason": "registry_unverified"
+    },
+    {
+      "id": "list2002",
+      "doi": "10.1017/S0266267102001098",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Aggregating sets of judgments: An impossibility result",
+          "registry": [
+            "Aggregating Sets of Judgments: An Impossibility Result"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "list",
+          "registry": "list",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2002
+          ],
+          "registry": [
+            2002,
+            2002,
+            2002,
+            2002
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Economics and Philosophy",
+          "registry": [
+            "Economics and Philosophy"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "18",
+          "registry": "18",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "89-110",
+          "registry": "89-110",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:22.233811+00:00",
+      "record_sha256": "d519862d44dd7326f77662b71057087c467f9f6ae055c9b1aad6e293b7ceb41c",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "nehring2007",
+      "doi": "10.1016/j.jet.2006.04.008",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The structure of strategy-proof social choice. Part I: General characterization and possibility results on median spaces",
+          "registry": [
+            "The structure of strategy-proof social choice — Part I: General characterization and possibility results on median spaces"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "nehring",
+          "registry": "nehring",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2007
+          ],
+          "registry": [
+            2007,
+            2007,
+            2007
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Economic Theory",
+          "registry": [
+            "Journal of Economic Theory"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "135",
+          "registry": "135",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "269-305",
+          "registry": "269-305",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:22.877902+00:00",
+      "record_sha256": "7579b2b3bba9e5c4e0aee6ec674d6fb35189377ea597a17bc879cd72b74f06f6",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "dietrich2007",
+      "doi": "10.1177/0951629807080775",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Judgment aggregation by quota rules: Majority voting generalized",
+          "registry": [
+            "Judgment Aggregation By Quota Rules"
+          ],
+          "registry_subtitle": [
+            "Majority Voting Generalized"
+          ],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "dietrich",
+          "registry": "dietrich",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2007
+          ],
+          "registry": [
+            2007,
+            2007,
+            2007,
+            2007
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Theoretical Politics",
+          "registry": [
+            "Journal of Theoretical Politics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "19",
+          "registry": "19",
+          "match": true
+        },
+        "issue": {
+          "reference": "4",
+          "registry": "4",
+          "match": true
+        },
+        "page": {
+          "reference": "391-424",
+          "registry": "391-424",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:23.516125+00:00",
+      "record_sha256": "40c69697274b4ac0c43e7f41f2b17894c554539735f2a5402af10195f80be3ce",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "greenberg1979",
+      "doi": "10.2307/1910410",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Consistent majority rules over compact sets of alternatives",
+          "registry": [
+            "Consistent Majority Rules over Compact Sets of Alternatives"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "greenberg",
+          "registry": "greenberg",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1979
+          ],
+          "registry": [
+            1979,
+            1979,
+            1979
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Econometrica",
+          "registry": [
+            "Econometrica"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "47",
+          "registry": "47",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "627-636",
+          "registry": "627",
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:24.084926+00:00",
+      "record_sha256": "88aeb5a4fb2ceea4aea69c2f0b8738bf9ae25b4adb79feb7eea1f234afe1b16b",
+      "suggestions": [],
+      "message": "different fields: page"
+    },
+    {
+      "id": "rescher2009",
+      "doi": "10.2307/j.ctt6wrbsj",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Aporetics: Rational Deliberation in the Face of Inconsistency",
+          "registry": [
+            "Aporetics"
+          ],
+          "registry_subtitle": [
+            "Rational Deliberation in the Face of Inconsistency"
+          ],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "rescher",
+          "registry": "rescher",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2009
+          ],
+          "registry": [
+            2009,
+            2009,
+            2009
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": null,
+          "registry": [],
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:24.722139+00:00",
+      "record_sha256": "72eb6e55ba52aacba6574d5338a364be116124f6dec950b6c8e346481e5a4863",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "lee2009",
+      "doi": "10.37236/241",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "On the size of minimal unsatisfiable formulas",
+          "registry": [
+            "On the Size of Minimal Unsatisfiable Formulas"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "lee",
+          "registry": "lee",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2009
+          ],
+          "registry": [
+            2009,
+            2009,
+            2009
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "The Electronic Journal of Combinatorics",
+          "registry": [
+            "The Electronic Journal of Combinatorics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "16",
+          "registry": "16",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "N3",
+          "registry": null,
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:25.433224+00:00",
+      "record_sha256": "30dda37c36a84a2eaa2c1747c01f93abc5d8bc07a323c811918476ec9275348e",
+      "suggestions": [],
+      "message": "different fields: page"
+    },
+    {
+      "id": "abbasizanjani2020",
+      "doi": "10.48550/arXiv.2003.03639",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The classification of minimally unsatisfiable 2-CNFs: A fundamental study",
+          "registry": [
+            "The classification of minimally unsatisfiable 2-CNFs -- a fundamental study"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "abbasizanjani",
+          "registry": "abbasizanjani",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2020
+          ],
+          "registry": [
+            2020
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": null,
+          "registry": "",
+          "match": true
+        }
+      },
+      "registry": "DataCite",
+      "fetched_at": "2026-11-15T13:31:25.984623+00:00",
+      "record_sha256": "ac4713495fd6f5cdea642dbf5ecacb7cfdaa27a4ae950f8a4b331e9388d93e3e",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "bourget2014",
+      "doi": "10.1007/s11098-013-0259-7",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "What do philosophers believe?",
+          "registry": [
+            "What do philosophers believe?"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "bourget",
+          "registry": "bourget",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2014
+          ],
+          "registry": [
+            2013,
+            2013,
+            2014,
+            2013
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Philosophical Studies",
+          "registry": [
+            "Philosophical Studies"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "170",
+          "registry": "170",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "465-500",
+          "registry": "465-500",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:26.639084+00:00",
+      "record_sha256": "0225a2d82145fb4fd85c6e897491cef41bed7ec086e1940d3a7c433741633c2b",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "bourget2023",
+      "doi": "10.3998/phimp.2109",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Philosophers on philosophy: The 2020 PhilPapers survey",
+          "registry": [
+            "Philosophers on Philosophy: The 2020 PhilPapers Survey"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "bourget",
+          "registry": "bourget",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2023
+          ],
+          "registry": [
+            2023,
+            2023,
+            2023
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Philosophers' Imprint",
+          "registry": [
+            "Philosophers' Imprint"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "23",
+          "registry": "23",
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": "1",
+          "match": false
+        },
+        "page": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:27.239884+00:00",
+      "record_sha256": "3b7ca50dcabf356835c56b801341fbf5bf1b42bb8a57946e83bb498aadca458e",
+      "suggestions": [],
+      "message": "different fields: issue"
+    },
+    {
+      "id": "noichl2021",
+      "doi": "10.1007/s11229-019-02390-8",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Modeling the structure of recent philosophy",
+          "registry": [
+            "Modeling the structure of recent philosophy"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "noichl",
+          "registry": "noichl",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2021
+          ],
+          "registry": [
+            2019,
+            2019,
+            2021,
+            2019
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Synthese",
+          "registry": [
+            "Synthese"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "198",
+          "registry": "198",
+          "match": true
+        },
+        "issue": {
+          "reference": "6",
+          "registry": "6",
+          "match": true
+        },
+        "page": {
+          "reference": "5089-5100",
+          "registry": "5089-5100",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:28.019713+00:00",
+      "record_sha256": "881417b7273df4fbeb02e1f2edae4a2445c2956f6e953d398e59e2b4d064722e",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "malaterre2019",
+      "doi": "10.1086/704372",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "What is this thing called *Philosophy of Science*? A computational topic-modeling perspective, 1934–2015",
+          "registry": [
+            "What Is This Thing Called\n                    <i>Philosophy of Science</i>\n                    ? A Computational Topic-Modeling Perspective, 1934–2015"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "malaterre",
+          "registry": "malaterre",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2019
+          ],
+          "registry": [
+            2019,
+            2019,
+            2019
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "HOPOS: The Journal of the International Society for the History of Philosophy of Science",
+          "registry": [
+            "HOPOS: The Journal of the International Society for the History of Philosophy of Science"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "9",
+          "registry": "9",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "215-249",
+          "registry": "215-249",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:28.588935+00:00",
+      "record_sha256": "e155c32bda37f7cdab0e1ee373b69b845df9f695d673d34b4418a1a69421a718",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "weatherson2022",
+      "doi": "10.3998/mpub.12251719",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "A History of Philosophy Journals, Volume 1: Evidence from Topic Modeling, 1876–2013",
+          "registry": [
+            "A History of Philosophy Journals, Volume 1"
+          ],
+          "registry_subtitle": [
+            "Evidence from Topic Modeling, 1876–2013"
+          ],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "weatherson",
+          "registry": "weatherson",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2022
+          ],
+          "registry": [
+            2022,
+            2022,
+            2022
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": null,
+          "registry": [],
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:29.332954+00:00",
+      "record_sha256": "71c4874c0780396403fe62f20aa25ab0c8dd2ec395994a366e237b8edcfc0bc9",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "shi2026",
+      "doi": "10.1145/3805689.3806760",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The collapse of heterogeneity in silicon philosophers",
+          "registry": [
+            "The Collapse of Heterogeneity in Silicon Philosophers"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "shi",
+          "registry": "shi",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2026
+          ],
+          "registry": [
+            2026,
+            2026,
+            2026,
+            2026
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency",
+          "registry": [
+            "Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "6280-6304",
+          "registry": "6280-6304",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:29.893232+00:00",
+      "record_sha256": "f86c1902a037d5317b1eb57d9703d4bab962e84c9c0472c9e6e7aa8b13236eb6",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "schneidman2003",
+      "doi": "10.1103/PhysRevLett.91.238701",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Network information and connected correlations",
+          "registry": [
+            "Network Information and Connected Correlations"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "schneidman",
+          "registry": "schneidman",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2003
+          ],
+          "registry": [
+            2003,
+            2003,
+            2003
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Physical Review Letters",
+          "registry": [
+            "Physical Review Letters"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "91",
+          "registry": "91",
+          "match": true
+        },
+        "issue": {
+          "reference": "23",
+          "registry": "23",
+          "match": true
+        },
+        "page": {
+          "reference": "238701",
+          "registry": null,
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:30.472919+00:00",
+      "record_sha256": "619eadb8c774ad7b80be0e7c7a11052e4f92cc4c8c64e560cd7198828e6b9c2b",
+      "suggestions": [],
+      "message": "different fields: page"
+    },
+    {
+      "id": "schneidman2006",
+      "doi": "10.1038/nature04701",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Weak pairwise correlations imply strongly correlated network states in a neural population",
+          "registry": [
+            "Weak pairwise correlations imply strongly correlated network states in a neural population"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "schneidman",
+          "registry": "schneidman",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2006
+          ],
+          "registry": [
+            2006,
+            2006,
+            2006,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Nature",
+          "registry": [
+            "Nature"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "440",
+          "registry": "440",
+          "match": true
+        },
+        "issue": {
+          "reference": "7087",
+          "registry": "7087",
+          "match": true
+        },
+        "page": {
+          "reference": "1007-1012",
+          "registry": "1007-1012",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:31.246507+00:00",
+      "record_sha256": "b1c3b71bec7fe985b3db238cd63f7ec4be4e2b72ada7645512da789d914b9f7d",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "amari2001",
+      "doi": "10.1109/18.930911",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Information geometry on hierarchy of probability distributions",
+          "registry": [
+            "Information geometry on hierarchy of probability distributions"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "amari",
+          "registry": "amari",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2001
+          ],
+          "registry": [
+            2001,
+            2001,
+            2001
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "IEEE Transactions on Information Theory",
+          "registry": [
+            "IEEE Transactions on Information Theory"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "47",
+          "registry": "47",
+          "match": true
+        },
+        "issue": {
+          "reference": "5",
+          "registry": "5",
+          "match": true
+        },
+        "page": {
+          "reference": "1701-1711",
+          "registry": "1701-1711",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:31.810565+00:00",
+      "record_sha256": "393ee81ea93bb6f31a299164790ad5842bbdd3c9971110be1a7e945915f74d7b",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "darroch1972",
+      "doi": "10.1214/aoms/1177692379",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Generalized iterative scaling for log-linear models",
+          "registry": [
+            "Generalized Iterative Scaling for Log-Linear Models"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "darroch",
+          "registry": "darroch",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1972
+          ],
+          "registry": [
+            1972,
+            1972,
+            1972
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "The Annals of Mathematical Statistics",
+          "registry": [
+            "The Annals of Mathematical Statistics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "43",
+          "registry": "43",
+          "match": true
+        },
+        "issue": {
+          "reference": "5",
+          "registry": "5",
+          "match": true
+        },
+        "page": {
+          "reference": "1470-1480",
+          "registry": "1470-1480",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:32.461947+00:00",
+      "record_sha256": "7522af2a5ff4cdc9feb0a5dec91a2f1759bfd9db2901917fa43b5e6d85e8f3c0",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "awad2020",
+      "doi": "10.1073/pnas.1911517117",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Universals and variations in moral decisions made in 42 countries by 70,000 participants",
+          "registry": [
+            "Universals and variations in moral decisions made in 42 countries by 70,000 participants"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "awad",
+          "registry": "awad",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2020
+          ],
+          "registry": [
+            2020,
+            2020,
+            2020,
+            2020
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Proceedings of the National Academy of Sciences",
+          "registry": [
+            "Proceedings of the National Academy of Sciences"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "117",
+          "registry": "117",
+          "match": true
+        },
+        "issue": {
+          "reference": "5",
+          "registry": "5",
+          "match": true
+        },
+        "page": {
+          "reference": "2332-2337",
+          "registry": "2332-2337",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:33.239048+00:00",
+      "record_sha256": "9a7cf379e12d8b2e3f2ae724f8a71a15640c7da7796785c181a602ca6a538bdc",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "francken2022",
+      "doi": "10.1093/nc/niac011",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "An academic survey on theoretical foundations, common assumptions and the current state of consciousness science",
+          "registry": [
+            "An academic survey on theoretical foundations, common assumptions and the current state of consciousness science"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "francken",
+          "registry": "francken",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2022
+          ],
+          "registry": [
+            2022,
+            2022,
+            2022,
+            2022
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Neuroscience of Consciousness",
+          "registry": [
+            "Neuroscience of Consciousness"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "2022",
+          "registry": "2022",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "niac011",
+          "registry": null,
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:33.917085+00:00",
+      "record_sha256": "a2da38dbe4e1c4eb0547a3b24826b7db7e760873ce0e764330011bc7ea886e50",
+      "suggestions": [],
+      "message": "different fields: page"
+    },
+    {
+      "id": "thomson1985",
+      "doi": "10.2307/796133",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "The trolley problem",
+          "registry": [
+            "The Trolley Problem"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "thomson",
+          "registry": "thomson",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1985
+          ],
+          "registry": [
+            1985,
+            1985,
+            1985
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "The Yale Law Journal",
+          "registry": [
+            "The Yale Law Journal"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "94",
+          "registry": "94",
+          "match": true
+        },
+        "issue": {
+          "reference": "6",
+          "registry": "6",
+          "match": true
+        },
+        "page": {
+          "reference": "1395-1415",
+          "registry": "1395",
+          "match": false
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:34.477952+00:00",
+      "record_sha256": "3437533ab1d1836bf45a53679c499538e3ba0b118b5faaf64da94604a3f9d30a",
+      "suggestions": [],
+      "message": "different fields: page"
+    },
+    {
+      "id": "foot2002",
+      "doi": "10.1093/0199252866.003.0002",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The problem of abortion and the doctrine of the double effect",
+          "registry": [
+            "The Problem of Abortion and the Doctrine of the Double Effect"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "foot",
+          "registry": "foot",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2002,
+            1967
+          ],
+          "registry": [
+            2002,
+            2002,
+            2002
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Virtues and Vices",
+          "registry": [
+            "Virtues and Vices"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "issue": {
+          "reference": null,
+          "registry": null,
+          "match": true
+        },
+        "page": {
+          "reference": "19-32",
+          "registry": "19-32",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T13:31:35.086333+00:00",
+      "record_sha256": "47b21406115b8a20797101563fd1dff0214e70fc5e533afe418e67c1095bd433",
+      "suggestions": [],
+      "message": "identity matches"
+    }
+  ]
+}

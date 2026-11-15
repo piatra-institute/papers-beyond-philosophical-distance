@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: If you use this work, please cite it as below.
+title: 'Beyond Philosophical Distance: Pairwise Maps Suffice for Answer Profiles but Not for Inferential Links'
+authors:
+- name: PIATRA Institute
+date-released: '2026-11-01'
+url: https://piatra.institute/papers/beyond-philosophical-distance.pdf
+repository-code: https://github.com/piatra-institute/papers-beyond-philosophical-distance
+abstract: Maps of philosophical positions are built from pairwise relations such as distances, correlations and shared citations. A synthesis of commitments can be compatible in every pair and incompatible as a whole. We ask when checking $k$ commitments at a time decides joint compatibility, and how much structure in position data lies beyond pairwise statistics. The first answer is the obstruction order of the commitment class, the size of its largest minimal incompatible family, which is its Helly number. Categorical answers and ranges on ordered scales have order two, so pairwise maps of answer profiles are complete. On $n$ yes/no issues, implication rules and parity constraints have order $n+1$ and all two-literal clauses $2n$; convex regions have order $d+1$ in a continuous space, $2^d$ on a grid of ordinal positions, and at least six when evaluated on 30 occupied positions of a planar map. Categorical answers and conditional principles, of orders two and one, combine to order $n+1$. Exhaustive enumeration confirms the small cases. Pairwise statistics of observed answers determine exactly their majority-closed hull, so parity-type exclusions are invisible to them. Individual PhilPapers survey responses are not public, so two public datasets were tested. In the judgments of 64,988 participants on three trolley cases, third-order structure carries 2.38% of the multi-information and is stable across countries and designs. In the answers of 294 respondents to a survey on consciousness science none is detectable, at a sample size with power 0.29 for an effect of the trolley size.
+preferred-citation:
+  type: article
+  title: 'Beyond Philosophical Distance: Pairwise Maps Suffice for Answer Profiles but Not for Inferential Links'
+  authors:
+  - name: PIATRA Institute
+  date-published: '2026-11-01'
+  url: https://piatra.institute/papers/beyond-philosophical-distance.pdf
+  repository-code: https://github.com/piatra-institute/papers-beyond-philosophical-distance

@@ -1,0 +1,827 @@
+# CSL references with stable IDs; cite using Pandoc [@id] syntax.
+# Identities checked against Crossref, DataCite, OpenAlex, OpenLibrary, GDZ/EuDML and the arXiv API on 15 November 2026; see sources.md.
+references:
+- id: helly1923
+  type: article-journal
+  author:
+  - family: Helly
+    given: Eduard
+  title: Über Mengen konvexer Körper mit gemeinschaftlichen Punkten
+  container-title: Jahresbericht der Deutschen Mathematiker-Vereinigung
+  volume: '32'
+  page: 175-176
+  issued:
+    date-parts:
+    - - 1923
+  language: de
+- id: danzer1963
+  type: chapter
+  author:
+  - family: Danzer
+    given: Ludwig
+  - family: Grünbaum
+    given: Branko
+  - family: Klee
+    given: Victor
+  title: Helly's theorem and its relatives
+  container-title: Convexity
+  collection-title: Proceedings of Symposia in Pure Mathematics
+  collection-number: '7'
+  editor:
+  - family: Klee
+    given: Victor
+  publisher: American Mathematical Society
+  publisher-place: Providence, RI
+  page: 101-180
+  issued:
+    date-parts:
+    - - 1963
+  DOI: 10.1090/pspum/007/0157289
+- id: doignon1973
+  type: article-journal
+  author:
+  - family: Doignon
+    given: Jean-Paul
+  title: Convexity in cristallographical lattices
+  container-title: Journal of Geometry
+  volume: '3'
+  issue: '1'
+  page: 71-85
+  issued:
+    date-parts:
+    - - 1973
+      - 3
+  DOI: 10.1007/BF01949705
+- id: averkov2013
+  type: article-journal
+  author:
+  - family: Averkov
+    given: Gennadiy
+  title: On maximal $S$-free sets and the Helly number for the family of $S$-convex sets
+  container-title: SIAM Journal on Discrete Mathematics
+  volume: '27'
+  issue: '3'
+  page: 1610-1624
+  issued:
+    date-parts:
+    - - 2013
+  DOI: 10.1137/110850463
+- id: hoffman1979
+  type: article-journal
+  author:
+  - family: Hoffman
+    given: Alan J.
+  title: Binding constraints and Helly numbers
+  container-title: Annals of the New York Academy of Sciences
+  volume: '319'
+  issue: '1'
+  page: 284-288
+  issued:
+    date-parts:
+    - - 1979
+      - 5
+  DOI: 10.1111/j.1749-6632.1979.tb32803.x
+- id: amenta2017
+  type: chapter
+  author:
+  - family: Amenta
+    given: Nina
+  - family: De Loera
+    given: Jesús A.
+  - family: Soberón
+    given: Pablo
+  title: 'Helly''s theorem: New variations and applications'
+  container-title: Algebraic and Geometric Methods in Discrete Mathematics
+  collection-title: Contemporary Mathematics
+  collection-number: '685'
+  editor:
+  - family: Harrington
+    given: Heather A.
+  - family: Omar
+    given: Mohamed
+  - family: Wright
+    given: Matthew
+  publisher: American Mathematical Society
+  publisher-place: Providence, RI
+  page: 55-95
+  issued:
+    date-parts:
+    - - 2017
+  DOI: 10.1090/conm/685/13718
+- id: harborth1978
+  type: article-journal
+  author:
+  - family: Harborth
+    given: Heiko
+  title: Konvexe Fünfecke in ebenen Punktmengen
+  container-title: Elemente der Mathematik
+  volume: '33'
+  issue: '5'
+  page: 116-118
+  issued:
+    date-parts:
+    - - 1978
+  language: de
+- id: horton1983
+  type: article-journal
+  author:
+  - family: Horton
+    given: J. D.
+  title: Sets with no empty convex 7-gons
+  container-title: Canadian Mathematical Bulletin
+  volume: '26'
+  issue: '4'
+  page: 482-484
+  issued:
+    date-parts:
+    - - 1983
+      - 12
+  DOI: 10.4153/CMB-1983-077-8
+- id: heule2024
+  type: paper-conference
+  author:
+  - family: Heule
+    given: Marijn J. H.
+  - family: Scheucher
+    given: Manfred
+  title: 'Happy ending: An empty hexagon in every set of 30 points'
+  container-title: 'Tools and Algorithms for the Construction and Analysis of Systems: TACAS 2024'
+  collection-title: Lecture Notes in Computer Science
+  collection-number: '14570'
+  editor:
+  - family: Finkbeiner
+    given: Bernd
+  - family: Kovács
+    given: Laura
+  publisher: Springer
+  publisher-place: Cham
+  page: 61-80
+  issued:
+    date-parts:
+    - - 2024
+  DOI: 10.1007/978-3-031-57246-3_5
+- id: balogh2013
+  type: article-journal
+  author:
+  - family: Balogh
+    given: József
+  - family: González-Aguilar
+    given: Hernán
+  - family: Salazar
+    given: Gelasio
+  title: Large convex holes in random point sets
+  container-title: Computational Geometry
+  volume: '46'
+  issue: '6'
+  page: 725-733
+  issued:
+    date-parts:
+    - - 2013
+      - 8
+  DOI: 10.1016/j.comgeo.2012.11.004
+- id: gardenfors2000
+  type: book
+  author:
+  - family: Gärdenfors
+    given: Peter
+  title: 'Conceptual Spaces: The Geometry of Thought'
+  publisher: MIT Press
+  publisher-place: Cambridge, MA
+  issued:
+    date-parts:
+    - - 2000
+  ISBN: '0262071991'
+  DOI: 10.7551/mitpress/2076.001.0001
+- id: larose2007
+  type: article-journal
+  author:
+  - family: Larose
+    given: Benoit
+  - family: Loten
+    given: Cynthia
+  - family: Tardif
+    given: Claude
+  title: A characterisation of first-order constraint satisfaction problems
+  container-title: Logical Methods in Computer Science
+  volume: '3'
+  issue: '4'
+  page: 1-22
+  issued:
+    date-parts:
+    - - 2007
+      - 11
+  DOI: 10.2168/LMCS-3(4:6)2007
+- id: aspvall1979
+  type: article-journal
+  author:
+  - family: Aspvall
+    given: Bengt
+  - family: Plass
+    given: Michael F.
+  - family: Tarjan
+    given: Robert Endre
+  title: A linear-time algorithm for testing the truth of certain quantified boolean formulas
+  container-title: Information Processing Letters
+  volume: '8'
+  issue: '3'
+  page: 121-123
+  issued:
+    date-parts:
+    - - 1979
+      - 3
+  DOI: 10.1016/0020-0190(79)90002-4
+- id: baker1975
+  type: article-journal
+  author:
+  - family: Baker
+    given: Kirby A.
+  - family: Pixley
+    given: Alden F.
+  title: Polynomial interpolation and the Chinese remainder theorem for algebraic systems
+  container-title: Mathematische Zeitschrift
+  volume: '143'
+  issue: '2'
+  page: 165-174
+  issued:
+    date-parts:
+    - - 1975
+      - 6
+  DOI: 10.1007/BF01187059
+- id: jeavons1998
+  type: article-journal
+  author:
+  - family: Jeavons
+    given: Peter
+  - family: Cohen
+    given: David
+  - family: Cooper
+    given: Martin C.
+  title: Constraints, consistency and closure
+  container-title: Artificial Intelligence
+  volume: '101'
+  issue: 1-2
+  page: 251-265
+  issued:
+    date-parts:
+    - - 1998
+      - 5
+  DOI: 10.1016/S0004-3702(98)00022-8
+- id: feder1998
+  type: article-journal
+  author:
+  - family: Feder
+    given: Tomás
+  - family: Vardi
+    given: Moshe Y.
+  title: 'The computational structure of monotone monadic SNP and constraint satisfaction: A study through Datalog and group theory'
+  container-title: SIAM Journal on Computing
+  volume: '28'
+  issue: '1'
+  page: 57-104
+  issued:
+    date-parts:
+    - - 1998
+  DOI: 10.1137/S0097539794266766
+- id: barto2014
+  type: article-journal
+  author:
+  - family: Barto
+    given: Libor
+  - family: Kozik
+    given: Marcin
+  title: Constraint satisfaction problems solvable by local consistency methods
+  container-title: Journal of the ACM
+  volume: '61'
+  issue: '1'
+  page: 1-19
+  issued:
+    date-parts:
+    - - 2014
+      - 1
+  DOI: 10.1145/2556646
+- id: schaefer1978
+  type: paper-conference
+  author:
+  - family: Schaefer
+    given: Thomas J.
+  title: The complexity of satisfiability problems
+  container-title: 'Proceedings of the Tenth Annual ACM Symposium on Theory of Computing'
+  publisher: ACM
+  publisher-place: New York, NY
+  page: 216-226
+  issued:
+    date-parts:
+    - - 1978
+  DOI: 10.1145/800133.804350
+- id: chen2006
+  type: article-journal
+  author:
+  - family: Chen
+    given: Hubie
+  title: A rendezvous of logic, complexity, and algebra
+  container-title: ACM SIGACT News
+  volume: '37'
+  issue: '4'
+  page: 85-114
+  issued:
+    date-parts:
+    - - 2006
+      - 12
+  DOI: 10.1145/1189056.1189076
+- id: beeri1983
+  type: article-journal
+  author:
+  - family: Beeri
+    given: Catriel
+  - family: Fagin
+    given: Ronald
+  - family: Maier
+    given: David
+  - family: Yannakakis
+    given: Mihalis
+  title: On the desirability of acyclic database schemes
+  container-title: Journal of the ACM
+  volume: '30'
+  issue: '3'
+  page: 479-513
+  issued:
+    date-parts:
+    - - 1983
+      - 7
+  DOI: 10.1145/2402.322389
+- id: vorobev1962
+  type: article-journal
+  author:
+  - family: Vorob'ev
+    given: N. N.
+  title: Consistent families of measures and their extensions
+  container-title: Theory of Probability and Its Applications
+  volume: '7'
+  issue: '2'
+  page: 147-163
+  issued:
+    date-parts:
+    - - 1962
+  DOI: 10.1137/1107014
+- id: abramsky2011
+  type: article-journal
+  author:
+  - family: Abramsky
+    given: Samson
+  - family: Brandenburger
+    given: Adam
+  title: The sheaf-theoretic structure of non-locality and contextuality
+  container-title: New Journal of Physics
+  volume: '13'
+  issue: '11'
+  page: '113036'
+  issued:
+    date-parts:
+    - - 2011
+      - 11
+  DOI: 10.1088/1367-2630/13/11/113036
+- id: reiter1987
+  type: article-journal
+  author:
+  - family: Reiter
+    given: Raymond
+  title: A theory of diagnosis from first principles
+  container-title: Artificial Intelligence
+  volume: '32'
+  issue: '1'
+  page: 57-95
+  issued:
+    date-parts:
+    - - 1987
+      - 4
+  DOI: 10.1016/0004-3702(87)90062-2
+- id: hansson1994
+  type: article-journal
+  author:
+  - family: Hansson
+    given: Sven Ove
+  title: Kernel contraction
+  container-title: Journal of Symbolic Logic
+  volume: '59'
+  issue: '3'
+  page: 845-859
+  issued:
+    date-parts:
+    - - 1994
+      - 9
+  DOI: 10.2307/2275912
+- id: liffiton2008
+  type: article-journal
+  author:
+  - family: Liffiton
+    given: Mark H.
+  - family: Sakallah
+    given: Karem A.
+  title: Algorithms for computing minimal unsatisfiable subsets of constraints
+  container-title: Journal of Automated Reasoning
+  volume: '40'
+  issue: '1'
+  page: 1-33
+  issued:
+    date-parts:
+    - - 2008
+  DOI: 10.1007/s10817-007-9084-z
+- id: dung1995
+  type: article-journal
+  author:
+  - family: Dung
+    given: Phan Minh
+  title: On the acceptability of arguments and its fundamental role in nonmonotonic reasoning, logic programming and n-person games
+  container-title: Artificial Intelligence
+  volume: '77'
+  issue: '2'
+  page: 321-357
+  issued:
+    date-parts:
+    - - 1995
+      - 9
+  DOI: 10.1016/0004-3702(94)00041-X
+- id: nielsen2007
+  type: chapter
+  author:
+  - family: Nielsen
+    given: Søren Holbech
+  - family: Parsons
+    given: Simon
+  title: 'A generalization of Dung''s abstract framework for argumentation: Arguing with sets of attacking arguments'
+  container-title: 'Argumentation in Multi-Agent Systems: Third International Workshop, ArgMAS 2006'
+  collection-title: Lecture Notes in Computer Science
+  editor:
+  - family: Maudet
+    given: Nicolas
+  - family: Parsons
+    given: Simon
+  - family: Rahwan
+    given: Iyad
+  publisher: Springer
+  publisher-place: Berlin
+  page: 54-73
+  issued:
+    date-parts:
+    - - 2007
+  DOI: 10.1007/978-3-540-75526-5_4
+- id: list2002
+  type: article-journal
+  author:
+  - family: List
+    given: Christian
+  - family: Pettit
+    given: Philip
+  title: 'Aggregating sets of judgments: An impossibility result'
+  container-title: Economics and Philosophy
+  volume: '18'
+  issue: '1'
+  page: 89-110
+  issued:
+    date-parts:
+    - - 2002
+  DOI: 10.1017/S0266267102001098
+- id: nehring2007
+  type: article-journal
+  author:
+  - family: Nehring
+    given: Klaus
+  - family: Puppe
+    given: Clemens
+  title: 'The structure of strategy-proof social choice. Part I: General characterization and possibility results on median spaces'
+  container-title: Journal of Economic Theory
+  volume: '135'
+  issue: '1'
+  page: 269-305
+  issued:
+    date-parts:
+    - - 2007
+      - 7
+  DOI: 10.1016/j.jet.2006.04.008
+- id: dietrich2007
+  type: article-journal
+  author:
+  - family: Dietrich
+    given: Franz
+  - family: List
+    given: Christian
+  title: 'Judgment aggregation by quota rules: Majority voting generalized'
+  container-title: Journal of Theoretical Politics
+  volume: '19'
+  issue: '4'
+  page: 391-424
+  issued:
+    date-parts:
+    - - 2007
+      - 10
+  DOI: 10.1177/0951629807080775
+- id: greenberg1979
+  type: article-journal
+  author:
+  - family: Greenberg
+    given: Joseph
+  title: Consistent majority rules over compact sets of alternatives
+  container-title: Econometrica
+  volume: '47'
+  issue: '3'
+  page: 627-636
+  issued:
+    date-parts:
+    - - 1979
+      - 5
+  DOI: 10.2307/1910410
+- id: rescher2009
+  type: book
+  author:
+  - family: Rescher
+    given: Nicholas
+  title: 'Aporetics: Rational Deliberation in the Face of Inconsistency'
+  publisher: University of Pittsburgh Press
+  publisher-place: Pittsburgh, PA
+  issued:
+    date-parts:
+    - - 2009
+  ISBN: '9780822943631'
+  DOI: 10.2307/j.ctt6wrbsj
+- id: lee2009
+  type: article-journal
+  author:
+  - family: Lee
+    given: Choongbum
+  title: On the size of minimal unsatisfiable formulas
+  container-title: The Electronic Journal of Combinatorics
+  volume: '16'
+  issue: '1'
+  page: N3
+  issued:
+    date-parts:
+    - - 2009
+      - 1
+  DOI: 10.37236/241
+- id: abbasizanjani2020
+  type: article
+  author:
+  - family: Abbasizanjani
+    given: Hoda
+  - family: Kullmann
+    given: Oliver
+  title: 'The classification of minimally unsatisfiable 2-CNFs: A fundamental study'
+  publisher: arXiv
+  number: '2003.03639'
+  issued:
+    date-parts:
+    - - 2020
+  DOI: 10.48550/arXiv.2003.03639
+- id: bourget2014
+  type: article-journal
+  author:
+  - family: Bourget
+    given: David
+  - family: Chalmers
+    given: David J.
+  title: What do philosophers believe?
+  container-title: Philosophical Studies
+  volume: '170'
+  issue: '3'
+  page: 465-500
+  issued:
+    date-parts:
+    - - 2014
+      - 9
+  DOI: 10.1007/s11098-013-0259-7
+- id: bourget2023
+  type: article-journal
+  author:
+  - family: Bourget
+    given: David
+  - family: Chalmers
+    given: David J.
+  title: 'Philosophers on philosophy: The 2020 PhilPapers survey'
+  container-title: Philosophers' Imprint
+  volume: '23'
+  issued:
+    date-parts:
+    - - 2023
+      - 7
+  DOI: 10.3998/phimp.2109
+- id: noichl2021
+  type: article-journal
+  author:
+  - family: Noichl
+    given: Maximilian
+  title: Modeling the structure of recent philosophy
+  container-title: Synthese
+  volume: '198'
+  issue: '6'
+  page: 5089-5100
+  issued:
+    date-parts:
+    - - 2021
+      - 6
+  DOI: 10.1007/s11229-019-02390-8
+- id: malaterre2019
+  type: article-journal
+  author:
+  - family: Malaterre
+    given: Christophe
+  - family: Chartier
+    given: Jean-François
+  - family: Pulizzotto
+    given: Davide
+  title: 'What is this thing called *Philosophy of Science*? A computational topic-modeling perspective, 1934–2015'
+  container-title: 'HOPOS: The Journal of the International Society for the History of Philosophy of Science'
+  volume: '9'
+  issue: '2'
+  page: 215-249
+  issued:
+    date-parts:
+    - - 2019
+      - 9
+  DOI: 10.1086/704372
+- id: weatherson2022
+  type: book
+  author:
+  - family: Weatherson
+    given: Brian
+  title: 'A History of Philosophy Journals, Volume 1: Evidence from Topic Modeling, 1876–2013'
+  publisher: Maize Books
+  publisher-place: Ann Arbor, MI
+  issued:
+    date-parts:
+    - - 2022
+  ISBN: '9781607857280'
+  DOI: 10.3998/mpub.12251719
+- id: shi2026
+  type: paper-conference
+  author:
+  - family: Shi
+    given: Yuanming
+  - family: Haupt
+    given: Andreas
+  title: The collapse of heterogeneity in silicon philosophers
+  container-title: Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency
+  publisher: ACM
+  publisher-place: New York, NY
+  page: 6280-6304
+  issued:
+    date-parts:
+    - - 2026
+      - 6
+  DOI: 10.1145/3805689.3806760
+- id: schneidman2003
+  type: article-journal
+  author:
+  - family: Schneidman
+    given: Elad
+  - family: Still
+    given: Susanne
+  - family: Berry
+    given: Michael J.
+  - family: Bialek
+    given: William
+  title: Network information and connected correlations
+  container-title: Physical Review Letters
+  volume: '91'
+  issue: '23'
+  page: '238701'
+  issued:
+    date-parts:
+    - - 2003
+      - 12
+  DOI: 10.1103/PhysRevLett.91.238701
+- id: schneidman2006
+  type: article-journal
+  author:
+  - family: Schneidman
+    given: Elad
+  - family: Berry
+    given: Michael J.
+  - family: Segev
+    given: Ronen
+  - family: Bialek
+    given: William
+  title: Weak pairwise correlations imply strongly correlated network states in a neural population
+  container-title: Nature
+  volume: '440'
+  issue: '7087'
+  page: 1007-1012
+  issued:
+    date-parts:
+    - - 2006
+      - 4
+  DOI: 10.1038/nature04701
+- id: amari2001
+  type: article-journal
+  author:
+  - family: Amari
+    given: Shun-ichi
+  title: Information geometry on hierarchy of probability distributions
+  container-title: IEEE Transactions on Information Theory
+  volume: '47'
+  issue: '5'
+  page: 1701-1711
+  issued:
+    date-parts:
+    - - 2001
+      - 7
+  DOI: 10.1109/18.930911
+- id: darroch1972
+  type: article-journal
+  author:
+  - family: Darroch
+    given: J. N.
+  - family: Ratcliff
+    given: D.
+  title: Generalized iterative scaling for log-linear models
+  container-title: The Annals of Mathematical Statistics
+  volume: '43'
+  issue: '5'
+  page: 1470-1480
+  issued:
+    date-parts:
+    - - 1972
+      - 10
+  DOI: 10.1214/aoms/1177692379
+- id: awad2020
+  type: article-journal
+  author:
+  - family: Awad
+    given: Edmond
+  - family: Dsouza
+    given: Sohan
+  - family: Shariff
+    given: Azim
+  - family: Rahwan
+    given: Iyad
+  - family: Bonnefon
+    given: Jean-François
+  title: Universals and variations in moral decisions made in 42 countries by 70,000 participants
+  container-title: Proceedings of the National Academy of Sciences
+  volume: '117'
+  issue: '5'
+  page: 2332-2337
+  issued:
+    date-parts:
+    - - 2020
+      - 2
+  DOI: 10.1073/pnas.1911517117
+- id: francken2022
+  type: article-journal
+  author:
+  - family: Francken
+    given: Jolien C.
+  - family: Beerendonk
+    given: Lola
+  - family: Molenaar
+    given: Dylan
+  - family: Fahrenfort
+    given: Johannes J.
+  - family: Kiverstein
+    given: Julian D.
+  - family: Seth
+    given: Anil K.
+  - family: van Gaal
+    given: Simon
+  title: An academic survey on theoretical foundations, common assumptions and the current state of consciousness science
+  container-title: Neuroscience of Consciousness
+  volume: '2022'
+  issue: '1'
+  page: niac011
+  issued:
+    date-parts:
+    - - 2022
+      - 8
+  DOI: 10.1093/nc/niac011
+- id: thomson1985
+  type: article-journal
+  author:
+  - family: Thomson
+    given: Judith Jarvis
+  title: The trolley problem
+  container-title: The Yale Law Journal
+  volume: '94'
+  issue: '6'
+  page: 1395-1415
+  issued:
+    date-parts:
+    - - 1985
+      - 5
+  DOI: 10.2307/796133
+- id: foot2002
+  type: chapter
+  author:
+  - family: Foot
+    given: Philippa
+  title: The problem of abortion and the doctrine of the double effect
+  container-title: 'Virtues and Vices'
+  publisher: Oxford University Press
+  publisher-place: Oxford
+  page: 19-32
+  issued:
+    date-parts:
+    - - 2002
+  original-date:
+    date-parts:
+    - - 1967
+  ISBN: '9780199252862'
+  DOI: 10.1093/0199252866.003.0002

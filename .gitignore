@@ -1,0 +1,15 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+DOSSIER.pdf
+# raw genesis/seed material — kept local (see workspace docs)
+chats/
+
+# Generated local build records
+*.build.log
+build-manifest.json
+.pytest_cache/
+
+# Raw downloads re-fetched by simulation/fetch_data.py (hashes pinned there)
+simulation/data/raw/
