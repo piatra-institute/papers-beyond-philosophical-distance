@@ -116,6 +116,61 @@ def g2_batch(tables: np.ndarray) -> np.ndarray:
     return np.maximum(2.0 * term.sum(axis=(-3, -2, -1)), 0.0)
 
 
+EVEN_CELLS = [0, 3, 5, 6]  # 000, 011, 101, 110 in C order (index 4a + 2b + c)
+ODD_CELLS = [1, 2, 4, 7]   # 001, 010, 100, 111
+
+
+def no3way_fit(tables: np.ndarray, iters: int = 200) -> np.ndarray:
+    """Exact fit of the no-three-way-interaction model to (..., 2, 2, 2) count tables.
+
+    The tables with the two-way margins of t are t + delta * s, where s is +1 on cells
+    of even parity and -1 on cells of odd parity. The fit is the member of this line
+    with zero three-way log interaction, the root of the strictly increasing function
+    sum_even log(t + delta) - sum_odd log(t - delta) on (-min_even t, min_odd t), found
+    by Newton steps kept inside a shrinking bracket. When both parities contain an
+    empty cell the line meets the nonnegative orthant only at t, which is then the fit
+    (the extended maximum-likelihood estimate that iterative scaling converges to).
+    """
+    t = np.asarray(tables, dtype=np.float64)
+    flat = t.reshape(-1, 8)
+    te, to = flat[:, EVEN_CELLS], flat[:, ODD_CELLS]
+    lo, hi = -te.min(axis=1), to.min(axis=1)
+    point = hi - lo <= 0.0
+    x = np.where((lo < 0.0) & (hi > 0.0), 0.0, 0.5 * (lo + hi))
+    x[point] = 0.0
+    act = ~point
+    for _ in range(iters):
+        if not act.any():
+            break
+        a = te[act] + x[act, None]
+        b = to[act] - x[act, None]
+        g = np.log(a).sum(axis=1) - np.log(b).sum(axis=1)
+        gp = (1.0 / a).sum(axis=1) + (1.0 / b).sum(axis=1)
+        la, ha, xa = lo[act], hi[act], x[act]
+        ha = np.where(g > 0.0, xa, ha)
+        la = np.where(g < 0.0, xa, la)
+        xn = xa - g / gp
+        bad = ~((xn > la) & (xn < ha))
+        xn = np.where(bad, 0.5 * (la + ha), xn)
+        done = (np.abs(xn - xa) <= 1e-13 * (1.0 + np.abs(xa))) | (g == 0.0)
+        lo[act], hi[act], x[act] = la, ha, np.where(g == 0.0, xa, xn)
+        idx = np.flatnonzero(act)
+        act[idx[done]] = False
+    m = flat.copy()
+    m[:, EVEN_CELLS] += x[:, None]
+    m[:, ODD_CELLS] -= x[:, None]
+    return m.reshape(t.shape)
+
+
+def g2_fast(tables: np.ndarray) -> np.ndarray:
+    """Likelihood-ratio statistic for no three-way interaction, from the exact fit."""
+    t = np.asarray(tables, dtype=np.float64)
+    m = no3way_fit(t)
+    with np.errstate(divide="ignore", invalid="ignore"):
+        term = np.where(t > 0, t * np.log(np.where(t > 0, t, 1.0) / np.where(m > 0, m, 1.0)), 0.0)
+    return np.maximum(2.0 * term.sum(axis=(-3, -2, -1)), 0.0)
+
+
 def three_way_log_interaction(table: np.ndarray, pseudo: float = 0.0) -> float:
     """log of the ratio of conditional odds ratios, log[OR_12|3=1 / OR_12|3=0]."""
     t = np.asarray(table, dtype=np.float64) + pseudo

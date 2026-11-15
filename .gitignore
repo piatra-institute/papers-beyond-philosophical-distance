@@ -13,3 +13,7 @@ build-manifest.json
 
 # Raw downloads re-fetched by simulation/fetch_data.py (hashes pinned there)
 simulation/data/raw/
+
+# Per-respondent survey answers: rebuilt byte-identically from the OSF raw file by
+# simulation/fetch_data.py (SHA-256 pinned there); not redistributed
+simulation/data/consciousness_items.csv

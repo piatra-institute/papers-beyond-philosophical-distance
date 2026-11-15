@@ -1,8 +1,8 @@
 {
   "schema": 1,
-  "references_sha256": "2db291433cef7b7c7cffe3b4f1f060b24d5c10e1406508d90d5dd4aed852e134",
+  "references_sha256": "423be44961a2c440b3e4d67a58c053a802d534dba93a5ec4e72b2d5a73ec76cf",
   "bibliography_inputs": {
-    "references.yaml": "2db291433cef7b7c7cffe3b4f1f060b24d5c10e1406508d90d5dd4aed852e134"
+    "references.yaml": "423be44961a2c440b3e4d67a58c053a802d534dba93a5ec4e72b2d5a73ec76cf"
   },
   "entries": [
     {
@@ -11,7 +11,7 @@
       "outcome": "unverified",
       "compared_fields": {},
       "registry": null,
-      "fetched_at": "2026-11-15T13:31:03.033548+00:00",
+      "fetched_at": "2026-11-15T17:52:53.137698+00:00",
       "record_sha256": null,
       "suggestions": [
         {
@@ -94,7 +94,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:03.662150+00:00",
+      "fetched_at": "2026-11-15T17:52:53.815482+00:00",
       "record_sha256": "f433a6bd8f7718a841e99364f0ceb02418c2684700f24bbe1d9ea5d59b81b8d6",
       "suggestions": [],
       "message": "different fields: container-title"
@@ -153,7 +153,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:04.288242+00:00",
+      "fetched_at": "2026-11-15T17:52:54.426194+00:00",
       "record_sha256": "ba25f44b9d5a8d7e17acbe37d895348196b36dbca8e30bea3c6ca54e8f9550ae",
       "suggestions": [],
       "message": "identity matches"
@@ -213,7 +213,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:04.843654+00:00",
+      "fetched_at": "2026-11-15T17:52:54.963981+00:00",
       "record_sha256": "99516666f9ff9a3489051aa792ec6f9f91b97209c9b7188701d6503f8582d392",
       "suggestions": [],
       "message": "identity matches"
@@ -273,7 +273,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:05.399317+00:00",
+      "fetched_at": "2026-11-15T17:52:55.515164+00:00",
       "record_sha256": "32c5320b37020014e789cb264679f6716a3093f93568f25abce203b60c29cc2e",
       "suggestions": [],
       "message": "identity matches"
@@ -333,7 +333,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:06.236434+00:00",
+      "fetched_at": "2026-11-15T17:52:56.489679+00:00",
       "record_sha256": "2da1342ab7607b87e9a55094c0db1ba7381b49da8ab4bcb167c28b73995c540f",
       "suggestions": [],
       "message": "different fields: container-title"
@@ -344,7 +344,7 @@
       "outcome": "unverified",
       "compared_fields": {},
       "registry": null,
-      "fetched_at": "2026-11-15T13:31:07.554502+00:00",
+      "fetched_at": "2026-11-15T17:52:56.905952+00:00",
       "record_sha256": null,
       "suggestions": [
         {
@@ -427,7 +427,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:08.232491+00:00",
+      "fetched_at": "2026-11-15T17:52:57.555392+00:00",
       "record_sha256": "072a40a517980fe85b93c98fd240ffc38114c9658b5bafe8e4dbb811cb2a7e43",
       "suggestions": [],
       "message": "identity matches"
@@ -488,7 +488,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:09.013234+00:00",
+      "fetched_at": "2026-11-15T17:52:58.249933+00:00",
       "record_sha256": "6c55b370ffad7bfa75e87ceb0c92ea73bac9a4973f5df3c4af1ca4ce13bd8923",
       "suggestions": [],
       "message": "different fields: container-title"
@@ -547,7 +547,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:09.586588+00:00",
+      "fetched_at": "2026-11-15T17:52:58.785651+00:00",
       "record_sha256": "c6f97fc32e02af83e4eeff93751d89ba3b2fe184e7df74f14c26be6af8196b2c",
       "suggestions": [],
       "message": "identity matches"
@@ -606,7 +606,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:10.147933+00:00",
+      "fetched_at": "2026-11-15T17:52:59.434018+00:00",
       "record_sha256": "3edfbf93dd46726a21753241172b7073c881dabfde9e9f2584cef598dcbe58ec",
       "suggestions": [],
       "message": "identity matches"
@@ -665,7 +665,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:10.959558+00:00",
+      "fetched_at": "2026-11-15T17:53:00.132285+00:00",
       "record_sha256": "2c8fb1b12ca662afec5ec3640a1641ebbc1b345775c59c5c0ffe2bd2cda250bb",
       "suggestions": [],
       "message": "different fields: volume, issue, page"
@@ -724,7 +724,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:11.540628+00:00",
+      "fetched_at": "2026-11-15T17:53:00.772818+00:00",
       "record_sha256": "ed2c0e416ed950ed1e1e9f702eee2817234b8696875c35a1aa931db10d087728",
       "suggestions": [],
       "message": "identity matches"
@@ -783,7 +783,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:12.172430+00:00",
+      "fetched_at": "2026-11-15T17:53:01.421910+00:00",
       "record_sha256": "ea5fe761c5dc947350cf01b300f51edad5cafb4cb9c7676bf0cf09b04bf572d2",
       "suggestions": [],
       "message": "identity matches"
@@ -842,7 +842,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:12.767306+00:00",
+      "fetched_at": "2026-11-15T17:53:02.033651+00:00",
       "record_sha256": "b1f97619ad7c9448a52d9434abae509bf6cc4e047f4e43a0b232b1bdab0c1d0c",
       "suggestions": [],
       "message": "identity matches"
@@ -902,7 +902,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:13.327520+00:00",
+      "fetched_at": "2026-11-15T17:53:02.697570+00:00",
       "record_sha256": "2424898c35265c056dbe3dbcc994eca887433c3f22ccb01d998c54f6add1aa14",
       "suggestions": [],
       "message": "identity matches"
@@ -962,7 +962,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:13.894913+00:00",
+      "fetched_at": "2026-11-15T17:53:03.294753+00:00",
       "record_sha256": "6d2edca60c423a6633d1f08540b14d61edce1eeba091f7c5e1e4c1310e938de7",
       "suggestions": [],
       "message": "identity matches"
@@ -1021,7 +1021,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:14.464856+00:00",
+      "fetched_at": "2026-11-15T17:53:03.809642+00:00",
       "record_sha256": "8421a9072dc97d63824bacd682030eff5ba34bb54096c1693869a57ab2f33c0e",
       "suggestions": [],
       "message": "different fields: container-title"
@@ -1081,7 +1081,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:15.035262+00:00",
+      "fetched_at": "2026-11-15T17:53:04.464445+00:00",
       "record_sha256": "a4f2ebdef315535b07024efbc13bf46ceb0edae9192a3d023535f4d7f899469b",
       "suggestions": [],
       "message": "identity matches"
@@ -1141,7 +1141,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:15.737062+00:00",
+      "fetched_at": "2026-11-15T17:53:05.103935+00:00",
       "record_sha256": "2718fdf119c2ff821093d1aa5f632ae4c0521858e12566429879d24281dfcbcb",
       "suggestions": [],
       "message": "identity matches"
@@ -1201,7 +1201,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:16.407509+00:00",
+      "fetched_at": "2026-11-15T17:53:05.646610+00:00",
       "record_sha256": "1ca865513ae6e3ec16742a663cd88d4a28ac64d9bfdc2a3097103495e6b27d40",
       "suggestions": [],
       "message": "different fields: container-title"
@@ -1260,7 +1260,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:17.045960+00:00",
+      "fetched_at": "2026-11-15T17:53:06.209729+00:00",
       "record_sha256": "41c8a3f7e3c9ace4f2e5564e2e2bdef3c989deb33d9963937cf3573f89bb76fb",
       "suggestions": [],
       "message": "identity matches"
@@ -1319,7 +1319,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:17.604806+00:00",
+      "fetched_at": "2026-11-15T17:53:06.779192+00:00",
       "record_sha256": "dce0064e8870d7d8756f461d0afbb2b9854204706fe63588e02b63cf11494ccd",
       "suggestions": [],
       "message": "identity matches"
@@ -1379,7 +1379,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:18.179878+00:00",
+      "fetched_at": "2026-11-15T17:53:07.316214+00:00",
       "record_sha256": "976d5c7d4b17514b2b519bfa3365135ffb19b63a08ae0e2dd84eb5379c7b48ac",
       "suggestions": [],
       "message": "identity matches"
@@ -1439,7 +1439,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:18.867285+00:00",
+      "fetched_at": "2026-11-15T17:53:08.010477+00:00",
       "record_sha256": "202cbd9c9e8f8e3182a307b7cd65722eaeeb729bdb1f3580b8885a777065b270",
       "suggestions": [],
       "message": "identity matches"
@@ -1498,7 +1498,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:19.527065+00:00",
+      "fetched_at": "2026-11-15T17:53:08.693534+00:00",
       "record_sha256": "d2274215b0a200c3baddd059d7e34234fd4bd28c051303a78bb7372484fb4860",
       "suggestions": [],
       "message": "identity matches"
@@ -1554,7 +1554,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:21.666849+00:00",
+      "fetched_at": "2026-11-15T17:53:09.992379+00:00",
       "record_sha256": "5934186aab054c789862db509ccb9b4a235ddd191b6ca06794cf32cbe32377a9",
       "suggestions": [
         {
@@ -1580,7 +1580,18 @@
         }
       ],
       "message": "unverified: identity comparison lacks a title, first author or publication year; rerun papers refs --verify --refresh",
-      "unverified_reason": "registry_unverified"
+      "unverified_reason": "registry_unverified",
+      "manual_identity": {
+        "verifier": {
+          "tool": "codex",
+          "model": "gpt-6-astra",
+          "family": "openai"
+        },
+        "source": "https://api.crossref.org/works/10.1007/978-3-540-75526-5",
+        "note": "Independent check by Codex (gpt-6-astra), 2026-11-15: the Crossref chapter record for 10.1007/978-3-540-75526-5_4 confirms the title and Nielsen as first author with Parsons; it has no year. The linked Crossref book record confirms 2007 (published-print, issued), the ArgMAS 2006 proceedings title and the LNCS series; OpenLibrary ISBN 9783540755258 confirms 2007 and volume 4766. 2006 is the workshop year.",
+        "recorded_at": "2026-11-15T15:23:57.783513+00:00",
+        "entry_sha256": "822a7f5ac18f455b9f59ae559c2b785a1d989e08bfa4c6220787c862ad762537"
+      }
     },
     {
       "id": "list2002",
@@ -1637,7 +1648,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:22.233811+00:00",
+      "fetched_at": "2026-11-15T17:53:10.529478+00:00",
       "record_sha256": "d519862d44dd7326f77662b71057087c467f9f6ae055c9b1aad6e293b7ceb41c",
       "suggestions": [],
       "message": "identity matches"
@@ -1696,7 +1707,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:22.877902+00:00",
+      "fetched_at": "2026-11-15T17:53:11.097637+00:00",
       "record_sha256": "7579b2b3bba9e5c4e0aee6ec674d6fb35189377ea597a17bc879cd72b74f06f6",
       "suggestions": [],
       "message": "identity matches"
@@ -1758,7 +1769,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:23.516125+00:00",
+      "fetched_at": "2026-11-15T17:53:11.704940+00:00",
       "record_sha256": "40c69697274b4ac0c43e7f41f2b17894c554539735f2a5402af10195f80be3ce",
       "suggestions": [],
       "message": "identity matches"
@@ -1817,7 +1828,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:24.084926+00:00",
+      "fetched_at": "2026-11-15T17:53:12.331485+00:00",
       "record_sha256": "88aeb5a4fb2ceea4aea69c2f0b8738bf9ae25b4adb79feb7eea1f234afe1b16b",
       "suggestions": [],
       "message": "different fields: page"
@@ -1876,7 +1887,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:24.722139+00:00",
+      "fetched_at": "2026-11-15T17:53:12.872552+00:00",
       "record_sha256": "72eb6e55ba52aacba6574d5338a364be116124f6dec950b6c8e346481e5a4863",
       "suggestions": [],
       "message": "identity matches"
@@ -1935,7 +1946,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:25.433224+00:00",
+      "fetched_at": "2026-11-15T17:53:13.493815+00:00",
       "record_sha256": "30dda37c36a84a2eaa2c1747c01f93abc5d8bc07a323c811918476ec9275348e",
       "suggestions": [],
       "message": "different fields: page"
@@ -1990,7 +2001,7 @@
         }
       },
       "registry": "DataCite",
-      "fetched_at": "2026-11-15T13:31:25.984623+00:00",
+      "fetched_at": "2026-11-15T17:53:13.949960+00:00",
       "record_sha256": "ac4713495fd6f5cdea642dbf5ecacb7cfdaa27a4ae950f8a4b331e9388d93e3e",
       "suggestions": [],
       "message": "identity matches"
@@ -2050,7 +2061,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:26.639084+00:00",
+      "fetched_at": "2026-11-15T17:53:14.523608+00:00",
       "record_sha256": "0225a2d82145fb4fd85c6e897491cef41bed7ec086e1940d3a7c433741633c2b",
       "suggestions": [],
       "message": "identity matches"
@@ -2109,7 +2120,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:27.239884+00:00",
+      "fetched_at": "2026-11-15T17:53:15.123659+00:00",
       "record_sha256": "3b7ca50dcabf356835c56b801341fbf5bf1b42bb8a57946e83bb498aadca458e",
       "suggestions": [],
       "message": "different fields: issue"
@@ -2169,7 +2180,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:28.019713+00:00",
+      "fetched_at": "2026-11-15T17:53:15.778908+00:00",
       "record_sha256": "881417b7273df4fbeb02e1f2edae4a2445c2956f6e953d398e59e2b4d064722e",
       "suggestions": [],
       "message": "identity matches"
@@ -2228,7 +2239,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:28.588935+00:00",
+      "fetched_at": "2026-11-15T17:53:16.447482+00:00",
       "record_sha256": "e155c32bda37f7cdab0e1ee373b69b845df9f695d673d34b4418a1a69421a718",
       "suggestions": [],
       "message": "identity matches"
@@ -2287,7 +2298,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:29.332954+00:00",
+      "fetched_at": "2026-11-15T17:53:17.185901+00:00",
       "record_sha256": "71c4874c0780396403fe62f20aa25ab0c8dd2ec395994a366e237b8edcfc0bc9",
       "suggestions": [],
       "message": "identity matches"
@@ -2347,7 +2358,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:29.893232+00:00",
+      "fetched_at": "2026-11-15T17:53:17.786803+00:00",
       "record_sha256": "f86c1902a037d5317b1eb57d9703d4bab962e84c9c0472c9e6e7aa8b13236eb6",
       "suggestions": [],
       "message": "identity matches"
@@ -2406,7 +2417,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:30.472919+00:00",
+      "fetched_at": "2026-11-15T17:53:18.401034+00:00",
       "record_sha256": "619eadb8c774ad7b80be0e7c7a11052e4f92cc4c8c64e560cd7198828e6b9c2b",
       "suggestions": [],
       "message": "different fields: page"
@@ -2466,7 +2477,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:31.246507+00:00",
+      "fetched_at": "2026-11-15T17:53:19.042871+00:00",
       "record_sha256": "b1c3b71bec7fe985b3db238cd63f7ec4be4e2b72ada7645512da789d914b9f7d",
       "suggestions": [],
       "message": "identity matches"
@@ -2525,7 +2536,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:31.810565+00:00",
+      "fetched_at": "2026-11-15T17:53:19.754484+00:00",
       "record_sha256": "393ee81ea93bb6f31a299164790ad5842bbdd3c9971110be1a7e945915f74d7b",
       "suggestions": [],
       "message": "identity matches"
@@ -2584,7 +2595,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:32.461947+00:00",
+      "fetched_at": "2026-11-15T17:53:20.315926+00:00",
       "record_sha256": "7522af2a5ff4cdc9feb0a5dec91a2f1759bfd9db2901917fa43b5e6d85e8f3c0",
       "suggestions": [],
       "message": "identity matches"
@@ -2644,7 +2655,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:33.239048+00:00",
+      "fetched_at": "2026-11-15T17:53:20.977216+00:00",
       "record_sha256": "9a7cf379e12d8b2e3f2ae724f8a71a15640c7da7796785c181a602ca6a538bdc",
       "suggestions": [],
       "message": "identity matches"
@@ -2704,7 +2715,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:33.917085+00:00",
+      "fetched_at": "2026-11-15T17:53:21.643674+00:00",
       "record_sha256": "a2da38dbe4e1c4eb0547a3b24826b7db7e760873ce0e764330011bc7ea886e50",
       "suggestions": [],
       "message": "different fields: page"
@@ -2763,7 +2774,7 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:34.477952+00:00",
+      "fetched_at": "2026-11-15T17:53:22.193470+00:00",
       "record_sha256": "3437533ab1d1836bf45a53679c499538e3ba0b118b5faaf64da94604a3f9d30a",
       "suggestions": [],
       "message": "different fields: page"
@@ -2823,8 +2834,364 @@
         }
       },
       "registry": "Crossref",
-      "fetched_at": "2026-11-15T13:31:35.086333+00:00",
+      "fetched_at": "2026-11-15T17:53:22.790450+00:00",
       "record_sha256": "47b21406115b8a20797101563fd1dff0214e70fc5e533afe418e67c1095bd433",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "wainwright2008",
+      "doi": "10.1561/2200000001",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Graphical models, exponential families, and variational inference",
+          "registry": [
+            "Graphical Models, Exponential Families, and Variational Inference"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "wainwright",
+          "registry": "wainwright",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2008
+          ],
+          "registry": [
+            2008,
+            2008,
+            2008,
+            2008
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Foundations and Trends in Machine Learning",
+          "registry": [
+            "Foundations and Trends® in Machine Learning"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "issue": {
+          "reference": "1-2",
+          "registry": "1-2",
+          "match": true
+        },
+        "page": {
+          "reference": "1-305",
+          "registry": "1-305",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:23.613116+00:00",
+      "record_sha256": "94866472edb0f6d92f0c361d3033fe35991560163bce66d7efeda0bfedb1ff56",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "fienberg2012",
+      "doi": "10.1214/12-AOS986",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Maximum likelihood estimation in log-linear models",
+          "registry": [
+            "Maximum likelihood estimation in log-linear models"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "fienberg",
+          "registry": "fienberg",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2012
+          ],
+          "registry": [
+            2012,
+            2012,
+            2012
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "The Annals of Statistics",
+          "registry": [
+            "The Annals of Statistics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "40",
+          "registry": "40",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "996-1023",
+          "registry": "996-1023",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:24.390612+00:00",
+      "record_sha256": "7622babf28f9950b651875ae281c09da3111a84621f50d35106b0787545577be",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "eriksson2006",
+      "doi": "10.1016/j.jsc.2005.04.003",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Polyhedral conditions for the nonexistence of the MLE for hierarchical log-linear models",
+          "registry": [
+            "Polyhedral conditions for the nonexistence of the MLE for hierarchical log-linear models"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "eriksson",
+          "registry": "eriksson",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2006
+          ],
+          "registry": [
+            2006,
+            2006,
+            2006
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of Symbolic Computation",
+          "registry": [
+            "Journal of Symbolic Computation"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "41",
+          "registry": "41",
+          "match": true
+        },
+        "issue": {
+          "reference": "2",
+          "registry": "2",
+          "match": true
+        },
+        "page": {
+          "reference": "222-233",
+          "registry": "222-233",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:24.931715+00:00",
+      "record_sha256": "c5d35c719b305c3c5653802e151725dd65f6c155e3265af9718b269990fce6db",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "nadeau2003",
+      "doi": "10.1023/A:1024068626366",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "Inference for the generalization error",
+          "registry": [
+            "Inference for the Generalization Error"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "nadeau",
+          "registry": "nadeau",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2003
+          ],
+          "registry": [
+            2003,
+            2003,
+            2003
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Machine Learning",
+          "registry": [
+            "Machine Learning"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "52",
+          "registry": "52",
+          "match": true
+        },
+        "issue": {
+          "reference": "3",
+          "registry": "3",
+          "match": true
+        },
+        "page": {
+          "reference": "239-281",
+          "registry": "239-281",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:25.511225+00:00",
+      "record_sha256": "92f37d3c7015d802e07a88d9b2d067d51dc88cda3f24c93806f885918457364c",
+      "suggestions": [],
+      "message": "identity matches"
+    },
+    {
+      "id": "benjamini1995",
+      "doi": "10.1111/j.2517-6161.1995.tb02031.x",
+      "outcome": "advisory",
+      "compared_fields": {
+        "title": {
+          "reference": "Controlling the false discovery rate: A practical and powerful approach to multiple testing",
+          "registry": [
+            "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "benjamini",
+          "registry": "benjamini",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            1995
+          ],
+          "registry": [
+            1995,
+            1995,
+            1995,
+            2018
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "Journal of the Royal Statistical Society: Series B (Methodological)",
+          "registry": [
+            "Journal of the Royal Statistical Society Series B: Statistical Methodology"
+          ],
+          "match": false
+        },
+        "volume": {
+          "reference": "57",
+          "registry": "57",
+          "match": true
+        },
+        "issue": {
+          "reference": "1",
+          "registry": "1",
+          "match": true
+        },
+        "page": {
+          "reference": "289-300",
+          "registry": "289-300",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:26.080561+00:00",
+      "record_sha256": "2ec1f8e8400ecce81c4689a490d7ab6b713ef7c5af1ad0090b0f6315ffa1646b",
+      "suggestions": [],
+      "message": "different fields: container-title"
+    },
+    {
+      "id": "benjamini2001",
+      "doi": "10.1214/aos/1013699998",
+      "outcome": "verified",
+      "compared_fields": {
+        "title": {
+          "reference": "The control of the false discovery rate in multiple testing under dependency",
+          "registry": [
+            "The control of the false discovery rate in multiple testing under dependency"
+          ],
+          "registry_subtitle": [],
+          "similarity": 1.0,
+          "match": true
+        },
+        "author": {
+          "reference": "benjamini",
+          "registry": "benjamini",
+          "match": true
+        },
+        "year": {
+          "reference": [
+            2001
+          ],
+          "registry": [
+            2001,
+            2001,
+            2001
+          ],
+          "match": true
+        },
+        "container-title": {
+          "reference": "The Annals of Statistics",
+          "registry": [
+            "The Annals of Statistics"
+          ],
+          "match": true
+        },
+        "volume": {
+          "reference": "29",
+          "registry": "29",
+          "match": true
+        },
+        "issue": {
+          "reference": "4",
+          "registry": "4",
+          "match": true
+        },
+        "page": {
+          "reference": "1165-1188",
+          "registry": "1165-1188",
+          "match": true
+        }
+      },
+      "registry": "Crossref",
+      "fetched_at": "2026-11-15T17:53:26.617118+00:00",
+      "record_sha256": "d2b2692e73eb4af60a22f7b71d004bc8072a5d75d388854be433879ff00683f6",
       "suggestions": [],
       "message": "identity matches"
     }

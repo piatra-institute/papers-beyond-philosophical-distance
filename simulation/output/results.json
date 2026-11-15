@@ -161,7 +161,7 @@
      "atoms": 20,
      "order_by_points": 3,
      "nodes": 3143,
-     "seconds": 0.023,
+     "seconds": 0.024,
      "formula": 3,
      "matches_formula": true
     },
@@ -215,7 +215,7 @@
      "atoms": 30,
      "order_by_points": 6,
      "nodes": 19848,
-     "seconds": 0.191,
+     "seconds": 0.195,
      "formula": 6,
      "matches_formula": true
     },
@@ -269,7 +269,7 @@
      "atoms": 111,
      "order_by_points": 6,
      "nodes": 104705,
-     "seconds": 0.96,
+     "seconds": 0.987,
      "formula": 6,
      "matches_formula": true
     },
@@ -323,7 +323,7 @@
      "atoms": 62,
      "order_by_points": 6,
      "nodes": 651280,
-     "seconds": 7.791,
+     "seconds": 8.378,
      "formula": 6,
      "matches_formula": true
     },
@@ -333,7 +333,7 @@
      "atoms": 2,
      "order_by_points": 2,
      "nodes": 3,
-     "seconds": 0.0,
+     "seconds": 0.01,
      "order_by_families": 2,
      "methods_agree": true
     },
@@ -367,7 +367,7 @@
      "atoms": 32,
      "order_by_points": 8,
      "nodes": 6436,
-     "seconds": 0.029,
+     "seconds": 0.035,
      "formula": 8,
      "matches_formula": true
     },
@@ -377,7 +377,7 @@
      "atoms": 50,
      "order_by_points": 10,
      "nodes": 609848,
-     "seconds": 8.756,
+     "seconds": 9.417,
      "formula": 10,
      "matches_formula": true
     },
@@ -421,7 +421,7 @@
      "atoms": 16,
      "order_by_points": 16,
      "nodes": 65535,
-     "seconds": 0.22,
+     "seconds": 0.228,
      "formula": 16,
      "matches_formula": true
     }
@@ -1432,7 +1432,76 @@
    },
    "all_agree": true
   },
-  "seconds": 66.7
+  "seconds": 68.8,
+  "lp_exhaustive": {
+   "issues_3": {
+    "supports": 255,
+    "methods_compared_on": 255,
+    "facial_set_lp_agrees_per_pattern_lp": 255,
+    "same_exclusions_under_second_weighting": 255,
+    "closed_form_agrees": 255,
+    "closed_form_checked": 255,
+    "supports_with_unobserved_patterns_in_hull": 90,
+    "supports_where_lp_excludes_more_than_hull": 60,
+    "unobserved_patterns_in_hull": 128,
+    "lp_excluded_patterns_in_hull": 64,
+    "max_lp_excluded_in_hull_for_one_support": 2,
+    "certificates_verified": 64,
+    "certificates_total": 64
+   },
+   "six_profile_example": {
+    "support": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "hull": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5,
+     6,
+     7
+    ],
+    "facial_set": [
+     1,
+     2,
+     3,
+     4,
+     5,
+     6
+    ],
+    "excluded": [
+     0,
+     7
+    ],
+    "bounds": {
+     "0": -0.0,
+     "7": -0.0
+    }
+   },
+   "issues_4": {
+    "supports": 65535,
+    "methods_compared_on": 401,
+    "facial_set_lp_agrees_per_pattern_lp": 65535,
+    "same_exclusions_under_second_weighting": 65535,
+    "closed_form_agrees": null,
+    "closed_form_checked": null,
+    "supports_with_unobserved_patterns_in_hull": 61366,
+    "supports_where_lp_excludes_more_than_hull": 27936,
+    "unobserved_patterns_in_hull": 279040,
+    "lp_excluded_patterns_in_hull": 82176,
+    "max_lp_excluded_in_hull_for_one_support": 10,
+    "certificates_verified": 82176,
+    "certificates_total": 82176
+   },
+   "all_agree": true
+  }
  },
  "trolley": {
   "participants": 64988,
@@ -1561,8 +1630,49 @@
    "folds": 10,
    "gain_pairwise_over_independent_bits": 0.20006698884583635,
    "gain_third_order_over_pairwise_bits": 0.004867615150491078,
-   "gain_third_order_over_pairwise_se_bits": 0.00038980833883749816,
+   "gain_third_order_over_pairwise": {
+    "mean": 0.004867615150491078,
+    "se_corrected": 0.0005663783854473719,
+    "ci95_corrected": [
+     0.0035863782289655664,
+     0.00614885207201659
+    ],
+    "sd_folds": 0.0012326822016531665,
+    "folds": 10,
+    "test_over_train": 0.11111111111111112,
+    "folds_positive": 10
+   },
+   "gain_pairwise_over_independent": {
+    "mean": 0.20006698884583635,
+    "se_corrected": 0.006443945604756386,
+    "ci95_corrected": [
+     0.1854897711389945,
+     0.21464420655267819
+    ],
+    "sd_folds": 0.014024788479754661,
+    "folds": 10,
+    "test_over_train": 0.11111111111111112,
+    "folds_positive": 10
+   },
    "folds_third_order_better": 10
+  },
+  "lp_bounds": {
+   "issues": 3,
+   "respondents": 64988,
+   "observed_patterns": 8,
+   "hull_patterns": 8,
+   "hull_unobserved": 0,
+   "lp_possible_unobserved": 0,
+   "lp_excluded_in_hull": 0,
+   "facial_set_size": 8,
+   "certificates_verified": 0,
+   "certificates_attempted": 0,
+   "max_denominator": null,
+   "facial_set_agrees_with_support_lp": true,
+   "smallest_positive_bound": null,
+   "largest_positive_bound": null,
+   "median_positive_bound": null,
+   "hull_is_majority_closure": true
   },
   "strata": {
    "country": {
@@ -1923,8 +2033,15 @@
  "consciousness": {
   "positions": {
    "label": "positions",
-   "respondents_total": 307,
-   "respondents_complete": 294,
+   "screening": {
+    "submissions": 307,
+    "repeat_submissions": 18,
+    "not_researcher": 39,
+    "researcher_status_missing": 18,
+    "eligible": 232,
+    "eligible_attended_assc": 166
+   },
+   "respondents_complete": 223,
    "items": [
     "driving",
     "light",
@@ -1943,17 +2060,17 @@
    "dropped_count": 0,
    "extreme_threshold": 0.05,
    "endorsement_rates": {
-    "driving": 0.6326530612244898,
-    "light": 0.25170068027210885,
-    "phenomenal": 0.5748299319727891,
-    "higher-order": 0.391156462585034,
-    "explanatorygap": 0.6496598639455783,
-    "biology": 0.6666666666666666,
-    "evolution": 0.6870748299319728,
-    "machines": 0.6564625850340136,
-    "zombie": 0.336734693877551,
-    "mary": 0.826530612244898,
-    "transition": 0.2585034013605442
+    "driving": 0.6547085201793722,
+    "light": 0.2556053811659193,
+    "phenomenal": 0.57847533632287,
+    "higher-order": 0.40358744394618834,
+    "explanatorygap": 0.6233183856502242,
+    "biology": 0.6816143497757847,
+    "evolution": 0.6816143497757847,
+    "machines": 0.6591928251121076,
+    "zombie": 0.336322869955157,
+    "mary": 0.8430493273542601,
+    "transition": 0.28699551569506726
    },
    "cross_validation": {
     "reps": 5,
@@ -1968,111 +2085,177 @@
      0.3
     ],
     "folds_total": 50,
-    "heldout_bits_order1": -9.861052550789699,
-    "heldout_bits_order2": -9.626501358461038,
-    "heldout_bits_order3": -9.674775543587497,
-    "gain_order2_over_order1_bits": 0.23497105536399002,
-    "gain_order2_over_order1_se_bits": 0.025214485660428568,
-    "folds_order2_better": 45,
-    "gain_order3_over_order2_bits": -0.04840528551217975,
-    "gain_order3_over_order2_se_bits": 0.007648026203391317,
-    "folds_order3_better": 7,
+    "heldout_bits_order1": -9.878381130973244,
+    "heldout_bits_order2": -9.68816157295974,
+    "heldout_bits_order3": -9.726841422777154,
+    "gain_order2_over_order1_bits": 0.19039838883074078,
+    "gain_order2_over_order1": {
+     "mean": 0.19039838883074078,
+     "se_corrected": 0.060975469900388046,
+     "ci95_corrected": [
+      0.06786359444660169,
+      0.3129331832148799
+     ],
+     "sd_folds": 0.1683974097141613,
+     "folds": 50,
+     "test_over_train": 0.11111111111111112,
+     "folds_positive": 43
+    },
+    "folds_order2_better": 43,
+    "gain_order3_over_order2_bits": -0.038576130256442805,
+    "gain_order3_over_order2": {
+     "mean": -0.038576130256442805,
+     "se_corrected": 0.01952326672857693,
+     "ci95_corrected": [
+      -0.07780960362206017,
+      0.000657343109174563
+     ],
+     "sd_folds": 0.053917871426360266,
+     "folds": 50,
+     "test_over_train": 0.11111111111111112,
+     "folds_positive": 10
+    },
+    "folds_order3_better": 10,
     "lambda_mode_order1": 0.01,
     "lambda_mode_order2": 0.03,
     "lambda_mode_order3": 0.1
    },
    "base_pairwise_lambda": 0.03,
+   "lp_bounds": {
+    "issues": 11,
+    "respondents": 223,
+    "observed_patterns": 176,
+    "hull_patterns": 2048,
+    "hull_unobserved": 1872,
+    "lp_possible_unobserved": 1872,
+    "lp_excluded_in_hull": 0,
+    "facial_set_size": 2048,
+    "certificates_verified": 0,
+    "certificates_attempted": 0,
+    "max_denominator": null,
+    "facial_set_agrees_with_support_lp": true,
+    "smallest_positive_bound": 0.026905829596400074,
+    "largest_positive_bound": 0.11868460388639754,
+    "median_positive_bound": 0.03587443946188344,
+    "hull_is_majority_closure": true
+   },
    "triplet_tests": {
     "triplets": 165,
-    "simulations_per_triplet": 2000,
+    "simulations_per_triplet": 9999,
     "fdr_q": 0.05,
+    "smallest_attainable_p": 0.0001,
+    "first_bh_threshold": 0.00030303030303030303,
     "discoveries": 0,
-    "min_p_boot": 0.004497751124437781,
-    "p_boot_below_005": 8,
-    "median_third_order_bits": 0.001092213296341793,
-    "median_null_third_order_bits": 0.0025257309691979883,
-    "median_excess_third_order_bits": -0.0014287232558970087,
-    "max_third_order_bits": 0.019621967220606162,
-    "median_third_order_fraction": 0.05116744049515587,
+    "min_p_boot": 0.0049,
+    "p_boot_below_005": 12,
+    "expected_below_005_under_null": 8.25,
+    "median_third_order_bits": 0.0014752854594881626,
+    "median_null_third_order_bits": 0.0033573895086245484,
+    "median_excess_third_order_bits": -0.0018796995158686164,
+    "max_third_order_bits": 0.026525308845752882,
+    "median_third_order_fraction": 0.05688907665682604,
+    "simultaneous_z": 3.6126956508842163,
+    "simultaneous_halfwidth_median": 2.4305328228529306,
+    "simultaneous_halfwidth_min": 2.0807406090337692,
+    "max_abs_log_interaction": 2.813699314559076,
     "top": [
      {
       "items": [
-       "driving",
-       "light",
-       "machines"
-      ],
-      "g2": 7.997335818529469,
-      "p_chi2": 0.004684622715737638,
-      "p_boot": 0.004497751124437781,
-      "third_order_bits": 0.019621967220606162,
-      "third_order_fraction": 0.8740803056124424,
-      "null_mean_third_order_bits": 0.0025442605067788537,
-      "log_interaction": -1.7875907560601174
-     },
-     {
-      "items": [
-       "driving",
        "higher-order",
-       "zombie"
+       "biology",
+       "mary"
       ],
-      "g2": 6.947153794646525,
-      "p_chi2": 0.008395269716735947,
-      "p_boot": 0.0079960019990005,
-      "third_order_bits": 0.017045279469098062,
-      "third_order_fraction": 0.5437970097355156,
-      "null_mean_third_order_bits": 0.002471404949121962,
-      "log_interaction": -1.3862796595864642
+      "g2": 8.200130595802257,
+      "p_chi2": 0.004188737458254947,
+      "p_boot": 0.0049,
+      "third_order_bits": 0.026525308845752882,
+      "third_order_fraction": 0.7243517713864961,
+      "null_mean_third_order_bits": 0.0034853123187281944,
+      "log_interaction": -2.813699314559076,
+      "log_interaction_se": 1.5365940219557461,
+      "log_interaction_simultaneous_ci95": [
+       -8.364945854853286,
+       2.7375472257351343
+      ]
      },
      {
       "items": [
+       "phenomenal",
        "explanatorygap",
-       "machines",
-       "zombie"
+       "mary"
       ],
-      "g2": 6.719204798767336,
-      "p_chi2": 0.009538014497524788,
-      "p_boot": 0.012993503248375811,
-      "third_order_bits": 0.016485992248126635,
-      "third_order_fraction": 0.27223773500205933,
-      "null_mean_third_order_bits": 0.0026509534483258857,
-      "log_interaction": 1.5410380440733125
+      "g2": 7.201262726205395,
+      "p_chi2": 0.007285230224606796,
+      "p_boot": 0.0088,
+      "third_order_bits": 0.023294228751646884,
+      "third_order_fraction": 0.17924030706162986,
+      "null_mean_third_order_bits": 0.0033299450405591315,
+      "log_interaction": -2.1640282737376957,
+      "log_interaction_se": 0.9084960490721009,
+      "log_interaction_simultaneous_ci95": [
+       -5.446147999065968,
+       1.1180914515905767
+      ]
+     },
+     {
+      "items": [
+       "light",
+       "phenomenal",
+       "higher-order"
+      ],
+      "g2": 6.342484519790723,
+      "p_chi2": 0.011787965401299115,
+      "p_boot": 0.0117,
+      "third_order_bits": 0.02051630260900783,
+      "third_order_fraction": 0.665898311778942,
+      "null_mean_third_order_bits": 0.0033134118233446755,
+      "log_interaction": -1.5774774669448544,
+      "log_interaction_se": 0.6571880030982888,
+      "log_interaction_simultaneous_ci95": [
+       -3.9516977075513253,
+       0.7967427736616166
+      ]
      }
-    ]
+    ],
+    "reference_log_interaction": 1.102985873394923,
+    "triplets_excluding_reference_size": 0,
+    "triplets_interval_contains_zero": 165
    },
    "joint_avoidances": {
-    "observed": 0,
+    "observed": 3,
     "simulations": 500,
-    "null_mean": 0.178,
+    "null_mean": 0.764,
     "null_ci95": [
      0.0,
-     1.0
+     4.0
     ],
-    "p_upper": 1.0
+    "p_upper": 0.08782435129740519
    },
+   "transition_answers_2_or_4": 43,
    "power": {
     "triplets": 8,
     "steps": 24,
     "simulations": 4000,
-    "sample_size": 294,
+    "sample_size": 223,
     "tests_for_bonferroni": 165,
-    "bits_for_80pct_power_alpha005_median": 0.019412397066401348,
+    "bits_for_80pct_power_alpha005_median": 0.02538782416468309,
     "bits_for_80pct_power_alpha005_range": [
-     0.01837804372992218,
-     0.019942834428144054
+     0.02384319304672749,
+     0.026216030977398073
     ],
-    "bits_for_80pct_power_bonferroni_median": 0.04810368263889389,
+    "bits_for_80pct_power_bonferroni_median": 0.06242431244549128,
     "bits_for_80pct_power_bonferroni_range": [
-     0.04640706962109294,
-     0.048720178995360075
+     0.06050798940511762,
+     0.06448701894090013
     ],
     "triplets_reaching_80pct_bonferroni": 8,
     "reference_bits": 0.004886665746299812,
-    "power_at_reference_median": 0.2920730000952054,
+    "power_at_reference_median": 0.2402737404062805,
     "power_at_reference_range": [
-     0.28514622157593533,
-     0.3006104765363535
+     0.23078440858370666,
+     0.2497713072751592
     ],
-    "size_at_zero_mean": 0.054,
+    "size_at_zero_mean": 0.05515625,
     "rows": [
      {
       "triplet": [
@@ -2080,157 +2263,157 @@
        6,
        9
       ],
-      "eps_max": 0.03654915654241139,
+      "eps_max": 0.03388705751955305,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.053,
-        "power_alpha_bonferroni": 0.0
+        "power_alpha_005": 0.05875,
+        "power_alpha_bonferroni": 0.00025
        },
        {
-        "eps": 0.0015228815226004746,
-        "third_order_bits": 0.000205088318204229,
-        "power_alpha_005": 0.06025,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.001411960729981377,
+        "third_order_bits": 0.00019069080572379962,
+        "power_alpha_005": 0.06375,
+        "power_alpha_bonferroni": 0.00075
        },
        {
-        "eps": 0.0030457630452009493,
-        "third_order_bits": 0.0008196093500584404,
-        "power_alpha_005": 0.092,
+        "eps": 0.002823921459962754,
+        "third_order_bits": 0.0007615051137675188,
+        "power_alpha_005": 0.0765,
         "power_alpha_bonferroni": 0.00125
        },
        {
-        "eps": 0.004568644567801424,
-        "third_order_bits": 0.001843289103260746,
-        "power_alpha_005": 0.13775,
-        "power_alpha_bonferroni": 0.00325
+        "eps": 0.0042358821899441314,
+        "third_order_bits": 0.0017114367080797045,
+        "power_alpha_005": 0.1275,
+        "power_alpha_bonferroni": 0.004
        },
        {
-        "eps": 0.0060915260904018985,
-        "third_order_bits": 0.0032769571047292292,
-        "power_alpha_005": 0.22025,
-        "power_alpha_bonferroni": 0.01075
+        "eps": 0.005647842919925508,
+        "third_order_bits": 0.003040615148959011,
+        "power_alpha_005": 0.17575,
+        "power_alpha_bonferroni": 0.00575
        },
        {
-        "eps": 0.007614407613002374,
-        "third_order_bits": 0.005122543659050516,
-        "power_alpha_005": 0.30325,
-        "power_alpha_bonferroni": 0.01425
+        "eps": 0.007059803649906886,
+        "third_order_bits": 0.004750281830224081,
+        "power_alpha_005": 0.22625,
+        "power_alpha_bonferroni": 0.0085
        },
        {
-        "eps": 0.009137289135602848,
-        "third_order_bits": 0.007383102044515652,
-        "power_alpha_005": 0.415,
-        "power_alpha_bonferroni": 0.033
+        "eps": 0.008471764379888263,
+        "third_order_bits": 0.00684279392959182,
+        "power_alpha_005": 0.315,
+        "power_alpha_bonferroni": 0.01675
        },
        {
-        "eps": 0.010660170658203322,
-        "third_order_bits": 0.010062856693006293,
-        "power_alpha_005": 0.52775,
-        "power_alpha_bonferroni": 0.06425
+        "eps": 0.009883725109869639,
+        "third_order_bits": 0.009321656053000744,
+        "power_alpha_005": 0.3915,
+        "power_alpha_bonferroni": 0.027
        },
        {
-        "eps": 0.012183052180803797,
-        "third_order_bits": 0.013167280085974991,
-        "power_alpha_005": 0.64075,
-        "power_alpha_bonferroni": 0.09925
+        "eps": 0.011295685839851017,
+        "third_order_bits": 0.012191581270014714,
+        "power_alpha_005": 0.49225,
+        "power_alpha_bonferroni": 0.05325
        },
        {
-        "eps": 0.013705933703404274,
-        "third_order_bits": 0.016703203117577933,
-        "power_alpha_005": 0.74775,
-        "power_alpha_bonferroni": 0.17075
+        "eps": 0.012707646569832394,
+        "third_order_bits": 0.015458585342755835,
+        "power_alpha_005": 0.59625,
+        "power_alpha_bonferroni": 0.08225
        },
        {
-        "eps": 0.015228815226004748,
-        "third_order_bits": 0.02067896631405968,
-        "power_alpha_005": 0.825,
-        "power_alpha_bonferroni": 0.24775
+        "eps": 0.014119607299813772,
+        "third_order_bits": 0.019130120564341026,
+        "power_alpha_005": 0.7035,
+        "power_alpha_bonferroni": 0.117
        },
        {
-        "eps": 0.01675169674860522,
-        "third_order_bits": 0.0251046229811001,
-        "power_alpha_005": 0.8985,
-        "power_alpha_bonferroni": 0.33275
+        "eps": 0.015531568029795148,
+        "third_order_bits": 0.023215259161049336,
+        "power_alpha_005": 0.76,
+        "power_alpha_bonferroni": 0.1725
        },
        {
-        "eps": 0.018274578271205696,
-        "third_order_bits": 0.029992210759900315,
-        "power_alpha_005": 0.943,
-        "power_alpha_bonferroni": 0.46675
+        "eps": 0.016943528759776526,
+        "third_order_bits": 0.027724941322594253,
+        "power_alpha_005": 0.84425,
+        "power_alpha_bonferroni": 0.2515
        },
        {
-        "eps": 0.019797459793806173,
-        "third_order_bits": 0.035356116363203835,
-        "power_alpha_005": 0.97325,
-        "power_alpha_bonferroni": 0.57325
+        "eps": 0.018355489489757904,
+        "third_order_bits": 0.032672310688326774,
+        "power_alpha_005": 0.89075,
+        "power_alpha_bonferroni": 0.33975
        },
        {
-        "eps": 0.021320341316406644,
-        "third_order_bits": 0.04121357148386992,
-        "power_alpha_005": 0.985,
-        "power_alpha_bonferroni": 0.70075
+        "eps": 0.019767450219739278,
+        "third_order_bits": 0.03807317244243681,
+        "power_alpha_005": 0.93025,
+        "power_alpha_bonferroni": 0.43475
        },
        {
-        "eps": 0.02284322283900712,
-        "third_order_bits": 0.04758533983205029,
-        "power_alpha_005": 0.993,
-        "power_alpha_bonferroni": 0.799
+        "eps": 0.02117941094972066,
+        "third_order_bits": 0.04394662959857824,
+        "power_alpha_005": 0.957,
+        "power_alpha_bonferroni": 0.54475
        },
        {
-        "eps": 0.024366104361607594,
-        "third_order_bits": 0.054496693418248615,
-        "power_alpha_005": 0.9975,
-        "power_alpha_bonferroni": 0.8675
+        "eps": 0.022591371679702033,
+        "third_order_bits": 0.050315988503363676,
+        "power_alpha_005": 0.9755,
+        "power_alpha_bonferroni": 0.6475
        },
        {
-        "eps": 0.02588898588420807,
-        "third_order_bits": 0.061978846024224626,
+        "eps": 0.02400333240968341,
+        "third_order_bits": 0.057210089405880904,
+        "power_alpha_005": 0.98975,
+        "power_alpha_bonferroni": 0.73175
+       },
+       {
+        "eps": 0.02541529313966479,
+        "third_order_bits": 0.06466534402452749,
+        "power_alpha_005": 0.9945,
+        "power_alpha_bonferroni": 0.827
+       },
+       {
+        "eps": 0.026827253869646166,
+        "third_order_bits": 0.07272902661036852,
+        "power_alpha_005": 0.99825,
+        "power_alpha_bonferroni": 0.87675
+       },
+       {
+        "eps": 0.028239214599627544,
+        "third_order_bits": 0.08146497612117454,
         "power_alpha_005": 0.99875,
-        "power_alpha_bonferroni": 0.927
+        "power_alpha_bonferroni": 0.9345
        },
        {
-        "eps": 0.027411867406808548,
-        "third_order_bits": 0.07007114768435073,
-        "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.966
+        "eps": 0.029651175329608922,
+        "third_order_bits": 0.09096446999681565,
+        "power_alpha_005": 0.99925,
+        "power_alpha_bonferroni": 0.9655
        },
        {
-        "eps": 0.028934748929409018,
-        "third_order_bits": 0.07882462920391195,
+        "eps": 0.031063136059590296,
+        "third_order_bits": 0.10137005831092276,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.983
+        "power_alpha_bonferroni": 0.98425
        },
        {
-        "eps": 0.030457630452009495,
-        "third_order_bits": 0.08830814465151615,
+        "eps": 0.032475096789571674,
+        "third_order_bits": 0.11294102828353486,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9935
+        "power_alpha_bonferroni": 0.99575
        },
        {
-        "eps": 0.03198051197460997,
-        "third_order_bits": 0.09862008824139945,
+        "eps": 0.03388705751955305,
+        "third_order_bits": 0.12634177973431016,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99725
-       },
-       {
-        "eps": 0.03350339349721044,
-        "third_order_bits": 0.10991408482905404,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99925
-       },
-       {
-        "eps": 0.03502627501981092,
-        "third_order_bits": 0.12246957406176721,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.03654915654241139,
-        "third_order_bits": 0.13700280632388437,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
+        "power_alpha_bonferroni": 0.99775
        }
       ]
      },
@@ -2240,155 +2423,155 @@
        2,
        8
       ],
-      "eps_max": 0.050569068107714825,
+      "eps_max": 0.05109785659909423,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.0595,
-        "power_alpha_bonferroni": 0.00075
+        "power_alpha_005": 0.0525,
+        "power_alpha_bonferroni": 0.0005
        },
        {
-        "eps": 0.0021070445044881177,
-        "third_order_bits": 0.0002559074837406158,
-        "power_alpha_005": 0.06575,
-        "power_alpha_bonferroni": 0.00025
+        "eps": 0.002129077358295593,
+        "third_order_bits": 0.00026649693448595104,
+        "power_alpha_005": 0.05975,
+        "power_alpha_bonferroni": 0.00125
        },
        {
-        "eps": 0.004214089008976235,
-        "third_order_bits": 0.0010246641540662266,
-        "power_alpha_005": 0.10575,
-        "power_alpha_bonferroni": 0.00375
+        "eps": 0.004258154716591186,
+        "third_order_bits": 0.0010667205780405765,
+        "power_alpha_005": 0.096,
+        "power_alpha_bonferroni": 0.001
        },
        {
-        "eps": 0.006321133513464353,
-        "third_order_bits": 0.0023084558411262425,
-        "power_alpha_005": 0.17925,
-        "power_alpha_bonferroni": 0.00525
+        "eps": 0.00638723207488678,
+        "third_order_bits": 0.002402459610359708,
+        "power_alpha_005": 0.14675,
+        "power_alpha_bonferroni": 0.00225
        },
        {
-        "eps": 0.00842817801795247,
-        "third_order_bits": 0.004110353006006578,
-        "power_alpha_005": 0.26325,
-        "power_alpha_bonferroni": 0.00975
+        "eps": 0.008516309433182372,
+        "third_order_bits": 0.004276456933338096,
+        "power_alpha_005": 0.216,
+        "power_alpha_bonferroni": 0.00925
        },
        {
-        "eps": 0.010535222522440588,
-        "third_order_bits": 0.006434372204444762,
-        "power_alpha_005": 0.36075,
-        "power_alpha_bonferroni": 0.0255
+        "eps": 0.010645386791477965,
+        "third_order_bits": 0.00669246744443951,
+        "power_alpha_005": 0.3085,
+        "power_alpha_bonferroni": 0.01575
        },
        {
-        "eps": 0.012642267026928706,
-        "third_order_bits": 0.009285556057205858,
-        "power_alpha_005": 0.48225,
-        "power_alpha_bonferroni": 0.0485
+        "eps": 0.01277446414977356,
+        "third_order_bits": 0.009655335271359596,
+        "power_alpha_005": 0.414,
+        "power_alpha_bonferroni": 0.0335
        },
        {
-        "eps": 0.014749311531416823,
-        "third_order_bits": 0.01267007588340209,
-        "power_alpha_005": 0.617,
-        "power_alpha_bonferroni": 0.0865
+        "eps": 0.01490354150806915,
+        "third_order_bits": 0.013171094577707567,
+        "power_alpha_005": 0.508,
+        "power_alpha_bonferroni": 0.049
        },
        {
-        "eps": 0.01685635603590494,
-        "third_order_bits": 0.0165953627028298,
-        "power_alpha_005": 0.745,
-        "power_alpha_bonferroni": 0.17025
+        "eps": 0.017032618866364743,
+        "third_order_bits": 0.01724709963480308,
+        "power_alpha_005": 0.6325,
+        "power_alpha_bonferroni": 0.09325
        },
        {
-        "eps": 0.01896340054039306,
-        "third_order_bits": 0.02107027450102749,
-        "power_alpha_005": 0.83175,
-        "power_alpha_bonferroni": 0.2445
+        "eps": 0.019161696224660334,
+        "third_order_bits": 0.021892192081460492,
+        "power_alpha_005": 0.732,
+        "power_alpha_bonferroni": 0.14725
        },
        {
-        "eps": 0.021070445044881175,
-        "third_order_bits": 0.02610531081153012,
-        "power_alpha_005": 0.8995,
-        "power_alpha_bonferroni": 0.353
+        "eps": 0.02129077358295593,
+        "third_order_bits": 0.027116916501434576,
+        "power_alpha_005": 0.8375,
+        "power_alpha_bonferroni": 0.2515
        },
        {
-        "eps": 0.023177489549369296,
-        "third_order_bits": 0.03171289034762114,
-        "power_alpha_005": 0.94975,
-        "power_alpha_bonferroni": 0.489
+        "eps": 0.023419850941251524,
+        "third_order_bits": 0.0329338001872518,
+        "power_alpha_005": 0.89825,
+        "power_alpha_bonferroni": 0.3335
        },
        {
-        "eps": 0.025284534053857412,
-        "third_order_bits": 0.037907714519266555,
-        "power_alpha_005": 0.9805,
-        "power_alpha_bonferroni": 0.6295
+        "eps": 0.02554892829954712,
+        "third_order_bits": 0.039357720148009555,
+        "power_alpha_005": 0.93775,
+        "power_alpha_bonferroni": 0.4505
        },
        {
-        "eps": 0.027391578558345533,
-        "third_order_bits": 0.044707250767646076,
-        "power_alpha_005": 0.991,
-        "power_alpha_bonferroni": 0.75425
+        "eps": 0.027678005657842706,
+        "third_order_bits": 0.04640639164200823,
+        "power_alpha_005": 0.9715,
+        "power_alpha_bonferroni": 0.587
        },
        {
-        "eps": 0.029498623062833646,
-        "third_order_bits": 0.052132387546561215,
-        "power_alpha_005": 0.9965,
-        "power_alpha_bonferroni": 0.8465
+        "eps": 0.0298070830161383,
+        "third_order_bits": 0.05410103060938329,
+        "power_alpha_005": 0.98475,
+        "power_alpha_bonferroni": 0.68275
        },
        {
-        "eps": 0.03160566756732177,
-        "third_order_bits": 0.06020834271818398,
-        "power_alpha_005": 0.998,
-        "power_alpha_bonferroni": 0.91525
+        "eps": 0.03193616037443389,
+        "third_order_bits": 0.06246727264158073,
+        "power_alpha_005": 0.99525,
+        "power_alpha_bonferroni": 0.7965
        },
        {
-        "eps": 0.03371271207180988,
-        "third_order_bits": 0.06896595938734176,
-        "power_alpha_005": 0.99925,
-        "power_alpha_bonferroni": 0.95975
+        "eps": 0.034065237732729486,
+        "third_order_bits": 0.07153648393872691,
+        "power_alpha_005": 0.99675,
+        "power_alpha_bonferroni": 0.872
        },
        {
-        "eps": 0.035819756576298,
-        "third_order_bits": 0.07844361912134515,
+        "eps": 0.03619431509102508,
+        "third_order_bits": 0.08134769664384517,
+        "power_alpha_005": 0.9985,
+        "power_alpha_bonferroni": 0.9305
+       },
+       {
+        "eps": 0.03832339244932067,
+        "third_order_bits": 0.09195059001631542,
+        "power_alpha_005": 0.99975,
+        "power_alpha_bonferroni": 0.9635
+       },
+       {
+        "eps": 0.04045246980761626,
+        "third_order_bits": 0.10341033642521488,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.98475
+        "power_alpha_bonferroni": 0.98375
        },
        {
-        "eps": 0.03792680108078612,
-        "third_order_bits": 0.08869018960570026,
+        "eps": 0.04258154716591186,
+        "third_order_bits": 0.11581605065216981,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99375
+        "power_alpha_bonferroni": 0.99575
        },
        {
-        "eps": 0.04003384558527424,
-        "third_order_bits": 0.0997698171749484,
+        "eps": 0.04471062452420745,
+        "third_order_bits": 0.12929699510726256,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99775
+        "power_alpha_bonferroni": 0.99825
        },
        {
-        "eps": 0.04214089008976235,
-        "third_order_bits": 0.11177028463279207,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.999
-       },
-       {
-        "eps": 0.04424793459425047,
-        "third_order_bits": 0.12481904388467074,
+        "eps": 0.04683970188250305,
+        "third_order_bits": 0.14405827146768588,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 0.99975
        },
        {
-        "eps": 0.04635497909873859,
-        "third_order_bits": 0.13911853236440094,
+        "eps": 0.04896877924079864,
+        "third_order_bits": 0.1604792094526852,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        },
        {
-        "eps": 0.04846202360322671,
-        "third_order_bits": 0.15504353663195908,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.050569068107714825,
-        "third_order_bits": 0.17357109494679734,
+        "eps": 0.05109785659909424,
+        "third_order_bits": 0.17954777321991833,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        }
@@ -2400,155 +2583,155 @@
        2,
        4
       ],
-      "eps_max": 0.050156474548875396,
+      "eps_max": 0.05411504093095775,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.05775,
+        "power_alpha_005": 0.05475,
         "power_alpha_bonferroni": 0.0005
        },
        {
-        "eps": 0.0020898531062031414,
-        "third_order_bits": 0.0002973574051674693,
-        "power_alpha_005": 0.06525,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.0022547933721232395,
+        "third_order_bits": 0.0003308368351664544,
+        "power_alpha_005": 0.0705,
+        "power_alpha_bonferroni": 0.00075
        },
        {
-        "eps": 0.004179706212406283,
-        "third_order_bits": 0.0011865860162027196,
-        "power_alpha_005": 0.107,
-        "power_alpha_bonferroni": 0.00225
+        "eps": 0.004509586744246479,
+        "third_order_bits": 0.0013206474224910277,
+        "power_alpha_005": 0.103,
+        "power_alpha_bonferroni": 0.002
        },
        {
-        "eps": 0.0062695593186094245,
-        "third_order_bits": 0.0026646322291956504,
-        "power_alpha_005": 0.1835,
-        "power_alpha_bonferroni": 0.00475
+        "eps": 0.006764380116369719,
+        "third_order_bits": 0.002966661713844637,
+        "power_alpha_005": 0.16325,
+        "power_alpha_bonferroni": 0.004
        },
        {
-        "eps": 0.008359412424812565,
-        "third_order_bits": 0.004730004197340402,
-        "power_alpha_005": 0.28225,
-        "power_alpha_bonferroni": 0.0135
+        "eps": 0.009019173488492958,
+        "third_order_bits": 0.005267772647348982,
+        "power_alpha_005": 0.24425,
+        "power_alpha_bonferroni": 0.01075
        },
        {
-        "eps": 0.010449265531015708,
-        "third_order_bits": 0.0073827360736755665,
-        "power_alpha_005": 0.4055,
-        "power_alpha_bonferroni": 0.03075
+        "eps": 0.011273966860616198,
+        "third_order_bits": 0.008224512776344254,
+        "power_alpha_005": 0.35525,
+        "power_alpha_bonferroni": 0.024
        },
        {
-        "eps": 0.012539118637218849,
-        "third_order_bits": 0.010624388741046525,
-        "power_alpha_005": 0.55225,
-        "power_alpha_bonferroni": 0.0725
+        "eps": 0.013528760232739438,
+        "third_order_bits": 0.011839067336453225,
+        "power_alpha_005": 0.476,
+        "power_alpha_bonferroni": 0.04475
        },
        {
-        "eps": 0.01462897174342199,
-        "third_order_bits": 0.014458087307790524,
-        "power_alpha_005": 0.6725,
-        "power_alpha_bonferroni": 0.1175
+        "eps": 0.015783553604862676,
+        "third_order_bits": 0.016115324930047862,
+        "power_alpha_005": 0.60575,
+        "power_alpha_bonferroni": 0.09325
        },
        {
-        "eps": 0.01671882484962513,
-        "third_order_bits": 0.018888598133216722,
-        "power_alpha_005": 0.7895,
-        "power_alpha_bonferroni": 0.1955
+        "eps": 0.018038346976985916,
+        "third_order_bits": 0.021058969453430748,
+        "power_alpha_005": 0.719,
+        "power_alpha_bonferroni": 0.1495
        },
        {
-        "eps": 0.018808677955828274,
-        "third_order_bits": 0.0239224510067012,
-        "power_alpha_005": 0.86725,
-        "power_alpha_bonferroni": 0.29925
+        "eps": 0.020293140349109156,
+        "third_order_bits": 0.02667761981750626,
+        "power_alpha_005": 0.80725,
+        "power_alpha_bonferroni": 0.22625
        },
        {
-        "eps": 0.020898531062031416,
-        "third_order_bits": 0.029568115748469313,
-        "power_alpha_005": 0.93725,
-        "power_alpha_bonferroni": 0.439
+        "eps": 0.022547933721232396,
+        "third_order_bits": 0.03298102783589928,
+        "power_alpha_005": 0.88575,
+        "power_alpha_bonferroni": 0.32125
        },
        {
-        "eps": 0.022988384168234555,
-        "third_order_bits": 0.035836247520895766,
-        "power_alpha_005": 0.96575,
-        "power_alpha_bonferroni": 0.576
+        "eps": 0.024802727093355636,
+        "third_order_bits": 0.039981349998426535,
+        "power_alpha_005": 0.9325,
+        "power_alpha_bonferroni": 0.453
        },
        {
-        "eps": 0.025078237274437698,
-        "third_order_bits": 0.042740022473575154,
-        "power_alpha_005": 0.98425,
-        "power_alpha_bonferroni": 0.707
+        "eps": 0.027057520465478876,
+        "third_order_bits": 0.04769351671355137,
+        "power_alpha_005": 0.96325,
+        "power_alpha_bonferroni": 0.58325
        },
        {
-        "eps": 0.02716809038064084,
-        "third_order_bits": 0.050295596573679754,
-        "power_alpha_005": 0.994,
-        "power_alpha_bonferroni": 0.8245
+        "eps": 0.029312313837602116,
+        "third_order_bits": 0.05613573468932175,
+        "power_alpha_005": 0.985,
+        "power_alpha_bonferroni": 0.696
        },
        {
-        "eps": 0.02925794348684398,
-        "third_order_bits": 0.058522738396976165,
-        "power_alpha_005": 0.99825,
-        "power_alpha_bonferroni": 0.90325
+        "eps": 0.03156710720972535,
+        "third_order_bits": 0.0653301774470691,
+        "power_alpha_005": 0.9945,
+        "power_alpha_bonferroni": 0.8105
        },
        {
-        "eps": 0.03134779659304712,
-        "third_order_bits": 0.06744571648555656,
+        "eps": 0.03382190058184859,
+        "third_order_bits": 0.07530395114596058,
+        "power_alpha_005": 0.99725,
+        "power_alpha_bonferroni": 0.887
+       },
+       {
+        "eps": 0.03607669395397183,
+        "third_order_bits": 0.08609047894622587,
         "power_alpha_005": 0.99925,
-        "power_alpha_bonferroni": 0.95125
+        "power_alpha_bonferroni": 0.9365
        },
        {
-        "eps": 0.03343764969925026,
-        "third_order_bits": 0.07709457381866333,
+        "eps": 0.03833148732609507,
+        "third_order_bits": 0.097731549906382,
+        "power_alpha_005": 0.99975,
+        "power_alpha_bonferroni": 0.97125
+       },
+       {
+        "eps": 0.04058628069821831,
+        "third_order_bits": 0.11028047874782426,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9785
+        "power_alpha_bonferroni": 0.98975
        },
        {
-        "eps": 0.03552750280545341,
-        "third_order_bits": 0.08750701717326678,
+        "eps": 0.04284107407034155,
+        "third_order_bits": 0.12380724391138595,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.992
+        "power_alpha_bonferroni": 0.9955
        },
        {
-        "eps": 0.03761735591165655,
-        "third_order_bits": 0.09873133480340587,
+        "eps": 0.04509586744246479,
+        "third_order_bits": 0.13840744524053408,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9965
+        "power_alpha_bonferroni": 0.9985
        },
        {
-        "eps": 0.039707209017859686,
-        "third_order_bits": 0.11083114611178088,
+        "eps": 0.04735066081458803,
+        "third_order_bits": 0.1542194794054743,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9995
+        "power_alpha_bonferroni": 1.0
        },
        {
-        "eps": 0.04179706212406283,
-        "third_order_bits": 0.12389368959573878,
+        "eps": 0.04960545418671127,
+        "third_order_bits": 0.171462356681643,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 0.99975
        },
        {
-        "eps": 0.04388691523026597,
-        "third_order_bits": 0.13804572502012505,
+        "eps": 0.05186024755883451,
+        "third_order_bits": 0.19053992188599192,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        },
        {
-        "eps": 0.04597676833646911,
-        "third_order_bits": 0.15348856409227246,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.04806662144267226,
-        "third_order_bits": 0.17059464417420442,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.050156474548875396,
-        "third_order_bits": 0.19033393001263121,
+        "eps": 0.05411504093095775,
+        "third_order_bits": 0.21250093959055538,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        }
@@ -2560,157 +2743,157 @@
        2,
        7
       ],
-      "eps_max": 0.03769767617845723,
+      "eps_max": 0.03875092092746623,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.05175,
-        "power_alpha_bonferroni": 0.00025
+        "power_alpha_005": 0.05975,
+        "power_alpha_bonferroni": 0.00075
        },
        {
-        "eps": 0.0015707365074357179,
-        "third_order_bits": 0.0001648317275752373,
+        "eps": 0.0016146217053110928,
+        "third_order_bits": 0.0001731071086003835,
         "power_alpha_005": 0.0635,
-        "power_alpha_bonferroni": 0.00025
+        "power_alpha_bonferroni": 0.0005
        },
        {
-        "eps": 0.0031414730148714358,
-        "third_order_bits": 0.0006605333050946332,
-        "power_alpha_005": 0.089,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.0032292434106221857,
+        "third_order_bits": 0.0006936121443539773,
+        "power_alpha_005": 0.088,
+        "power_alpha_bonferroni": 0.00075
        },
        {
-        "eps": 0.0047122095223071534,
-        "third_order_bits": 0.00148931502789353,
-        "power_alpha_005": 0.13125,
-        "power_alpha_bonferroni": 0.00325
+        "eps": 0.004843865115933279,
+        "third_order_bits": 0.0015637127690839824,
+        "power_alpha_005": 0.1055,
+        "power_alpha_bonferroni": 0.003
        },
        {
-        "eps": 0.0062829460297428716,
-        "third_order_bits": 0.0026539550364449906,
-        "power_alpha_005": 0.195,
-        "power_alpha_bonferroni": 0.00525
+        "eps": 0.006458486821244371,
+        "third_order_bits": 0.002786203493712676,
+        "power_alpha_005": 0.1595,
+        "power_alpha_bonferroni": 0.006
        },
        {
-        "eps": 0.007853682537178589,
-        "third_order_bits": 0.004157850374322503,
-        "power_alpha_005": 0.26725,
-        "power_alpha_bonferroni": 0.01375
+        "eps": 0.008073108526555465,
+        "third_order_bits": 0.0043645276794236215,
+        "power_alpha_005": 0.2195,
+        "power_alpha_bonferroni": 0.0085
        },
        {
-        "eps": 0.009424419044614307,
-        "third_order_bits": 0.006005081050791634,
-        "power_alpha_005": 0.3495,
-        "power_alpha_bonferroni": 0.02
+        "eps": 0.009687730231866558,
+        "third_order_bits": 0.006302843007812335,
+        "power_alpha_005": 0.3,
+        "power_alpha_bonferroni": 0.016
        },
        {
-        "eps": 0.010995155552050025,
-        "third_order_bits": 0.008200490293612934,
-        "power_alpha_005": 0.451,
-        "power_alpha_bonferroni": 0.0345
+        "eps": 0.01130235193717765,
+        "third_order_bits": 0.008606103687533917,
+        "power_alpha_005": 0.372,
+        "power_alpha_bonferroni": 0.02375
        },
        {
-        "eps": 0.012565892059485743,
-        "third_order_bits": 0.01074978531732233,
-        "power_alpha_005": 0.56175,
-        "power_alpha_bonferroni": 0.06825
+        "eps": 0.012916973642488743,
+        "third_order_bits": 0.01128016383831795,
+        "power_alpha_005": 0.46975,
+        "power_alpha_bonferroni": 0.04475
        },
        {
-        "eps": 0.01413662856692146,
-        "third_order_bits": 0.013659664549864833,
-        "power_alpha_005": 0.673,
-        "power_alpha_bonferroni": 0.11
+        "eps": 0.014531595347799837,
+        "third_order_bits": 0.014331908157669389,
+        "power_alpha_005": 0.5625,
+        "power_alpha_bonferroni": 0.065
        },
        {
-        "eps": 0.015707365074357178,
-        "third_order_bits": 0.01693797960542461,
-        "power_alpha_005": 0.74,
-        "power_alpha_bonferroni": 0.16525
+        "eps": 0.01614621705311093,
+        "third_order_bits": 0.01776941838757141,
+        "power_alpha_005": 0.65625,
+        "power_alpha_bonferroni": 0.1105
        },
        {
-        "eps": 0.017278101581792896,
-        "third_order_bits": 0.02059394376867201,
-        "power_alpha_005": 0.8335,
-        "power_alpha_bonferroni": 0.246
+        "eps": 0.017760838758422024,
+        "third_order_bits": 0.021602187674474672,
+        "power_alpha_005": 0.73625,
+        "power_alpha_bonferroni": 0.1505
        },
        {
-        "eps": 0.018848838089228614,
-        "third_order_bits": 0.024638404042339322,
-        "power_alpha_005": 0.8915,
-        "power_alpha_bonferroni": 0.33475
+        "eps": 0.019375460463733115,
+        "third_order_bits": 0.02584140035165052,
+        "power_alpha_005": 0.825,
+        "power_alpha_bonferroni": 0.22075
        },
        {
-        "eps": 0.020419574596664332,
-        "third_order_bits": 0.02908420207450256,
-        "power_alpha_005": 0.9445,
-        "power_alpha_bonferroni": 0.4495
+        "eps": 0.020990082169044206,
+        "third_order_bits": 0.03050030316977544,
+        "power_alpha_005": 0.88375,
+        "power_alpha_bonferroni": 0.306
        },
        {
-        "eps": 0.02199031110410005,
-        "third_order_bits": 0.033946662616301373,
-        "power_alpha_005": 0.96425,
-        "power_alpha_bonferroni": 0.55575
+        "eps": 0.0226047038743553,
+        "third_order_bits": 0.03559470770998072,
+        "power_alpha_005": 0.926,
+        "power_alpha_bonferroni": 0.3965
        },
        {
-        "eps": 0.023561047611535768,
-        "third_order_bits": 0.039244270471993206,
-        "power_alpha_005": 0.98175,
-        "power_alpha_bonferroni": 0.67725
+        "eps": 0.024219325579666395,
+        "third_order_bits": 0.04114368664969925,
+        "power_alpha_005": 0.95475,
+        "power_alpha_bonferroni": 0.49
        },
        {
-        "eps": 0.025131784118971486,
-        "third_order_bits": 0.044999635852361046,
-        "power_alpha_005": 0.98875,
-        "power_alpha_bonferroni": 0.7655
+        "eps": 0.025833947284977486,
+        "third_order_bits": 0.047170566590695455,
+        "power_alpha_005": 0.9745,
+        "power_alpha_bonferroni": 0.6125
        },
        {
-        "eps": 0.0267025206264072,
-        "third_order_bits": 0.05124091954329767,
-        "power_alpha_005": 0.9975,
-        "power_alpha_bonferroni": 0.8485
+        "eps": 0.02744856899028858,
+        "third_order_bits": 0.05370439365908012,
+        "power_alpha_005": 0.98425,
+        "power_alpha_bonferroni": 0.692
        },
        {
-        "eps": 0.02827325713384292,
-        "third_order_bits": 0.058004028774217606,
-        "power_alpha_005": 0.99775,
-        "power_alpha_bonferroni": 0.90275
+        "eps": 0.029063190695599674,
+        "third_order_bits": 0.0607821914589204,
+        "power_alpha_005": 0.994,
+        "power_alpha_bonferroni": 0.78625
        },
        {
-        "eps": 0.02984399364127864,
-        "third_order_bits": 0.06533618792282875,
+        "eps": 0.030677812400910765,
+        "third_order_bits": 0.06845263240874258,
+        "power_alpha_005": 0.99825,
+        "power_alpha_bonferroni": 0.869
+       },
+       {
+        "eps": 0.03229243410622186,
+        "third_order_bits": 0.07678244079591812,
+        "power_alpha_005": 0.999,
+        "power_alpha_bonferroni": 0.9175
+       },
+       {
+        "eps": 0.03390705581153295,
+        "third_order_bits": 0.08586867664507672,
         "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.9515
+        "power_alpha_bonferroni": 0.95975
        },
        {
-        "eps": 0.031414730148714355,
-        "third_order_bits": 0.07330216654286766,
+        "eps": 0.03552167751684405,
+        "third_order_bits": 0.09586579630221148,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.97625
+        "power_alpha_bonferroni": 0.98
        },
        {
-        "eps": 0.03298546665615008,
-        "third_order_bits": 0.08199622819919869,
+        "eps": 0.03713629922215514,
+        "third_order_bits": 0.10706025914609127,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99
+        "power_alpha_bonferroni": 0.996
        },
        {
-        "eps": 0.03455620316358579,
-        "third_order_bits": 0.09156845419858133,
+        "eps": 0.03875092092746623,
+        "third_order_bits": 0.12019995742168907,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99775
-       },
-       {
-        "eps": 0.036126939671021506,
-        "third_order_bits": 0.10229732093045978,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9995
-       },
-       {
-        "eps": 0.03769767617845723,
-        "third_order_bits": 0.11491017401659823,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
+        "power_alpha_bonferroni": 0.99925
        }
       ]
      },
@@ -2720,157 +2903,157 @@
        4,
        9
       ],
-      "eps_max": 0.031623466659814144,
+      "eps_max": 0.032310310084606976,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.0555,
-        "power_alpha_bonferroni": 0.00025
+        "power_alpha_005": 0.05375,
+        "power_alpha_bonferroni": 0.0
        },
        {
-        "eps": 0.0013176444441589227,
-        "third_order_bits": 0.00014697942481029674,
-        "power_alpha_005": 0.06225,
-        "power_alpha_bonferroni": 0.00025
+        "eps": 0.0013462629201919573,
+        "third_order_bits": 0.00015981120921243724,
+        "power_alpha_005": 0.06025,
+        "power_alpha_bonferroni": 0.0005
        },
        {
-        "eps": 0.0026352888883178455,
-        "third_order_bits": 0.0005898304459723783,
-        "power_alpha_005": 0.08575,
-        "power_alpha_bonferroni": 0.00075
+        "eps": 0.0026925258403839147,
+        "third_order_bits": 0.0006413084298964897,
+        "power_alpha_005": 0.0835,
+        "power_alpha_bonferroni": 0.00125
        },
        {
-        "eps": 0.003952933332476768,
-        "third_order_bits": 0.0013318448162016362,
-        "power_alpha_005": 0.1275,
-        "power_alpha_bonferroni": 0.0025
+        "eps": 0.004038788760575872,
+        "third_order_bits": 0.0014481165500330982,
+        "power_alpha_005": 0.1165,
+        "power_alpha_bonferroni": 0.002
        },
        {
-        "eps": 0.005270577776635691,
-        "third_order_bits": 0.0023769156261311776,
-        "power_alpha_005": 0.179,
-        "power_alpha_bonferroni": 0.00325
+        "eps": 0.005385051680767829,
+        "third_order_bits": 0.0025846115419668,
+        "power_alpha_005": 0.154,
+        "power_alpha_bonferroni": 0.0045
        },
        {
-        "eps": 0.006588222220794613,
-        "third_order_bits": 0.003729593877504085,
-        "power_alpha_005": 0.24625,
-        "power_alpha_bonferroni": 0.01
+        "eps": 0.006731314600959787,
+        "third_order_bits": 0.004055989066143758,
+        "power_alpha_005": 0.21425,
+        "power_alpha_bonferroni": 0.00875
        },
        {
-        "eps": 0.007905866664953536,
-        "third_order_bits": 0.00539515826365726,
-        "power_alpha_005": 0.3245,
-        "power_alpha_bonferroni": 0.0155
+        "eps": 0.008077577521151744,
+        "third_order_bits": 0.005868350368429349,
+        "power_alpha_005": 0.29175,
+        "power_alpha_bonferroni": 0.015
        },
        {
-        "eps": 0.009223511109112459,
-        "third_order_bits": 0.007379701258977255,
-        "power_alpha_005": 0.4175,
-        "power_alpha_bonferroni": 0.03025
+        "eps": 0.009423840441343702,
+        "third_order_bits": 0.008028809414416681,
+        "power_alpha_005": 0.367,
+        "power_alpha_bonferroni": 0.0225
        },
        {
-        "eps": 0.010541155553271382,
-        "third_order_bits": 0.009690235683968592,
-        "power_alpha_005": 0.534,
-        "power_alpha_bonferroni": 0.0485
+        "eps": 0.010770103361535659,
+        "third_order_bits": 0.010545626586594106,
+        "power_alpha_005": 0.4615,
+        "power_alpha_bonferroni": 0.04325
        },
        {
-        "eps": 0.011858799997430303,
-        "third_order_bits": 0.012334827409955815,
-        "power_alpha_005": 0.6195,
-        "power_alpha_bonferroni": 0.08175
+        "eps": 0.012116366281727617,
+        "third_order_bits": 0.013428376201339128,
+        "power_alpha_005": 0.55,
+        "power_alpha_bonferroni": 0.0685
        },
        {
-        "eps": 0.013176444441589226,
-        "third_order_bits": 0.015322762017731636,
-        "power_alpha_005": 0.71475,
-        "power_alpha_bonferroni": 0.14725
+        "eps": 0.013462629201919573,
+        "third_order_bits": 0.01668815785936458,
+        "power_alpha_005": 0.65075,
+        "power_alpha_bonferroni": 0.0995
        },
        {
-        "eps": 0.014494088885748149,
-        "third_order_bits": 0.018664756383265573,
-        "power_alpha_005": 0.808,
-        "power_alpha_bonferroni": 0.19875
+        "eps": 0.014808892122111532,
+        "third_order_bits": 0.0203378656681993,
+        "power_alpha_005": 0.733,
+        "power_alpha_bonferroni": 0.1485
        },
        {
-        "eps": 0.015811733329907072,
-        "third_order_bits": 0.022373230921448006,
-        "power_alpha_005": 0.87275,
-        "power_alpha_bonferroni": 0.2755
+        "eps": 0.016155155042303488,
+        "third_order_bits": 0.024392535397093844,
+        "power_alpha_005": 0.8105,
+        "power_alpha_bonferroni": 0.20875
        },
        {
-        "eps": 0.017129377774065997,
-        "third_order_bits": 0.02646266558895156,
-        "power_alpha_005": 0.931,
-        "power_alpha_bonferroni": 0.3895
+        "eps": 0.017501417962495446,
+        "third_order_bits": 0.028869798880802707,
+        "power_alpha_005": 0.858,
+        "power_alpha_bonferroni": 0.26225
        },
        {
-        "eps": 0.018447022218224918,
-        "third_order_bits": 0.030950074533509668,
-        "power_alpha_005": 0.95525,
-        "power_alpha_bonferroni": 0.4985
+        "eps": 0.018847680882687404,
+        "third_order_bits": 0.03379048965746985,
+        "power_alpha_005": 0.91475,
+        "power_alpha_bonferroni": 0.384
        },
        {
-        "eps": 0.01976466666238384,
-        "third_order_bits": 0.03585565383024057,
-        "power_alpha_005": 0.978,
-        "power_alpha_bonferroni": 0.60175
+        "eps": 0.02019394380287936,
+        "third_order_bits": 0.03917946790408948,
+        "power_alpha_005": 0.95025,
+        "power_alpha_bonferroni": 0.46625
        },
        {
-        "eps": 0.021082311106542764,
-        "third_order_bits": 0.04120369060594044,
-        "power_alpha_005": 0.9905,
-        "power_alpha_bonferroni": 0.71775
+        "eps": 0.021540206723071317,
+        "third_order_bits": 0.04506677391402129,
+        "power_alpha_005": 0.974,
+        "power_alpha_bonferroni": 0.559
        },
        {
-        "eps": 0.02239995555070169,
-        "third_order_bits": 0.04702388354690129,
-        "power_alpha_005": 0.993,
-        "power_alpha_bonferroni": 0.80975
+        "eps": 0.022886469643263272,
+        "third_order_bits": 0.05148929331903922,
+        "power_alpha_005": 0.986,
+        "power_alpha_bonferroni": 0.68525
        },
        {
-        "eps": 0.023717599994860606,
-        "third_order_bits": 0.05335334431422011,
+        "eps": 0.024232732563455234,
+        "third_order_bits": 0.058493258188192704,
+        "power_alpha_005": 0.994,
+        "power_alpha_bonferroni": 0.78175
+       },
+       {
+        "eps": 0.02557899548364719,
+        "third_order_bits": 0.0661381971894009,
+        "power_alpha_005": 0.997,
+        "power_alpha_bonferroni": 0.851
+       },
+       {
+        "eps": 0.026925258403839147,
+        "third_order_bits": 0.07450359945356366,
         "power_alpha_005": 0.99925,
-        "power_alpha_bonferroni": 0.87475
+        "power_alpha_bonferroni": 0.91425
        },
        {
-        "eps": 0.02503524443901953,
-        "third_order_bits": 0.06023979920769221,
-        "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.9345
-       },
-       {
-        "eps": 0.026352888883178452,
-        "third_order_bits": 0.06774708538102286,
-        "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.97025
-       },
-       {
-        "eps": 0.027670533327337377,
-        "third_order_bits": 0.0759655393781551,
-        "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.99
-       },
-       {
-        "eps": 0.028988177771496298,
-        "third_order_bits": 0.085034581150701,
+        "eps": 0.028271521324031105,
+        "third_order_bits": 0.0837012218675682,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9955
+        "power_alpha_bonferroni": 0.957
        },
        {
-        "eps": 0.030305822215655222,
-        "third_order_bits": 0.0952043059915898,
+        "eps": 0.029617784244223063,
+        "third_order_bits": 0.09390105790019723,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.999
+        "power_alpha_bonferroni": 0.98675
        },
        {
-        "eps": 0.031623466659814144,
-        "third_order_bits": 0.1071053555862436,
+        "eps": 0.030964047164415018,
+        "third_order_bits": 0.10539959427030529,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
+        "power_alpha_bonferroni": 0.99475
+       },
+       {
+        "eps": 0.032310310084606976,
+        "third_order_bits": 0.1189063897980446,
+        "power_alpha_005": 1.0,
+        "power_alpha_bonferroni": 0.99825
        }
       ]
      },
@@ -2880,157 +3063,157 @@
        7,
        8
       ],
-      "eps_max": 0.04942423558548513,
+      "eps_max": 0.039759261021790046,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.05,
+        "power_alpha_005": 0.0485,
+        "power_alpha_bonferroni": 0.0005
+       },
+       {
+        "eps": 0.0016566358759079185,
+        "third_order_bits": 0.0001710935437101561,
+        "power_alpha_005": 0.065,
         "power_alpha_bonferroni": 0.0
        },
        {
-        "eps": 0.0020593431493952136,
-        "third_order_bits": 0.00024859868676208345,
-        "power_alpha_005": 0.066,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.003313271751815837,
+        "third_order_bits": 0.0006857106417157716,
+        "power_alpha_005": 0.08125,
+        "power_alpha_bonferroni": 0.0005
        },
        {
-        "eps": 0.004118686298790427,
-        "third_order_bits": 0.0009954312603251345,
-        "power_alpha_005": 0.10375,
-        "power_alpha_bonferroni": 0.002
+        "eps": 0.004969907627723756,
+        "third_order_bits": 0.001546248574501175,
+        "power_alpha_005": 0.1125,
+        "power_alpha_bonferroni": 0.00175
        },
        {
-        "eps": 0.00617802944818564,
-        "third_order_bits": 0.002242647160333046,
-        "power_alpha_005": 0.163,
-        "power_alpha_bonferroni": 0.00275
+        "eps": 0.006626543503631674,
+        "third_order_bits": 0.002755665335673469,
+        "power_alpha_005": 0.15675,
+        "power_alpha_bonferroni": 0.0035
        },
        {
-        "eps": 0.008237372597580854,
-        "third_order_bits": 0.0039932289681257165,
-        "power_alpha_005": 0.255,
-        "power_alpha_bonferroni": 0.012
+        "eps": 0.008283179379539594,
+        "third_order_bits": 0.004317535406017748,
+        "power_alpha_005": 0.222,
+        "power_alpha_bonferroni": 0.00925
        },
        {
-        "eps": 0.01029671574697607,
-        "third_order_bits": 0.006251055056913878,
-        "power_alpha_005": 0.34725,
-        "power_alpha_bonferroni": 0.014
+        "eps": 0.009939815255447512,
+        "third_order_bits": 0.006236118803024812,
+        "power_alpha_005": 0.29375,
+        "power_alpha_bonferroni": 0.01525
        },
        {
-        "eps": 0.01235605889637128,
-        "third_order_bits": 0.009020979758250728,
-        "power_alpha_005": 0.49575,
-        "power_alpha_bonferroni": 0.05025
+        "eps": 0.011596451131355429,
+        "third_order_bits": 0.008516446808509813,
+        "power_alpha_005": 0.37425,
+        "power_alpha_bonferroni": 0.0245
        },
        {
-        "eps": 0.014415402045766496,
-        "third_order_bits": 0.012308935179685433,
-        "power_alpha_005": 0.61525,
-        "power_alpha_bonferroni": 0.0875
+        "eps": 0.013253087007263348,
+        "third_order_bits": 0.011164428969625512,
+        "power_alpha_005": 0.44975,
+        "power_alpha_bonferroni": 0.03625
        },
        {
-        "eps": 0.01647474519516171,
-        "third_order_bits": 0.01612206030721058,
-        "power_alpha_005": 0.72725,
-        "power_alpha_bonferroni": 0.15225
+        "eps": 0.014909722883171267,
+        "third_order_bits": 0.014186987666621513,
+        "power_alpha_005": 0.56075,
+        "power_alpha_bonferroni": 0.06825
        },
        {
-        "eps": 0.018534088344556925,
-        "third_order_bits": 0.020468865150894477,
-        "power_alpha_005": 0.836,
-        "power_alpha_bonferroni": 0.2325
+        "eps": 0.016566358759079188,
+        "third_order_bits": 0.017592229006887942,
+        "power_alpha_005": 0.65575,
+        "power_alpha_bonferroni": 0.10525
        },
        {
-        "eps": 0.02059343149395214,
-        "third_order_bits": 0.02535944076997963,
-        "power_alpha_005": 0.9055,
-        "power_alpha_bonferroni": 0.34025
+        "eps": 0.018222994634987104,
+        "third_order_bits": 0.021389662466087603,
+        "power_alpha_005": 0.7235,
+        "power_alpha_bonferroni": 0.14975
        },
        {
-        "eps": 0.02265277464334735,
-        "third_order_bits": 0.030805730575811163,
-        "power_alpha_005": 0.94525,
-        "power_alpha_bonferroni": 0.48625
+        "eps": 0.019879630510895023,
+        "third_order_bits": 0.025590487267240572,
+        "power_alpha_005": 0.80325,
+        "power_alpha_bonferroni": 0.21725
        },
        {
-        "eps": 0.02471211779274256,
-        "third_order_bits": 0.036821885244747964,
-        "power_alpha_005": 0.97625,
-        "power_alpha_bonferroni": 0.5925
+        "eps": 0.02153626638680294,
+        "third_order_bits": 0.03020797219964572,
+        "power_alpha_005": 0.87575,
+        "power_alpha_bonferroni": 0.28275
        },
        {
-        "eps": 0.026771460942137778,
-        "third_order_bits": 0.04342473441063229,
-        "power_alpha_005": 0.98925,
-        "power_alpha_bonferroni": 0.73725
+        "eps": 0.023192902262710858,
+        "third_order_bits": 0.03525796963787521,
+        "power_alpha_005": 0.9175,
+        "power_alpha_bonferroni": 0.38
        },
        {
-        "eps": 0.02883080409153299,
-        "third_order_bits": 0.05063442579040156,
-        "power_alpha_005": 0.99725,
-        "power_alpha_bonferroni": 0.829
+        "eps": 0.024849538138618777,
+        "third_order_bits": 0.04075962804717226,
+        "power_alpha_005": 0.95275,
+        "power_alpha_bonferroni": 0.483
        },
        {
-        "eps": 0.030890147240928204,
-        "third_order_bits": 0.058475311649228,
-        "power_alpha_005": 0.999,
-        "power_alpha_bonferroni": 0.90225
+        "eps": 0.026506174014526696,
+        "third_order_bits": 0.046736408335401575,
+        "power_alpha_005": 0.97075,
+        "power_alpha_bonferroni": 0.5815
        },
        {
-        "eps": 0.03294949039032342,
-        "third_order_bits": 0.06697721357748096,
-        "power_alpha_005": 0.9995,
-        "power_alpha_bonferroni": 0.955
+        "eps": 0.028162809890434615,
+        "third_order_bits": 0.05321758481708007,
+        "power_alpha_005": 0.986,
+        "power_alpha_bonferroni": 0.698
        },
        {
-        "eps": 0.035008833539718634,
-        "third_order_bits": 0.0761772902947621,
+        "eps": 0.029819445766342535,
+        "third_order_bits": 0.06024055864918121,
+        "power_alpha_005": 0.99275,
+        "power_alpha_bonferroni": 0.77725
+       },
+       {
+        "eps": 0.03147608164225046,
+        "third_order_bits": 0.06785462088077454,
+        "power_alpha_005": 0.99625,
+        "power_alpha_bonferroni": 0.8615
+       },
+       {
+        "eps": 0.033132717518158376,
+        "third_order_bits": 0.07612751769827482,
+        "power_alpha_005": 0.99875,
+        "power_alpha_bonferroni": 0.91075
+       },
+       {
+        "eps": 0.03478935339406629,
+        "third_order_bits": 0.08515804883530445,
         "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.9785
+        "power_alpha_bonferroni": 0.9565
        },
        {
-        "eps": 0.03706817668911385,
-        "third_order_bits": 0.0861229160547328,
+        "eps": 0.03644598926997421,
+        "third_order_bits": 0.0951038264453059,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99325
+        "power_alpha_bonferroni": 0.981
        },
        {
-        "eps": 0.03912751983850906,
-        "third_order_bits": 0.09687636169726759,
+        "eps": 0.03810262514588213,
+        "third_order_bits": 0.1062578164420184,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99875
+        "power_alpha_bonferroni": 0.99425
        },
        {
-        "eps": 0.04118686298790428,
-        "third_order_bits": 0.10852295975678414,
+        "eps": 0.039759261021790046,
+        "third_order_bits": 0.11938633274820809,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.99925
-       },
-       {
-        "eps": 0.04324620613729949,
-        "third_order_bits": 0.1211867700438965,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.0453055492866947,
-        "third_order_bits": 0.13506509177952122,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.04736489243608991,
-        "third_order_bits": 0.15052361743236814,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.04942423558548512,
-        "third_order_bits": 0.16851659627292906,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
+        "power_alpha_bonferroni": 0.998
        }
       ]
      },
@@ -3040,157 +3223,157 @@
        8,
        9
       ],
-      "eps_max": 0.03363134851998021,
+      "eps_max": 0.03188883651473886,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.05625,
-        "power_alpha_bonferroni": 0.001
+        "power_alpha_005": 0.06025,
+        "power_alpha_bonferroni": 0.00025
        },
        {
-        "eps": 0.0014013061883325088,
-        "third_order_bits": 0.00022223677622128105,
-        "power_alpha_005": 0.076,
-        "power_alpha_bonferroni": 0.00075
+        "eps": 0.0013287015214474525,
+        "third_order_bits": 0.00020634670794184256,
+        "power_alpha_005": 0.06825,
+        "power_alpha_bonferroni": 0.0
        },
        {
-        "eps": 0.0028026123766650177,
-        "third_order_bits": 0.0008836424166330796,
-        "power_alpha_005": 0.1015,
-        "power_alpha_bonferroni": 0.00275
+        "eps": 0.002657403042894905,
+        "third_order_bits": 0.0008213451383547246,
+        "power_alpha_005": 0.0985,
+        "power_alpha_bonferroni": 0.00125
        },
        {
-        "eps": 0.004203918564997526,
-        "third_order_bits": 0.0019783740244741135,
-        "power_alpha_005": 0.1505,
-        "power_alpha_bonferroni": 0.00325
+        "eps": 0.003986104564342357,
+        "third_order_bits": 0.001840759164019973,
+        "power_alpha_005": 0.12275,
+        "power_alpha_bonferroni": 0.00375
        },
        {
-        "eps": 0.005605224753330035,
-        "third_order_bits": 0.0035030954696487013,
-        "power_alpha_005": 0.234,
-        "power_alpha_bonferroni": 0.0115
+        "eps": 0.00531480608578981,
+        "third_order_bits": 0.003262556333782039,
+        "power_alpha_005": 0.183,
+        "power_alpha_bonferroni": 0.00625
        },
        {
-        "eps": 0.0070065309416625435,
-        "third_order_bits": 0.005456703277099266,
-        "power_alpha_005": 0.31375,
-        "power_alpha_bonferroni": 0.01775
+        "eps": 0.006643507607237263,
+        "third_order_bits": 0.005086710519668743,
+        "power_alpha_005": 0.2555,
+        "power_alpha_bonferroni": 0.01575
        },
        {
-        "eps": 0.008407837129995053,
-        "third_order_bits": 0.007840161672236536,
-        "power_alpha_005": 0.4405,
-        "power_alpha_bonferroni": 0.04075
+        "eps": 0.007972209128684715,
+        "third_order_bits": 0.007315094099026569,
+        "power_alpha_005": 0.33525,
+        "power_alpha_bonferroni": 0.01975
        },
        {
-        "eps": 0.009809143318327562,
-        "third_order_bits": 0.010656424691587695,
-        "power_alpha_005": 0.549,
-        "power_alpha_bonferroni": 0.0675
+        "eps": 0.009300910650132168,
+        "third_order_bits": 0.009951444825761102,
+        "power_alpha_005": 0.41125,
+        "power_alpha_bonferroni": 0.03375
        },
        {
-        "eps": 0.01121044950666007,
-        "third_order_bits": 0.013910433750405383,
-        "power_alpha_005": 0.66425,
-        "power_alpha_bonferroni": 0.10925
+        "eps": 0.01062961217157962,
+        "third_order_bits": 0.013001400729949826,
+        "power_alpha_005": 0.50275,
+        "power_alpha_bonferroni": 0.0655
        },
        {
-        "eps": 0.01261175569499258,
-        "third_order_bits": 0.01760918689203419,
-        "power_alpha_005": 0.75125,
-        "power_alpha_bonferroni": 0.18525
+        "eps": 0.011958313693027071,
+        "third_order_bits": 0.01647260299549934,
+        "power_alpha_005": 0.61925,
+        "power_alpha_bonferroni": 0.09225
        },
        {
-        "eps": 0.014013061883325087,
-        "third_order_bits": 0.021761882763983532,
-        "power_alpha_005": 0.838,
-        "power_alpha_bonferroni": 0.26075
+        "eps": 0.013287015214474526,
+        "third_order_bits": 0.020374873070269774,
+        "power_alpha_005": 0.69775,
+        "power_alpha_bonferroni": 0.1425
        },
        {
-        "eps": 0.015414368071657596,
-        "third_order_bits": 0.026380149438771778,
-        "power_alpha_005": 0.9005,
-        "power_alpha_bonferroni": 0.38325
+        "eps": 0.014615716735921977,
+        "third_order_bits": 0.024720477386522333,
+        "power_alpha_005": 0.78175,
+        "power_alpha_bonferroni": 0.2095
        },
        {
-        "eps": 0.016815674259990105,
-        "third_order_bits": 0.0314783768146697,
-        "power_alpha_005": 0.9445,
-        "power_alpha_bonferroni": 0.50225
+        "eps": 0.01594441825736943,
+        "third_order_bits": 0.02952450232532793,
+        "power_alpha_005": 0.847,
+        "power_alpha_bonferroni": 0.3005
        },
        {
-        "eps": 0.018216980448322612,
-        "third_order_bits": 0.037074183202132405,
-        "power_alpha_005": 0.9685,
-        "power_alpha_bonferroni": 0.61425
+        "eps": 0.017273119778816882,
+        "third_order_bits": 0.034805375353145526,
+        "power_alpha_005": 0.911,
+        "power_alpha_bonferroni": 0.3895
        },
        {
-        "eps": 0.019618286636655123,
-        "third_order_bits": 0.043189064529026634,
-        "power_alpha_005": 0.98725,
-        "power_alpha_bonferroni": 0.7275
+        "eps": 0.018601821300264335,
+        "third_order_bits": 0.040585588754468785,
+        "power_alpha_005": 0.935,
+        "power_alpha_bonferroni": 0.4855
        },
        {
-        "eps": 0.021019592824987634,
-        "third_order_bits": 0.0498493031358826,
-        "power_alpha_005": 0.9925,
-        "power_alpha_bonferroni": 0.82025
+        "eps": 0.019930522821711788,
+        "third_order_bits": 0.046892715779839556,
+        "power_alpha_005": 0.96425,
+        "power_alpha_bonferroni": 0.59175
        },
        {
-        "eps": 0.02242089901332014,
-        "third_order_bits": 0.05708726138077076,
-        "power_alpha_005": 0.99725,
-        "power_alpha_bonferroni": 0.888
+        "eps": 0.02125922434315924,
+        "third_order_bits": 0.05376086626800804,
+        "power_alpha_005": 0.9775,
+        "power_alpha_bonferroni": 0.694
        },
        {
-        "eps": 0.02382220520165265,
-        "third_order_bits": 0.06494327142126188,
-        "power_alpha_005": 0.99925,
-        "power_alpha_bonferroni": 0.938
+        "eps": 0.02258792586460669,
+        "third_order_bits": 0.06123283224192213,
+        "power_alpha_005": 0.99225,
+        "power_alpha_bonferroni": 0.79275
        },
        {
-        "eps": 0.02522351138998516,
-        "third_order_bits": 0.07346849603517988,
-        "power_alpha_005": 0.9995,
-        "power_alpha_bonferroni": 0.972
+        "eps": 0.023916627386054143,
+        "third_order_bits": 0.06936337254740713,
+        "power_alpha_005": 0.99525,
+        "power_alpha_bonferroni": 0.8485
        },
        {
-        "eps": 0.026624817578317667,
-        "third_order_bits": 0.08272946918821346,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.98675
+        "eps": 0.0252453289075016,
+        "third_order_bits": 0.0782244955567121,
+        "power_alpha_005": 0.99825,
+        "power_alpha_bonferroni": 0.91775
        },
        {
-        "eps": 0.028026123766650174,
-        "third_order_bits": 0.09281577275546918,
+        "eps": 0.026574030428949052,
+        "third_order_bits": 0.0879145264511004,
         "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.995
+        "power_alpha_bonferroni": 0.958
        },
        {
-        "eps": 0.029427429954982685,
-        "third_order_bits": 0.1038541990993717,
+        "eps": 0.0279027319503965,
+        "third_order_bits": 0.09857511271797356,
+        "power_alpha_005": 1.0,
+        "power_alpha_bonferroni": 0.98
+       },
+       {
+        "eps": 0.029231433471843954,
+        "third_order_bits": 0.11042747378223636,
+        "power_alpha_005": 0.99975,
+        "power_alpha_bonferroni": 0.992
+       },
+       {
+        "eps": 0.030560134993291407,
+        "third_order_bits": 0.12386729703388055,
+        "power_alpha_005": 1.0,
+        "power_alpha_bonferroni": 0.999
+       },
+       {
+        "eps": 0.03188883651473886,
+        "third_order_bits": 0.1398436384813499,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 0.99875
-       },
-       {
-        "eps": 0.030828736143315192,
-        "third_order_bits": 0.11603845586278635,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9995
-       },
-       {
-        "eps": 0.0322300423316477,
-        "third_order_bits": 0.12970613218285287,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.03363134851998021,
-        "third_order_bits": 0.1456524660715945,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
        }
       ]
      },
@@ -3200,158 +3383,307 @@
        2,
        3
       ],
-      "eps_max": 0.04913022872500941,
+      "eps_max": 0.05078045090873655,
       "curve": [
        {
         "eps": 0.0,
         "third_order_bits": 0.0,
-        "power_alpha_005": 0.04825,
-        "power_alpha_bonferroni": 0.001
+        "power_alpha_005": 0.053,
+        "power_alpha_bonferroni": 0.00125
        },
        {
-        "eps": 0.002047092863542059,
-        "third_order_bits": 0.00026501708910953983,
-        "power_alpha_005": 0.06575,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.002115852121197356,
+        "third_order_bits": 0.000279109391577167,
+        "power_alpha_005": 0.06825,
+        "power_alpha_bonferroni": 0.0015
        },
        {
-        "eps": 0.004094185727084118,
-        "third_order_bits": 0.0010614598007509992,
-        "power_alpha_005": 0.10475,
-        "power_alpha_bonferroni": 0.001
+        "eps": 0.004231704242394712,
+        "third_order_bits": 0.0011180256235161336,
+        "power_alpha_005": 0.0915,
+        "power_alpha_bonferroni": 0.0025
        },
        {
-        "eps": 0.0061412785906261765,
-        "third_order_bits": 0.002392212045828998,
-        "power_alpha_005": 0.17025,
-        "power_alpha_bonferroni": 0.0055
+        "eps": 0.006347556363592068,
+        "third_order_bits": 0.0025199726756821635,
+        "power_alpha_005": 0.15025,
+        "power_alpha_bonferroni": 0.0035
        },
        {
-        "eps": 0.008188371454168236,
-        "third_order_bits": 0.004261254865461601,
-        "power_alpha_005": 0.25825,
-        "power_alpha_bonferroni": 0.01175
+        "eps": 0.008463408484789424,
+        "third_order_bits": 0.004489336740370137,
+        "power_alpha_005": 0.215,
+        "power_alpha_bonferroni": 0.011
        },
        {
-        "eps": 0.010235464317710294,
-        "third_order_bits": 0.006673726769880312,
-        "power_alpha_005": 0.362,
-        "power_alpha_bonferroni": 0.02225
+        "eps": 0.010579260605986782,
+        "third_order_bits": 0.007031733522997859,
+        "power_alpha_005": 0.316,
+        "power_alpha_bonferroni": 0.01425
        },
        {
-        "eps": 0.012282557181252353,
-        "third_order_bits": 0.0096360067176416,
-        "power_alpha_005": 0.52025,
-        "power_alpha_bonferroni": 0.054
+        "eps": 0.012695112727184136,
+        "third_order_bits": 0.010154099452883675,
+        "power_alpha_005": 0.425,
+        "power_alpha_bonferroni": 0.03425
        },
        {
-        "eps": 0.014329650044794412,
-        "third_order_bits": 0.013155823735377995,
-        "power_alpha_005": 0.65275,
-        "power_alpha_bonferroni": 0.09675
+        "eps": 0.014810964848381493,
+        "third_order_bits": 0.013864811140613588,
+        "power_alpha_005": 0.54625,
+        "power_alpha_bonferroni": 0.061
        },
        {
-        "eps": 0.01637674290833647,
-        "third_order_bits": 0.017242398869628202,
-        "power_alpha_005": 0.75575,
-        "power_alpha_bonferroni": 0.17125
+        "eps": 0.01692681696957885,
+        "third_order_bits": 0.018173839199170146,
+        "power_alpha_005": 0.6575,
+        "power_alpha_bonferroni": 0.1105
        },
        {
-        "eps": 0.01842383577187853,
-        "third_order_bits": 0.021906627477092492,
-        "power_alpha_005": 0.8495,
-        "power_alpha_bonferroni": 0.265
+        "eps": 0.019042669090776208,
+        "third_order_bits": 0.023092944987287384,
+        "power_alpha_005": 0.76475,
+        "power_alpha_bonferroni": 0.178
        },
        {
-        "eps": 0.020470928635420587,
-        "third_order_bits": 0.027161313137000716,
-        "power_alpha_005": 0.92575,
-        "power_alpha_bonferroni": 0.3905
+        "eps": 0.021158521211973563,
+        "third_order_bits": 0.028635932290340345,
+        "power_alpha_005": 0.843,
+        "power_alpha_bonferroni": 0.263
        },
        {
-        "eps": 0.022518021498962648,
-        "third_order_bits": 0.03302146925244758,
-        "power_alpha_005": 0.96075,
-        "power_alpha_bonferroni": 0.537
+        "eps": 0.02327437333317092,
+        "third_order_bits": 0.03481897099496849,
+        "power_alpha_005": 0.918,
+        "power_alpha_bonferroni": 0.3715
        },
        {
-        "eps": 0.024565114362504706,
-        "third_order_bits": 0.03950471159729507,
-        "power_alpha_005": 0.98175,
-        "power_alpha_bonferroni": 0.67875
+        "eps": 0.02539022545436827,
+        "third_order_bits": 0.04166101738008039,
+        "power_alpha_005": 0.9555,
+        "power_alpha_bonferroni": 0.4845
        },
        {
-        "eps": 0.026612207226046763,
-        "third_order_bits": 0.04663177620843129,
-        "power_alpha_005": 0.99325,
-        "power_alpha_bonferroni": 0.78525
+        "eps": 0.02750607757556563,
+        "third_order_bits": 0.04918436735345597,
+        "power_alpha_005": 0.978,
+        "power_alpha_bonferroni": 0.62125
        },
        {
-        "eps": 0.028659300089588825,
-        "third_order_bits": 0.05442721487896162,
-        "power_alpha_005": 0.99675,
-        "power_alpha_bonferroni": 0.8795
+        "eps": 0.029621929696762986,
+        "third_order_bits": 0.05741539768563961,
+        "power_alpha_005": 0.99,
+        "power_alpha_bonferroni": 0.73525
        },
        {
-        "eps": 0.030706392953130882,
-        "third_order_bits": 0.06292035021402108,
+        "eps": 0.031737781817960345,
+        "third_order_bits": 0.06638558137825519,
+        "power_alpha_005": 0.9965,
+        "power_alpha_bonferroni": 0.82825
+       },
+       {
+        "eps": 0.0338536339391577,
+        "third_order_bits": 0.07613291719847715,
+        "power_alpha_005": 0.9995,
+        "power_alpha_bonferroni": 0.90125
+       },
+       {
+        "eps": 0.035969486060355056,
+        "third_order_bits": 0.08670401174562628,
         "power_alpha_005": 0.99925,
-        "power_alpha_bonferroni": 0.93175
+        "power_alpha_bonferroni": 0.952
        },
        {
-        "eps": 0.03275348581667294,
-        "third_order_bits": 0.07214662381842175,
+        "eps": 0.038085338181552415,
+        "third_order_bits": 0.09815724320768578,
+        "power_alpha_005": 1.0,
+        "power_alpha_bonferroni": 0.9815
+       },
+       {
+        "eps": 0.04020119030274977,
+        "third_order_bits": 0.11056783529359354,
         "power_alpha_005": 0.99975,
-        "power_alpha_bonferroni": 0.97
+        "power_alpha_bonferroni": 0.99225
        },
        {
-        "eps": 0.034800578680215,
-        "third_order_bits": 0.08214956553295524,
+        "eps": 0.04231704242394713,
+        "third_order_bits": 0.12403659010707677,
         "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9895
+        "power_alpha_bonferroni": 0.9975
        },
        {
-        "eps": 0.03684767154375706,
-        "third_order_bits": 0.09298379503628354,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 0.9955
-       },
-       {
-        "eps": 0.038894764407299116,
-        "third_order_bits": 0.10471985164510508,
+        "eps": 0.04443289454514448,
+        "third_order_bits": 0.13870643793372112,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 0.99975
        },
        {
-        "eps": 0.040941857270841174,
-        "third_order_bits": 0.1174525356199641,
+        "eps": 0.04654874666634184,
+        "third_order_bits": 0.15479850893082858,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        },
        {
-        "eps": 0.04298895013438323,
-        "third_order_bits": 0.13131677048717202,
+        "eps": 0.0486645987875392,
+        "third_order_bits": 0.17271074325626748,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        },
        {
-        "eps": 0.045036042997925296,
-        "third_order_bits": 0.146522289742078,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.04708313586146735,
-        "third_order_bits": 0.1634487315350566,
-        "power_alpha_005": 1.0,
-        "power_alpha_bonferroni": 1.0
-       },
-       {
-        "eps": 0.04913022872500941,
-        "third_order_bits": 0.18306399383785332,
+        "eps": 0.05078045090873654,
+        "third_order_bits": 0.19345078310586858,
         "power_alpha_005": 1.0,
         "power_alpha_bonferroni": 1.0
        }
+      ]
+     }
+    ]
+   },
+   "discovery_power": {
+    "sample_size": 223,
+    "triplets_planted": 4,
+    "replicates_per_triplet_and_level": 25,
+    "simulations_per_triplet_test": 9999,
+    "fdr_q": 0.05,
+    "workers_independent_seeds": true,
+    "datasets_total": 650,
+    "null_datasets": 100,
+    "null_any_discovery": 0.04,
+    "levels": [
+     {
+      "target_bits": 0.004886665746299812,
+      "datasets": 100,
+      "discovered": 0,
+      "power": 0.0,
+      "power_ci95": [
+       0.0,
+       0.03699349876899626
+      ],
+      "mean_other_discoveries": 0.07,
+      "median_planted_p": 0.13665
+     },
+     {
+      "target_bits": 0.02,
+      "datasets": 100,
+      "discovered": 16,
+      "power": 0.16,
+      "power_ci95": [
+       0.10095288451828568,
+       0.24420269464463176
+      ],
+      "mean_other_discoveries": 0.03,
+      "median_planted_p": 0.01745
+     },
+     {
+      "target_bits": 0.04,
+      "datasets": 100,
+      "discovered": 51,
+      "power": 0.51,
+      "power_ci95": [
+       0.41348011860427875,
+       0.6057800114203413
+      ],
+      "mean_other_discoveries": 0.12,
+      "median_planted_p": 0.00035
+     },
+     {
+      "target_bits": 0.06,
+      "datasets": 100,
+      "discovered": 81,
+      "power": 0.81,
+      "power_ci95": [
+       0.7222115454423076,
+       0.8748524853209146
+      ],
+      "mean_other_discoveries": 0.09,
+      "median_planted_p": 0.0001
+     },
+     {
+      "target_bits": 0.08,
+      "datasets": 75,
+      "discovered": 65,
+      "power": 0.8666666666666667,
+      "power_ci95": [
+       0.7716683616751212,
+       0.9259341533012722
+      ],
+      "mean_other_discoveries": 0.13333333333333333,
+      "median_planted_p": 0.0001
+     },
+     {
+      "target_bits": 0.1,
+      "datasets": 75,
+      "discovered": 72,
+      "power": 0.96,
+      "power_ci95": [
+       0.8888701283966872,
+       0.9863039358464244
+      ],
+      "mean_other_discoveries": 0.10666666666666667,
+      "median_planted_p": 0.0001
+     }
+    ],
+    "bits_for_80pct_discovery": 0.059333333333333335,
+    "max_margin_error": 3.256086056335761e-08,
+    "planted": [
+     {
+      "triplet": [
+       0,
+       4,
+       5
+      ],
+      "betas": [
+       0.7911421338897306,
+       1.6490309490140276,
+       2.438245962480936,
+       3.1596572151672415,
+       3.9506789461521015,
+       5.067558769189585
+      ]
+     },
+     {
+      "triplet": [
+       3,
+       6,
+       7
+      ],
+      "betas": [
+       0.7419991387895816,
+       1.5174905615938339,
+       2.1761188454029936,
+       2.7038956922341875,
+       3.169661438250041,
+       3.6005153260860343
+      ]
+     },
+     {
+      "triplet": [
+       1,
+       7,
+       8
+      ],
+      "betas": [
+       0.8186243051304263,
+       1.696071428649598,
+       2.49614460349792,
+       3.2182783486680813,
+       3.9934844533337843,
+       5.034474500694159
+      ]
+     },
+     {
+      "triplet": [
+       7,
+       8,
+       10
+      ],
+      "betas": [
+       0.8792219098750833,
+       1.904825511677804,
+       3.050354635145972,
+       4.8765148172733275,
+       null,
+       null
       ]
      }
     ]
@@ -3359,8 +3691,15 @@
   },
   "entities": {
    "label": "entities",
-   "respondents_total": 307,
-   "respondents_complete": 298,
+   "screening": {
+    "submissions": 307,
+    "repeat_submissions": 18,
+    "not_researcher": 39,
+    "researcher_status_missing": 18,
+    "eligible": 232,
+    "eligible_attended_assc": 166
+   },
+   "respondents_complete": 223,
    "items": [
     "entities_amoeba",
     "entities_baby",
@@ -3382,14 +3721,14 @@
    "dropped_count": 5,
    "extreme_threshold": 0.05,
    "endorsement_rates": {
-    "entities_amoeba": 0.17114093959731544,
-    "entities_baby": 0.8221476510067114,
-    "entities_bat": 0.7751677852348994,
-    "entities_dog": 0.8926174496644296,
-    "entities_fish": 0.6476510067114094,
-    "entities_octopus": 0.8154362416107382,
-    "entities_tree": 0.1040268456375839,
-    "entities_worm": 0.3087248322147651
+    "entities_amoeba": 0.15695067264573992,
+    "entities_baby": 0.7982062780269058,
+    "entities_bat": 0.7668161434977578,
+    "entities_dog": 0.8968609865470852,
+    "entities_fish": 0.6278026905829597,
+    "entities_octopus": 0.8251121076233184,
+    "entities_tree": 0.09865470852017937,
+    "entities_worm": 0.2914798206278027
    },
    "cross_validation": {
     "reps": 5,
@@ -3404,32 +3743,79 @@
      0.3
     ],
     "folds_total": 50,
-    "heldout_bits_order1": -5.6480402520249955,
-    "heldout_bits_order2": -3.9730541610366736,
-    "heldout_bits_order3": -4.020220575386385,
-    "gain_order2_over_order1_bits": 1.6753344480443724,
-    "gain_order2_over_order1_se_bits": 0.05949507742081937,
+    "heldout_bits_order1": -5.618065767836561,
+    "heldout_bits_order2": -4.024807729681424,
+    "heldout_bits_order3": -4.059359115839689,
+    "gain_order2_over_order1_bits": 1.5942330839286,
+    "gain_order2_over_order1": {
+     "mean": 1.5942330839286,
+     "se_corrected": 0.17840947386238518,
+     "ci95_corrected": [
+      1.2357058231854947,
+      1.9527603446717055
+     ],
+     "sd_folds": 0.4927176996909184,
+     "folds": 50,
+     "test_over_train": 0.11111111111111112,
+     "folds_positive": 50
+    },
     "folds_order2_better": 50,
-    "gain_order3_over_order2_bits": -0.046951667147520616,
-    "gain_order3_over_order2_se_bits": 0.00930532330175905,
-    "folds_order3_better": 9,
+    "gain_order3_over_order2_bits": -0.034116671995757464,
+    "gain_order3_over_order2": {
+     "mean": -0.034116671995757464,
+     "se_corrected": 0.026282206661777493,
+     "ci95_corrected": [
+      -0.08693274368037865,
+      0.018699399688863715
+     ],
+     "sd_folds": 0.07258419706557175,
+     "folds": 50,
+     "test_over_train": 0.11111111111111112,
+     "folds_positive": 18
+    },
+    "folds_order3_better": 18,
     "lambda_mode_order1": 0.003,
     "lambda_mode_order2": 0.001,
     "lambda_mode_order3": 0.003
    },
    "base_pairwise_lambda": 0.001,
+   "lp_bounds": {
+    "issues": 8,
+    "respondents": 223,
+    "observed_patterns": 27,
+    "hull_patterns": 44,
+    "hull_unobserved": 17,
+    "lp_possible_unobserved": 17,
+    "lp_excluded_in_hull": 0,
+    "facial_set_size": 44,
+    "certificates_verified": 0,
+    "certificates_attempted": 0,
+    "max_denominator": null,
+    "facial_set_agrees_with_support_lp": true,
+    "smallest_positive_bound": 0.004484304932735422,
+    "largest_positive_bound": 0.02242152466367698,
+    "median_positive_bound": 0.004484304932735557,
+    "hull_is_majority_closure": true
+   },
    "triplet_tests": {
     "triplets": 56,
-    "simulations_per_triplet": 2000,
+    "simulations_per_triplet": 9999,
     "fdr_q": 0.05,
+    "smallest_attainable_p": 0.0001,
+    "first_bh_threshold": 0.0008928571428571429,
     "discoveries": 0,
-    "min_p_boot": 0.02498750624687656,
-    "p_boot_below_005": 3,
-    "median_third_order_bits": 3.4416913763379853e-15,
-    "median_null_third_order_bits": 0.002659688290056907,
-    "median_excess_third_order_bits": -0.0021863662147862664,
-    "max_third_order_bits": 0.011271547184769082,
-    "median_third_order_fraction": 1.0198475826849299e-14,
+    "min_p_boot": 0.0333,
+    "p_boot_below_005": 2,
+    "expected_below_005_under_null": 2.8000000000000003,
+    "median_third_order_bits": 2.220446049250313e-16,
+    "median_null_third_order_bits": 0.002882342042716428,
+    "median_excess_third_order_bits": -0.0024216679675163216,
+    "max_third_order_bits": 0.015377629905863222,
+    "median_third_order_fraction": 1.3114424428758437e-15,
+    "simultaneous_z": 3.3222779195436,
+    "simultaneous_halfwidth_median": 7.440810419252806,
+    "simultaneous_halfwidth_min": 3.610104298851214,
+    "max_abs_log_interaction": 3.511571271256081,
     "top": [
      {
       "items": [
@@ -3437,64 +3823,82 @@
        "entities_bat",
        "entities_dog"
       ],
-      "g2": 4.5620669953392,
-      "p_chi2": 0.03268760024231885,
-      "p_boot": 0.02498750624687656,
-      "third_order_bits": 0.011043072869876047,
-      "third_order_fraction": 0.030780732160919425,
-      "null_mean_third_order_bits": 0.002627053014966803,
-      "log_interaction": 3.381979827987285
+      "g2": 4.753896522540624,
+      "p_chi2": 0.029232030189219372,
+      "p_boot": 0.0333,
+      "third_order_bits": 0.015377629905863222,
+      "third_order_fraction": 0.04635069292046077,
+      "null_mean_third_order_bits": 0.0034976902460931193,
+      "log_interaction": 3.511571271256081,
+      "log_interaction_se": 1.7412891117948899,
+      "log_interaction_simultaneous_ci95": [
+       -2.273475096401769,
+       9.296617638913931
+      ]
      },
      {
       "items": [
-       "entities_amoeba",
+       "entities_baby",
        "entities_bat",
-       "entities_tree"
+       "entities_fish"
       ],
-      "g2": 4.623733936893403,
-      "p_chi2": 0.03153252457345551,
-      "p_boot": 0.033483258370814596,
-      "third_order_bits": 0.011192345673039839,
-      "third_order_fraction": 0.050387266691282864,
-      "null_mean_third_order_bits": 0.002823092080784718,
-      "log_interaction": -2.9991252793120586
+      "g2": 3.865664964328921,
+      "p_chi2": 0.049283660776782895,
+      "p_boot": 0.0485,
+      "third_order_bits": 0.012504429761877933,
+      "third_order_fraction": 0.023168736268997698,
+      "null_mean_third_order_bits": 0.0036809745592037107,
+      "log_interaction": 2.995019945605262,
+      "log_interaction_se": 1.730961217019058,
+      "log_interaction_simultaneous_ci95": [
+       -2.755714285283472,
+       8.745754176493996
+      ]
      },
      {
       "items": [
-       "entities_bat",
-       "entities_tree",
-       "entities_worm"
+       "entities_baby",
+       "entities_fish",
+       "entities_octopus"
       ],
-      "g2": 4.656453326396884,
-      "p_chi2": 0.030937032532855808,
-      "p_boot": 0.0384807596201899,
-      "third_order_bits": 0.011271547184769082,
-      "third_order_fraction": 0.043303489720845446,
-      "null_mean_third_order_bits": 0.002882336361141752,
-      "log_interaction": -3.1705796874078063
+      "g2": 1.7004920227070235,
+      "p_chi2": 0.1922236438450685,
+      "p_boot": 0.1212,
+      "third_order_bits": 0.00550065338172967,
+      "third_order_fraction": 0.017259017670378966,
+      "null_mean_third_order_bits": 0.003008514395543653,
+      "log_interaction": 2.0967229055889707,
+      "log_interaction_se": 1.1252493321705006,
+      "log_interaction_simultaneous_ci95": [
+       -1.6416681046622656,
+       5.835113915840207
+      ]
      }
-    ]
+    ],
+    "reference_log_interaction": 1.102985873394923,
+    "triplets_excluding_reference_size": 0,
+    "triplets_interval_contains_zero": 56
    },
    "joint_avoidances": {
-    "observed": 19,
+    "observed": 9,
     "simulations": 500,
-    "null_mean": 30.028,
+    "null_mean": 30.21,
     "null_ci95": [
-     14.0,
-     50.0
+     11.0,
+     53.52499999999998
     ],
-    "p_upper": 0.9221556886227545
+    "p_upper": 0.9900199600798403
    }
   }
  },
  "design": {
   "survey_of_consciousness_researchers": {
-   "sample_size": 294,
+   "sample_size": 223,
    "triplets": 165,
-   "bits_for_80pct_power_alpha005": 0.019257673696316556,
-   "bits_for_80pct_power_bonferroni": 0.048680993482891885,
-   "power_at_reference_alpha005": 0.2919792338749288,
-   "power_at_reference_bonferroni": 0.013852929759887065
+   "bits_for_80pct_power_alpha005": 0.025389040657924068,
+   "bits_for_80pct_power_bonferroni": 0.06418032324650319,
+   "power_at_reference_alpha005": 0.23314415351193982,
+   "power_at_reference_bonferroni": 0.00857280866774438
   },
   "philpapers_2020_full_sample": {
    "sample_size": 1785,
@@ -3506,10 +3910,11 @@
   },
   "reference_bits": 0.004886665746299812,
   "check_against_simulation": {
-   "analytic_alpha005": 0.019257673696316556,
-   "simulated_alpha005_median": 0.019412397066401348,
-   "analytic_bonferroni": 0.048680993482891885,
-   "simulated_bonferroni_median": 0.04810368263889389
+   "analytic_alpha005": 0.025389040657924068,
+   "simulated_alpha005_median": 0.02538782416468309,
+   "analytic_bonferroni": 0.06418032324650319,
+   "simulated_bonferroni_median": 0.06242431244549128,
+   "simulated_screening_80pct_discovery": 0.059333333333333335
   }
  },
  "checks": {
@@ -3524,7 +3929,11 @@
   "convex_position_order_equals_m": true,
   "background_logic_all_agree": true,
   "pairwise_hull_all_agree": true,
-  "parity_pairs_equal": true
+  "parity_pairs_equal": true,
+  "lp_exhaustive_all_agree": true,
+  "lp_data_certificates_verified": true,
+  "monte_carlo_resolution_sufficient": true,
+  "planted_margins_preserved": true
  },
  "environment": {
   "python": "3.12.11",
@@ -3535,13 +3944,13 @@
  },
  "inputs": {
   "trolley_first_sessions.csv": "58aad63805e2ec8eb49a3a33670a126d518a75fe0767484916077990dd3ce4b3",
-  "consciousness_items.csv": "7509c8d191462e9abab8452d2331bdee367c205f6b0898b3d3cbf4e04e338468"
+  "consciousness_items.csv": "91a4995d048aef97fb2e2a05e7477ec6b1e813a6244aea965c7d092d40c7d95a"
  },
  "tests_output_tail": [
-  "............................                                             [100%]",
-  "28 passed in 1.04s"
+  "..................................                                       [100%]",
+  "34 passed in 1.15s"
  ],
- "runtime_seconds": 137.9,
+ "runtime_seconds": 517.9,
  "execution": {
   "status": "ok"
  }

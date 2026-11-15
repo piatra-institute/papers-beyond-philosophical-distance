@@ -1,16 +1,21 @@
 """Fetch the two public datasets and derive the frozen inputs of the recorded run.
 
-This script is not run by run_all.py. It downloads the raw files from the Open
-Science Framework into data/raw/ (not committed), checks their SHA-256 against the
-values pinned below, and writes the derived files in data/ that run_all.py reads:
+This script is not run by run_all.py; run it once before run_all.py. It downloads the
+raw files from the Open Science Framework into data/raw/ (not committed), checks their
+SHA-256 against the values pinned below, writes the derived files in data/ that
+run_all.py reads, and checks that each derived file reproduces its pinned SHA-256
+byte for byte:
 
-* data/trolley_first_sessions.csv: counts of the eight answer patterns to the
-  Switch, Loop and Footbridge dilemmas by country, one session per participant
-  (Awad et al. 2020, OSF project mxa6z).
-* data/consciousness_items.csv: answers of the 307 respondents of the survey of
-  consciousness researchers to eleven position items and thirteen entity items
-  (five-point scales, 1 = definitely yes), with the ASSC-attendance flag and without
-  participant numbers (Francken et al. 2022, OSF project xz3ua).
+* data/trolley_first_sessions.csv (committed): counts of the eight answer patterns to
+  the Switch, Loop and Footbridge dilemmas by country and design stratum, one session
+  per participant (Awad et al. 2020, OSF project mxa6z).
+* data/consciousness_items.csv (not committed, rebuilt here): answers of the 307
+  submissions to the survey of consciousness researchers to eleven position items and
+  thirteen entity items (five-point scales, 1 = definitely yes), with the ASSC-attendance
+  flag and the two screening answers (consciousness: "Do you study or research
+  consciousness?", 1 = yes, 2 = no; before: "Have you filled out this survey before?",
+  1 = yes, 2 = no, 3 = not asked on the 2018 forms), without participant numbers
+  (Francken et al. 2022, OSF project xz3ua). The analysis applies the source's screening.
 * data/MANIFEST.json: sources, retrieval date, raw and derived hashes, derivation rules.
 
 Usage: uv run python fetch_data.py [--raw-dir DIR]
@@ -52,6 +57,12 @@ ENTITY_ITEMS = ["entities_amoeba", "entities_baby", "entities_bat", "entities_do
                 "entities_monkey", "entities_octopus", "entities_other_people", "entities_rock",
                 "entities_tree", "entities_thermostat", "entities_worm", "entities_yourself"]
 SCENARIOS = ("Switch", "Loop", "Footbridge")
+SCREENING = ["assc", "consciousness", "before"]
+RETRIEVED = "2026-11-15"
+DERIVED_SHA256 = {
+    "trolley_first_sessions.csv": "58aad63805e2ec8eb49a3a33670a126d518a75fe0767484916077990dd3ce4b3",
+    "consciousness_items.csv": "91a4995d048aef97fb2e2a05e7477ec6b1e813a6244aea965c7d092d40c7d95a",
+}
 
 
 def sha256(path: Path) -> str:
@@ -123,18 +134,27 @@ def derive_trolley(raw: Path, out: Path) -> dict:
 
 
 def derive_consciousness(raw: Path, out: Path) -> dict:
+    """Columns copied verbatim for every submission; participant numbers dropped."""
     with open(raw, newline="", encoding="utf-8-sig") as fh:
         rows = list(csv.reader(fh, delimiter=";"))
     header, body = rows[0], rows[1:]
-    cols = ["assc"] + POSITION_ITEMS + ENTITY_ITEMS
+    cols = SCREENING + POSITION_ITEMS + ENTITY_ITEMS
     idx = [header.index(c) for c in cols]
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.writer(fh)
         w.writerow(cols)
         for r in body:
             w.writerow([r[i] for i in idx])
-    return {"respondents": len(body),
-            "rule": "columns copied verbatim; participant numbers dropped; assc 1 = attended ASSC"}
+    rec = [dict(zip(header, r)) for r in body]
+    repeat = sum(1 for r in rec if r["before"] == "1")
+    eligible = sum(1 for r in rec if r["consciousness"] == "1" and r["before"] != "1")
+    return {"submissions": len(body), "repeat_submissions": repeat,
+            "not_researcher": sum(1 for r in rec if r["consciousness"] == "2" and r["before"] != "1"),
+            "researcher_status_missing": sum(1 for r in rec if r["consciousness"] == "" and r["before"] != "1"),
+            "eligible": eligible,
+            "rule": "columns copied verbatim; participant numbers dropped; assc 1 = attended ASSC; "
+                    "eligible = consciousness 1 (studies or researches consciousness) and before not 1 "
+                    "(not a repeat submission), the screening of Francken et al. (2022)"}
 
 
 def main() -> None:
@@ -142,7 +162,7 @@ def main() -> None:
     ap.add_argument("--raw-dir", type=Path, default=DATA / "raw")
     args = ap.parse_args()
     args.raw_dir.mkdir(parents=True, exist_ok=True)
-    manifest = {"retrieved": dt.date.today().isoformat(), "sources": {}, "derived": {}}
+    manifest = {"retrieved": RETRIEVED, "sources": {}, "derived": {}}
     for key, src in SOURCES.items():
         dest = args.raw_dir / src["file"]
         if not dest.exists():
@@ -156,7 +176,10 @@ def main() -> None:
     manifest["derived"]["trolley_first_sessions.csv"] = derive_trolley(args.raw_dir / SOURCES["trolley"]["file"], t_out)
     manifest["derived"]["consciousness_items.csv"] = derive_consciousness(args.raw_dir / SOURCES["consciousness"]["file"], c_out)
     for name in ("trolley_first_sessions.csv", "consciousness_items.csv"):
-        manifest["derived"][name]["sha256"] = sha256(DATA / name)
+        digest = sha256(DATA / name)
+        if digest != DERIVED_SHA256[name]:
+            raise SystemExit(f"{name}: SHA-256 {digest} differs from pinned {DERIVED_SHA256[name]}")
+        manifest["derived"][name]["sha256"] = digest
     manifest["licence_note"] = ("Neither OSF project states a licence. The derived files are kept for "
                                 "reproduction with attribution to the original authors.")
     (DATA / "MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")

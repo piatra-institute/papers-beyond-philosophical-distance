@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "id": "analysis",
-  "started": "2026-11-15T12:41:44.415051+00:00",
-  "finished": "2026-11-15T12:44:02.831363+00:00",
+  "started": "2026-11-15T16:40:07.257118+00:00",
+  "finished": "2026-11-15T16:48:45.709999+00:00",
   "command": [
     "uv",
     "run",
@@ -31,24 +31,25 @@
     "simulation/atlas/__init__.py": "b29fdfb150a17bd1ca06c6a4c151f84605d08c87a343c916e12b628ff971ce3d",
     "simulation/atlas/classes.py": "791ce62357989f6640de75e8c201bd9051bcdc9951298b092fb373971bbdfd82",
     "simulation/atlas/constructions.py": "77313e749f9ef43dcc9729bd16f831cb0609434774a2d27841f9d373bdbe3c0d",
-    "simulation/atlas/empirical.py": "677c546ee0928610e50b3e898530a748b1def5f63b9572429423d8aadd82e028",
-    "simulation/atlas/figures.py": "4eeba5b3a98f3ac0658e40a5799b479d064562134ecdac1df71070c1d50f7e9e",
+    "simulation/atlas/empirical.py": "6551166ab488cef876e3db5338f29c796592f373d3ba2d752026a0f74a5f1834",
+    "simulation/atlas/figures.py": "143b664f3b4e4737bae2269174f75d2e88910662f57a9f6c2cde7760cc8e3fa1",
     "simulation/atlas/geometry.py": "325b5e95922023c835d4c9fdc27a3bc44cb758aaee4dafe4ed937440fd581543",
-    "simulation/atlas/maxent.py": "0bfb026b1834c8fd64ce52cbb70058ad9fef1ebb07ca44c5d9b5d89fa66b6a69",
+    "simulation/atlas/lpbounds.py": "87f3eab47c0ba52deb665000a61b4b9cbb505529afe1a4af5824fc974f504766",
+    "simulation/atlas/maxent.py": "844ac7e959a56e2ca9f913428262c972637d469826e6554870cf266846373733",
     "simulation/atlas/setsys.py": "cd368cec1ecfbccf3e1e2955c1e64ce814b84c4f615c8f512dfe223dd6ec1eda",
     "simulation/atlas/theory.py": "0405cf388bb839c7f52af5898a3a1c4f9bff4dae6c03395675f4b2cc2463d292",
-    "simulation/data/MANIFEST.json": "894b4809de2049bf473594bef4790a9a1116236738fb2cef00f68f327e4ca933",
-    "simulation/data/consciousness_items.csv": "7509c8d191462e9abab8452d2331bdee367c205f6b0898b3d3cbf4e04e338468",
+    "simulation/data/MANIFEST.json": "53774f974ed5b73ad6012d62f9279bbbe84dda97123a852d4a705f5f8616c67f",
+    "simulation/data/consciousness_items.csv": "91a4995d048aef97fb2e2a05e7477ec6b1e813a6244aea965c7d092d40c7d95a",
     "simulation/data/trolley_first_sessions.csv": "58aad63805e2ec8eb49a3a33670a126d518a75fe0767484916077990dd3ce4b3",
-    "simulation/fetch_data.py": "2f30d308d94d7f63d162f1d9410cecd8de5f45d79396c637ce594aecb6b47506",
+    "simulation/fetch_data.py": "b42da801753bec7aaa5791a6497745d39cda666eb98287742a35b3a071e6083d",
     "simulation/pyproject.toml": "6aa04fe0dd460aa0dbdcbf62091e96c2fa5f044f66a415bc9466ffd41eddc79d",
-    "simulation/run_all.py": "404888db821d362e18012a09199ae668c6c3d28d06ffa6ae7a5a8e1b5b66f728",
-    "simulation/tests/test_atlas.py": "db816d815ce0ec5ad3c317efc87fcaa78dde7908e10e548f4bee87b9e3db9ce8",
+    "simulation/run_all.py": "eafbfe95f6b1bd01f294db989ee9404edd8e18c27ff645ded21f27df8e4ffbbf",
+    "simulation/tests/test_atlas.py": "7f7660312665865d05d7dc703d1e62e253e5b01a8aa222f49614a51c89f0c522",
     "simulation/uv.lock": "72f4a1992c086b13503d96c2579841ffdc01e5cd14ef563201abc21b3d84cce0"
   },
   "artifacts": {
-    "simulation/output/results.json": "5228f8ba81cf85eac3894286ada60185892aa8f44b0782ac3eeb83e5e169cdee",
-    "paper/figures/orders.pdf": "bc8f93b3293eb258fc2ce53c46af3cee65b84217b3bcbf70ea15563b80e81263",
-    "paper/figures/data.pdf": "1e9fec71429f40608f07b5d4113957e18eea198c6b1046d881c9dcae15d1772f"
+    "simulation/output/results.json": "2e157eca3aaebf39bb5804e6155ce39c3fc1560be249a09b2b1008e2232f4210",
+    "paper/figures/orders.pdf": "94788367893ead3f88fb72f031dc83d533aebd74caec5809530fde95eae09dcb",
+    "paper/figures/data.pdf": "71890216ef418180d4c030c048c344c1316eceb03da8cb6008d5253e025eb9a2"
   }
 }

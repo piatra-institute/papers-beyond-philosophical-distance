@@ -27,9 +27,13 @@
       "sha256": "58aad63805e2ec8eb49a3a33670a126d518a75fe0767484916077990dd3ce4b3"
     },
     "consciousness_items.csv": {
-      "respondents": 307,
-      "rule": "columns copied verbatim; participant numbers dropped; assc 1 = attended ASSC",
-      "sha256": "7509c8d191462e9abab8452d2331bdee367c205f6b0898b3d3cbf4e04e338468"
+      "submissions": 307,
+      "repeat_submissions": 18,
+      "not_researcher": 39,
+      "researcher_status_missing": 18,
+      "eligible": 232,
+      "rule": "columns copied verbatim; participant numbers dropped; assc 1 = attended ASSC; eligible = consciousness 1 (studies or researches consciousness) and before not 1 (not a repeat submission), the screening of Francken et al. (2022)",
+      "sha256": "91a4995d048aef97fb2e2a05e7477ec6b1e813a6244aea965c7d092d40c7d95a"
     }
   },
   "licence_note": "Neither OSF project states a licence. The derived files are kept for reproduction with attribution to the original authors."

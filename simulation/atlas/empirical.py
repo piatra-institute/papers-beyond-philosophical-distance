@@ -4,14 +4,19 @@ from __future__ import annotations
 import csv
 import itertools
 import math
+import os
+from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
 import numpy as np
-from scipy.stats import chi2
+from scipy.optimize import brentq, minimize
+from scipy.stats import chi2, norm
+from scipy.stats import t as student_t
 
-from .maxent import (LOG2, MaxEnt, benjamini_hochberg, connected_information_3, g2_batch,
-                     g2_three_way, independent_fit, ipf_pairwise, marginal3_from_full, states,
-                     table3, three_way_log_interaction)
+from . import lpbounds
+from .maxent import (LOG2, MaxEnt, benjamini_hochberg, connected_information_3, g2_fast,
+                     g2_three_way, independent_fit, ipf_pairwise, marginal3_from_full, table3,
+                     three_way_log_interaction)
 
 POSITION_ITEMS = ["driving", "light", "phenomenal", "higher-order", "explanatorygap", "biology",
                   "evolution", "machines", "zombie", "mary", "transition"]
@@ -20,6 +25,28 @@ ENTITY_ITEMS = ["entities_amoeba", "entities_baby", "entities_bat", "entities_do
                 "entities_tree", "entities_thermostat", "entities_worm", "entities_yourself"]
 LAMBDAS = [0.001, 0.003, 0.01, 0.03, 0.1, 0.3]
 CELL_LABELS = ["".join(map(str, c)) for c in itertools.product((0, 1), repeat=3)]
+
+
+# --- uncertainty of cross-validated differences ---------------------------------------
+
+def corrected_cv_summary(d: np.ndarray, test_sizes: np.ndarray, n_total: int) -> dict:
+    """Mean of per-fold differences with the corrected resampled variance.
+
+    Fold scores share respondents across training sets and across repetitions, so the
+    naive variance s^2 / J understates the uncertainty. Nadeau and Bengio's correction
+    replaces 1/J by 1/J + n2/n1, with n2 and n1 the test and training sizes; the interval
+    uses Student's t with J - 1 degrees of freedom. The fold standard deviation is
+    reported as a descriptive quantity.
+    """
+    d = np.asarray(d, dtype=float)
+    J = len(d)
+    n2 = float(np.mean(test_sizes))
+    n1 = float(n_total - n2)
+    var = float(d.var(ddof=1))
+    se = math.sqrt((1.0 / J + n2 / n1) * var)
+    tq = float(student_t.ppf(0.975, J - 1))
+    return {"mean": float(d.mean()), "se_corrected": se, "ci95_corrected": [float(d.mean() - tq * se), float(d.mean() + tq * se)],
+            "sd_folds": math.sqrt(var), "folds": J, "test_over_train": n2 / n1, "folds_positive": int((d > 0).sum())}
 
 
 # --- trolley dilemmas ----------------------------------------------------------------
@@ -81,12 +108,22 @@ def _cv_three_items(table: np.ndarray, folds: int, seed: int) -> dict:
     out = {k: float(np.average(v, weights=sizes)) for k, v in scores.items()}
     d32 = np.array(scores["saturated"]) - np.array(scores["pairwise"])
     d21 = np.array(scores["pairwise"]) - np.array(scores["independent"])
+    total = int(table.sum())
     out |= {"folds": folds,
             "gain_pairwise_over_independent_bits": float(d21.mean()),
             "gain_third_order_over_pairwise_bits": float(d32.mean()),
-            "gain_third_order_over_pairwise_se_bits": float(d32.std(ddof=1) / math.sqrt(folds)),
+            "gain_third_order_over_pairwise": corrected_cv_summary(d32, np.array(sizes), total),
+            "gain_pairwise_over_independent": corrected_cv_summary(d21, np.array(sizes), total),
             "folds_third_order_better": int((d32 > 0).sum())}
     return out
+
+
+def _pattern_counts_trolley(table: np.ndarray) -> np.ndarray:
+    """Counts indexed by pattern integers with bit 0 = Switch, bit 1 = Loop, bit 2 = Footbridge."""
+    counts = np.zeros(8, dtype=np.int64)
+    for a, b, c in itertools.product((0, 1), repeat=3):
+        counts[a | (b << 1) | (c << 2)] = int(table[a, b, c])
+    return counts
 
 
 def trolley_analysis(path: Path, boot: int = 2000, seed: int = 20261115, min_country: int = 1000) -> dict:
@@ -141,6 +178,8 @@ def trolley_analysis(path: Path, boot: int = 2000, seed: int = 20261115, min_cou
         "log_interaction_ci95": [float(np.percentile(lam_b, 2.5)), float(np.percentile(lam_b, 97.5))],
         "cells": cells,
         "cross_validation": _cv_three_items(pooled, folds=10, seed=seed),
+        "lp_bounds": {k: v for k, v in lpbounds.analyse_counts(_pattern_counts_trolley(pooled), 3).items()
+                      if k != "excluded_patterns"},
         "strata": strata,
         "bootstrap": {"replicates": boot, "seed": seed},
     }
@@ -148,14 +187,40 @@ def trolley_analysis(path: Path, boot: int = 2000, seed: int = 20261115, min_cou
 
 # --- survey of consciousness researchers ----------------------------------------------
 
+def eligible(row: dict) -> bool:
+    """The screening of Francken et al. (2022): self-identified consciousness researchers
+    (consciousness = 1) who had not filled in the survey before (before != 1)."""
+    return row["consciousness"] == "1" and row["before"] != "1"
+
+
+def screening_counts(path: Path) -> dict:
+    with open(path, newline="", encoding="utf-8") as fh:
+        rows = list(csv.DictReader(fh))
+    first = [r for r in rows if r["before"] != "1"]
+    return {"submissions": len(rows),
+            "repeat_submissions": sum(1 for r in rows if r["before"] == "1"),
+            "not_researcher": sum(1 for r in first if r["consciousness"] == "2"),
+            "researcher_status_missing": sum(1 for r in first if r["consciousness"] == ""),
+            "eligible": sum(1 for r in rows if eligible(r)),
+            "eligible_attended_assc": sum(1 for r in rows if eligible(r) and r["assc"] == "1")}
+
+
 def load_items(path: Path, cols: list[str], cut: int = 2) -> tuple[np.ndarray, list[str]]:
-    """Binary endorsement (answer 1 or 2 on the five-point scale), complete cases."""
+    """Binary endorsement (answer 1 or 2 on the five-point scale), eligible complete cases."""
     rows = []
     with open(path, newline="", encoding="utf-8") as fh:
         for r in csv.DictReader(fh):
-            if all(r[c] != "" for c in cols):
+            if eligible(r) and all(r[c] != "" for c in cols):
                 rows.append([1.0 if int(r[c]) <= cut else 0.0 for c in cols])
     return np.array(rows), cols
+
+
+def five_point_answers(path: Path, col: str, cols: list[str]) -> int:
+    """Eligible complete respondents who answered 2 or 4 on an item whose online forms had
+    three answers coded 1, 3 and 5 (possible only on the five-point form)."""
+    with open(path, newline="", encoding="utf-8") as fh:
+        return sum(1 for r in csv.DictReader(fh)
+                   if eligible(r) and all(r[c] != "" for c in cols) and r[col] in ("2", "4"))
 
 
 def select_lambda(X: np.ndarray, order: int, lambdas: list[float], folds: int, rng: np.random.Generator) -> float:
@@ -200,7 +265,7 @@ def cv_compare(X: np.ndarray, seed: int, reps: int = 5, outer: int = 10, inner: 
     for a, b in ((2, 1), (3, 2)):
         d = np.array([r[a] - r[b] for r in recs])
         out[f"gain_order{a}_over_order{b}_bits"] = float(d.mean())
-        out[f"gain_order{a}_over_order{b}_se_bits"] = float(d.std(ddof=1) / math.sqrt(len(d)))
+        out[f"gain_order{a}_over_order{b}"] = corrected_cv_summary(d, w, len(X))
         out[f"folds_order{a}_better"] = int((d > 0).sum())
     for o in orders:
         lams = [r[f"lambda_{o}"] for r in recs]
@@ -208,43 +273,204 @@ def cv_compare(X: np.ndarray, seed: int, reps: int = 5, outer: int = 10, inner: 
     return out
 
 
-def triplet_tests(X: np.ndarray, names: list[str], base: MaxEnt, nsim: int, seed: int, q: float = 0.05) -> dict:
-    """Third-order test of each triplet against the fitted pairwise model of all items.
+def triplet_pvalues(X: np.ndarray, base: MaxEnt, nsim: int, rng: np.random.Generator) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Monte Carlo p-values of the third-order test for every triplet of items.
 
-    The null distribution of G^2 for a triplet is simulated from the triplet's marginal
-    under the fitted pairwise model (which can carry small third-order terms induced by
-    marginalising over the other items).
+    For each triplet, G^2 of the observed 2x2x2 table against its no-three-way fit is
+    compared with nsim tables drawn from the triplet's marginal under the fitted pairwise
+    model of all items (which can carry small third-order terms induced by marginalising
+    over the other items). The smallest attainable p-value is 1 / (nsim + 1).
     """
-    rng = np.random.default_rng(seed)
     n = X.shape[1]
     N = len(X)
     p_full = base.probabilities()
-    rows = []
-    for i, j, k in itertools.combinations(range(n), 3):
-        t = table3(X, i, j, k)
-        g2_obs, p_asym = g2_three_way(t)
+    trips = list(itertools.combinations(range(n), 3))
+    g2_obs = g2_fast(np.stack([table3(X, i, j, k) for i, j, k in trips]))
+    pv = np.empty(len(trips))
+    null_mean = np.empty(len(trips))
+    for t_idx, (i, j, k) in enumerate(trips):
         marg = marginal3_from_full(p_full, n, i, j, k)
-        sims = rng.multinomial(N, marg.ravel(), size=nsim).reshape(nsim, 2, 2, 2)
-        g2_null = g2_batch(sims)
-        p_boot = (1 + int((g2_null >= g2_obs - 1e-12).sum())) / (nsim + 1)
+        sims = rng.multinomial(N, marg.ravel() / marg.sum(), size=nsim).reshape(nsim, 2, 2, 2)
+        g2_null = g2_fast(sims)
+        pv[t_idx] = (1 + int((g2_null >= g2_obs[t_idx] - 1e-9).sum())) / (nsim + 1)
+        null_mean[t_idx] = g2_null.mean()
+    return pv, g2_obs, null_mean
+
+
+def triplet_tests(X: np.ndarray, names: list[str], base: MaxEnt, nsim: int, seed: int, q: float = 0.05,
+                  reference_log_interaction: float | None = None) -> dict:
+    """Third-order test of each triplet, with Benjamini-Hochberg control and simultaneous
+    intervals for the three-way log interaction."""
+    rng = np.random.default_rng(seed)
+    n = X.shape[1]
+    N = len(X)
+    pb, g2_obs, g2_null_mean = triplet_pvalues(X, base, nsim, rng)
+    trips = list(itertools.combinations(range(n), 3))
+    m = len(trips)
+    zsim = float(norm.isf(0.025 / m))
+    rows = []
+    for t_idx, (i, j, k) in enumerate(trips):
+        t = table3(X, i, j, k)
         ci = connected_information_3(t)
-        rows.append({"items": [names[i], names[j], names[k]], "g2": g2_obs, "p_chi2": p_asym, "p_boot": p_boot,
+        lam = three_way_log_interaction(t, pseudo=0.5)
+        se = math.sqrt(float(np.sum(1.0 / (t + 0.5))))
+        null_mean_bits = float(g2_null_mean[t_idx] / (2 * N * LOG2))
+        rows.append({"items": [names[i], names[j], names[k]], "g2": float(g2_obs[t_idx]),
+                     "p_chi2": float(chi2.sf(g2_obs[t_idx], 1)), "p_boot": float(pb[t_idx]),
                      "third_order_bits": ci["third_order_bits"], "third_order_fraction": ci["third_order_fraction"],
-                     "null_mean_third_order_bits": float(g2_null.mean() / (2 * N * LOG2)),
-                     "log_interaction": three_way_log_interaction(t, pseudo=0.5)})
-    pb = np.array([r["p_boot"] for r in rows])
+                     "null_mean_third_order_bits": null_mean_bits,
+                     "log_interaction": lam, "log_interaction_se": se,
+                     "log_interaction_simultaneous_ci95": [lam - zsim * se, lam + zsim * se]})
     disc = benjamini_hochberg(pb, q)
     top = sorted(rows, key=lambda r: r["p_boot"])[:3]
     excess = np.array([r["third_order_bits"] - r["null_mean_third_order_bits"] for r in rows])
-    return {"triplets": len(rows), "simulations_per_triplet": nsim, "fdr_q": q,
-            "discoveries": int(disc.sum()), "min_p_boot": float(pb.min()),
-            "p_boot_below_005": int((pb < 0.05).sum()),
-            "median_third_order_bits": float(np.median([r["third_order_bits"] for r in rows])),
-            "median_null_third_order_bits": float(np.median([r["null_mean_third_order_bits"] for r in rows])),
-            "median_excess_third_order_bits": float(np.median(excess)),
-            "max_third_order_bits": float(max(r["third_order_bits"] for r in rows)),
-            "median_third_order_fraction": float(np.median([r["third_order_fraction"] for r in rows])),
-            "top": top}
+    half = np.array([zsim * r["log_interaction_se"] for r in rows])
+    out = {"triplets": m, "simulations_per_triplet": nsim, "fdr_q": q,
+           "smallest_attainable_p": 1.0 / (nsim + 1), "first_bh_threshold": q / m,
+           "discoveries": int(disc.sum()), "min_p_boot": float(pb.min()),
+           "p_boot_below_005": int((pb < 0.05).sum()),
+           "expected_below_005_under_null": 0.05 * m,
+           "median_third_order_bits": float(np.median([r["third_order_bits"] for r in rows])),
+           "median_null_third_order_bits": float(np.median([r["null_mean_third_order_bits"] for r in rows])),
+           "median_excess_third_order_bits": float(np.median(excess)),
+           "max_third_order_bits": float(max(r["third_order_bits"] for r in rows)),
+           "median_third_order_fraction": float(np.median([r["third_order_fraction"] for r in rows])),
+           "simultaneous_z": zsim,
+           "simultaneous_halfwidth_median": float(np.median(half)),
+           "simultaneous_halfwidth_min": float(half.min()),
+           "max_abs_log_interaction": float(max(abs(r["log_interaction"]) for r in rows)),
+           "top": top}
+    if reference_log_interaction is not None:
+        ref = abs(reference_log_interaction)
+        out["reference_log_interaction"] = ref
+        out["triplets_excluding_reference_size"] = int(sum(
+            1 for r in rows if -ref < r["log_interaction_simultaneous_ci95"][0] and r["log_interaction_simultaneous_ci95"][1] < ref))
+        out["triplets_interval_contains_zero"] = int(sum(
+            1 for r in rows if r["log_interaction_simultaneous_ci95"][0] <= 0 <= r["log_interaction_simultaneous_ci95"][1]))
+    return out
+
+
+# --- discovery power of the full screening procedure ---------------------------------------
+
+def planted_distribution(base: MaxEnt, trip: tuple[int, int, int], beta: float) -> tuple[np.ndarray, float]:
+    """Distribution over all answer patterns with the one- and two-way margins of `base`
+    and an added three-way term beta * x_i x_j x_k (the I-projection of the tilted model
+    onto those margins, fitted by convex optimisation)."""
+    i, j, k = trip
+    S, F = base.S, base.F
+    mu = base.probabilities() @ F
+    off = beta * S[:, i] * S[:, j] * S[:, k]
+
+    def obj(th: np.ndarray) -> tuple[float, np.ndarray]:
+        e = F @ th + off
+        mx = e.max()
+        w = np.exp(e - mx)
+        z = w.sum()
+        return float(np.log(z) + mx - th @ mu), (w / z) @ F - mu
+
+    res = minimize(obj, base.theta.copy(), jac=True, method="L-BFGS-B",
+                   options={"maxiter": 20000, "gtol": 1e-13, "ftol": 1e-16})
+    e = F @ res.x + off
+    p = np.exp(e - e.max())
+    p /= p.sum()
+    return p, float(np.max(np.abs(p @ F - mu)))
+
+
+def _planted_bits(base: MaxEnt, trip, beta) -> float:
+    p, _ = planted_distribution(base, trip, beta)
+    return connected_information_3(marginal3_from_full(p, base.n, *trip))["third_order_bits"]
+
+
+def _screen_once(task: tuple) -> tuple[int, int, float]:
+    """Simulate one dataset from a planted model and rerun the screening procedure:
+    penalty chosen by inner cross-validation, pairwise fit, Monte Carlo p-values for all
+    triplets, Benjamini-Hochberg at q. Returns (planted triplet discovered, other
+    discoveries, p-value of the planted triplet)."""
+    p, n, N, trip_index, nsim, q, seed = task
+    rng = np.random.default_rng(seed)
+    S = np.array(list(itertools.product((0, 1), repeat=n)), dtype=np.float64)
+    X = S[rng.choice(len(p), size=N, p=p)]
+    lam = select_lambda(X, 2, LAMBDAS, 5, rng)
+    base = MaxEnt(n, 2).fit(X, lam)
+    pv, _, _ = triplet_pvalues(X, base, nsim, rng)
+    disc = benjamini_hochberg(pv, q)
+    hit = int(disc[trip_index]) if trip_index >= 0 else 0
+    return hit, int(disc.sum()) - hit, float(pv[trip_index]) if trip_index >= 0 else float("nan")
+
+
+def discovery_power(base: MaxEnt, N: int, targets: list[float], n_triplets: int, reps: int, nsim: int,
+                    seed: int, q: float = 0.05, null_reps: int = 100, workers: int | None = None) -> dict:
+    """Probability that the full screening procedure discovers a planted third-order term.
+
+    For randomly chosen triplets, a three-way term is added to the fitted pairwise model
+    of the battery while every one- and two-way margin is held fixed, with strength set
+    so that the triplet's own third-order information equals each target. Each simulated
+    dataset of N respondents is analysed exactly as the observed data are. The null level
+    (no planted term) estimates the probability of any false discovery.
+    """
+    rng = np.random.default_rng(seed)
+    n = base.n
+    trips = list(itertools.combinations(range(n), 3))
+    chosen = [int(c) for c in rng.choice(len(trips), size=n_triplets, replace=False)]
+    p0 = base.probabilities()
+    betas = np.linspace(0.0, 8.0, 161)
+    plan = []
+    for ti in chosen:
+        trip = trips[ti]
+        bits = np.array([_planted_bits(base, trip, b) for b in betas])
+        start = int(np.argmin(bits))
+        row = {"triplet": [int(v) for v in trip], "levels": []}
+        for target in targets:
+            idx = next((a for a in range(start, len(betas) - 1) if bits[a] < target <= bits[a + 1]), None)
+            if idx is None:
+                row["levels"].append(None)
+                continue
+            beta = brentq(lambda b: _planted_bits(base, trip, b) - target, betas[idx], betas[idx + 1], xtol=1e-10)
+            pp, err = planted_distribution(base, trip, beta)
+            row["levels"].append({"target_bits": target, "beta": float(beta), "margin_error": err, "p": pp})
+        plan.append((ti, row))
+    seeds = np.random.SeedSequence(seed).generate_state(len(targets) * n_triplets * reps + null_reps)
+    tasks, keys = [], []
+    s_i = 0
+    for r in range(null_reps):
+        tasks.append((p0, n, N, -1, nsim, q, int(seeds[s_i]))); keys.append(("null", None)); s_i += 1
+    for ti, row in plan:
+        for li, lev in enumerate(row["levels"]):
+            for r in range(reps):
+                if lev is not None:
+                    tasks.append((lev["p"], n, N, ti, nsim, q, int(seeds[s_i]))); keys.append((li, ti))
+                s_i += 1
+    workers = workers or max(1, min(8, (os.cpu_count() or 2) - 1))
+    with ProcessPoolExecutor(max_workers=workers) as ex:
+        results = list(ex.map(_screen_once, tasks, chunksize=4))
+    null_any = [res[1] > 0 for key, res in zip(keys, results) if key[0] == "null"]
+    levels = []
+    for li, target in enumerate(targets):
+        rs = [res for key, res in zip(keys, results) if key[0] == li]
+        hits = np.array([r_[0] for r_ in rs])
+        k_, n_ = int(hits.sum()), len(hits)
+        zc = 1.959964
+        centre = (k_ + zc * zc / 2) / (n_ + zc * zc)
+        half = zc * math.sqrt(k_ * (n_ - k_) / n_ + zc * zc / 4) / (n_ + zc * zc) if n_ else float("nan")
+        levels.append({"target_bits": target, "datasets": n_, "discovered": k_,
+                       "power": k_ / n_ if n_ else float("nan"),
+                       "power_ci95": [max(0.0, centre - half), min(1.0, centre + half)],
+                       "mean_other_discoveries": float(np.mean([r_[1] for r_ in rs])) if rs else float("nan"),
+                       "median_planted_p": float(np.median([r_[2] for r_ in rs])) if rs else float("nan")})
+    pw = [lv["power"] for lv in levels]
+    bits80 = None
+    for a in range(len(targets) - 1):
+        if pw[a] < 0.8 <= pw[a + 1]:
+            bits80 = targets[a] + (0.8 - pw[a]) * (targets[a + 1] - targets[a]) / (pw[a + 1] - pw[a])
+            break
+    return {"sample_size": N, "triplets_planted": n_triplets, "replicates_per_triplet_and_level": reps,
+            "simulations_per_triplet_test": nsim, "fdr_q": q, "workers_independent_seeds": True,
+            "datasets_total": len(tasks),
+            "null_datasets": len(null_any), "null_any_discovery": float(np.mean(null_any)) if null_any else None,
+            "levels": levels, "bits_for_80pct_discovery": bits80,
+            "max_margin_error": max(lev["margin_error"] for _, row in plan for lev in row["levels"] if lev),
+            "planted": [{"triplet": row["triplet"],
+                         "betas": [lev["beta"] if lev else None for lev in row["levels"]]} for _, row in plan]}
 
 
 def joint_avoidances(X: np.ndarray) -> int:
@@ -271,7 +497,12 @@ def avoidance_test(X: np.ndarray, base: MaxEnt, nsim: int, seed: int) -> dict:
 
 def power_analysis(base: MaxEnt, N: int, n_triplets: int, steps: int, nsim: int, seed: int,
                    n_tests: int, reference_bits: float) -> dict:
-    """Detection power of the triplet test for planted third-order structure.
+    """Power of the test for one pre-specified triplet, without multiplicity correction.
+
+    This is the power of a likelihood-ratio test of a single triplet chosen in advance,
+    against the asymptotic chi-square cut-off at alpha = 0.05 (and, for reference, at the
+    Bonferroni level over all triplets); the power of the screening procedure actually
+    applied to the survey is estimated by discovery_power.
 
     For each randomly chosen triplet, q* is the pairwise (no three-way interaction) fit
     of the triplet's marginal under the fitted pairwise model of all items. The planted
@@ -297,7 +528,7 @@ def power_analysis(base: MaxEnt, N: int, n_triplets: int, steps: int, nsim: int,
             q = qstar + eps * sgn
             i3 = float(np.sum(q * np.log2(q / qstar)))
             sims = rng.multinomial(N, q.ravel(), size=nsim).reshape(nsim, 2, 2, 2)
-            g2 = g2_batch(sims)
+            g2 = g2_fast(sims)
             curve.append({"eps": eps, "third_order_bits": i3,
                           "power_alpha_005": float((g2 > crit05).mean()),
                           "power_alpha_bonferroni": float((g2 > critb).mean())})
@@ -337,7 +568,8 @@ def power_analysis(base: MaxEnt, N: int, n_triplets: int, steps: int, nsim: int,
 
 
 def battery_analysis(path: Path, cols: list[str], label: str, seed: int, nsim_triplets: int,
-                     nsim_avoid: int, power_ref_bits: float | None, extreme: float = 0.05) -> dict:
+                     nsim_avoid: int, power_ref_bits: float | None, extreme: float = 0.05,
+                     reference_log_interaction: float | None = None, discovery: dict | None = None) -> dict:
     X, names = load_items(path, cols)
     rates = X.mean(axis=0)
     keep = [c for c, r in zip(names, rates) if extreme <= r <= 1 - extreme]
@@ -350,25 +582,31 @@ def battery_analysis(path: Path, cols: list[str], label: str, seed: int, nsim_tr
     rng = np.random.default_rng(seed + 1)
     lam = select_lambda(X, 2, LAMBDAS, 5, rng)
     base = MaxEnt(n, 2).fit(X, lam)
-    with open(path, newline="", encoding="utf-8") as fh:
-        total_rows = sum(1 for _ in csv.DictReader(fh))
-    out = {"label": label, "respondents_total": total_rows, "respondents_complete": N, "items": names,
+    codes = (X.astype(np.int64) * (1 << np.arange(n))).sum(axis=1)
+    lp = lpbounds.analyse_counts(np.bincount(codes, minlength=1 << n), n)
+    out = {"label": label, "screening": screening_counts(path), "respondents_complete": N, "items": names,
            "items_count": len(names), "dropped_extreme_items": dropped, "dropped_count": len(dropped),
            "extreme_threshold": extreme,
            "endorsement_rates": {c: float(r) for c, r in zip(names, rates)},
            "cross_validation": cv,
            "base_pairwise_lambda": lam,
-           "triplet_tests": triplet_tests(X, names, base, nsim_triplets, seed + 2),
+           "lp_bounds": {k: v for k, v in lp.items() if k != "excluded_patterns"},
+           "triplet_tests": triplet_tests(X, names, base, nsim_triplets, seed + 2,
+                                          reference_log_interaction=reference_log_interaction),
            "joint_avoidances": avoidance_test(X, base, nsim_avoid, seed + 3)}
+    if "transition" in names:
+        out["transition_answers_2_or_4"] = five_point_answers(path, "transition", names)
     if power_ref_bits is not None:
         n_tests = math.comb(n, 3)
         out["power"] = power_analysis(base, N, n_triplets=8, steps=24, nsim=4000, seed=seed + 4,
                                       n_tests=n_tests, reference_bits=power_ref_bits)
+    if discovery is not None:
+        out["discovery_power"] = discovery_power(base, N, seed=seed + 5, nsim=nsim_triplets, **discovery)
     return out
 
 
 def design_power(sample_sizes: dict[str, int], triplets: dict[str, int], reference_bits: float,
-                 simulated: dict | None = None) -> dict:
+                 simulated: dict | None = None, discovery: dict | None = None) -> dict:
     """Analytic power of the triplet test (noncentral chi-square, 1 df).
 
     Under a third-order effect of I bits, G^2 is approximately noncentral chi-square with
@@ -400,4 +638,6 @@ def design_power(sample_sizes: dict[str, int], triplets: dict[str, int], referen
             "simulated_alpha005_median": simulated["bits_for_80pct_power_alpha005_median"],
             "analytic_bonferroni": out["survey_of_consciousness_researchers"]["bits_for_80pct_power_bonferroni"],
             "simulated_bonferroni_median": simulated["bits_for_80pct_power_bonferroni_median"]}
+        if discovery is not None:
+            out["check_against_simulation"]["simulated_screening_80pct_discovery"] = discovery["bits_for_80pct_discovery"]
     return out

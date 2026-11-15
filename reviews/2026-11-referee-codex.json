@@ -1,0 +1,164 @@
+{
+  "paper": "Beyond Philosophical Distance: Pairwise Maps Suffice for Answer Profiles but Not for Inferential Links — paper/PAPER.md",
+  "central_claims": [
+    "Joint compatibility is determined by checks of at most k commitments exactly when the commitment class has Helly number at most k. The argument deletes commitments until a minimal incompatible family remains. This equivalence and the invariance under finite conjunction are sound, established results.",
+    "The paper derives representation-dependent orders: categorical assignments and ordinal boxes have order two on unrestricted product spaces; categorical assignments combined with implications and Horn rules have order n+1; parity constraints have order n+1; two-literal clauses have order 2n. Geometric results supply d+1 for continuous convexity, 2^d for integer grids, and at least six for convex commitments on 30 planar points in general position. The finite computations reproduce these results.",
+    "Commitment locality differs from issue locality: an implication chain can require n+1 commitments to witness inconsistency while propagation involving two issues at a time detects it. Majority closure characterizes pairwise sufficiency for categorical commitments relative to a Boolean admissible set. These arguments apply established constraint-satisfaction results.",
+    "The paper claims that numerical pairwise statistics certify exactly the exclusions outside the majority-closed hull of observed profiles. Proposition 5 establishes the support-hull identity and a sufficient condition for exclusion; the subsequent claim of necessity is false.",
+    "Maximum-entropy entropy differences measure dependence beyond pairs. Recalculation gives 0.0048866657463 bits of third-order information in 64,988 trolley responses, or 2.3833994593% of their multi-information, with likelihood-ratio statistic 440.2519. The consciousness analysis reproduces its reported lack of discoveries, but its sampling, uncertainty estimates and power interpretation do not establish the claimed absence of strong third-order structure."
+  ],
+  "contribution": {
+    "verdict": "useful synthesis",
+    "what_is_new": "The useful contribution is the organization of established Helly, constraint-satisfaction and information-decomposition results around philosophical maps, together with a new descriptive reanalysis of public survey data. The trolley third-order estimate and its stratified checks add results beyond the inspected source study. The advertised exact characterization of what numerical pairwise statistics certify is false. Renaming the Helly number 'obstruction order' introduces no new invariant, and most mathematical ingredients are appropriately credited. Running the complete analysis in a scratch copy passed all 28 tests and reproduced every substantive numerical result exactly; differences were confined to execution metadata and timings.",
+    "closest_prior_work": [
+      {
+        "work": "Averkov (2013), On maximal S-free sets and the Helly number for the family of S-convex sets",
+        "identifier": "10.1137/110850463",
+        "how_verified": "Crossref metadata matched author, title and publication. Inspected the [author's preprint](https://arxiv.org/html/1109.6179v3), including equation 3.1.",
+        "relation": "Already supplies the Helly-number framework and invariance under conjunction used in Proposition 2. The paper contributes an application and synthesis."
+      },
+      {
+        "work": "Baker and Pixley (1975), Polynomial interpolation and the Chinese Remainder Theorem for algebraic systems",
+        "identifier": "10.1007/BF01187059",
+        "how_verified": "Verified authors, title, year and journal through Crossref. Checked the relevant consequence against Feder and Vardi's accessible treatment.",
+        "relation": "The near-unanimity projection theorem underlying Propositions 4 and 5 is established prior work."
+      },
+      {
+        "work": "Feder and Vardi (1998), The Computational Structure of Monotone Monadic SNP and Constraint Satisfaction: A Study through Datalog and Group Theory",
+        "identifier": "10.1137/S0097539794266766",
+        "how_verified": "Crossref identity verified; inspected section 6.1.2 and Theorem 24 in the [author-hosted manuscript](https://www.cs.rice.edu/~vardi/papers/stoc93rj.pdf).",
+        "relation": "Already connects the Helly property, near-unanimity operations and strict width. The paper's distinction between commitments and issues is a useful presentation of these existing ideas."
+      },
+      {
+        "work": "Abbasizanjani and Kullmann (2020), The classification of minimally unsatisfiable 2-CNFs — a fundamental study",
+        "identifier": "10.48550/arXiv.2003.03639",
+        "how_verified": "DataCite verified title, authors and original year; inspected the [available manuscript](https://arxiv.org/html/2003.03639v3).",
+        "relation": "The classification and extremal cycles already support the 2n bound. The paper supplies a short direct proof, while correctly acknowledging the existing result."
+      },
+      {
+        "work": "Schneidman, Still, Berry and Bialek (2003), Network Information and Connected Correlations",
+        "identifier": "10.1103/PhysRevLett.91.238701",
+        "how_verified": "Crossref identity verified; inspected the connected-information decomposition and exclusive-or example in the [preprint](https://arxiv.org/html/physics/0307072v1).",
+        "relation": "Provides the empirical decomposition and canonical example of dependence invisible to pairs. Applying this method to the two surveys supplies new descriptive estimates."
+      },
+      {
+        "work": "Wainwright and Jordan (2008), Graphical Models, Exponential Families, and Variational Inference",
+        "identifier": "10.1561/2200000001",
+        "how_verified": "Crossref verified authors, title and year; inspected the marginal-polytope discussion and Example 4.1 in the [full text](https://www.cs.columbia.edu/~blei/fogm/2020F/readings/WainwrightJordan2008.pdf).",
+        "relation": "Missing cornerstone literature. Marginal-polytope constraints explain why numerical pairwise marginals can force zeros beyond the majority hull. This framework is necessary to position and repair the proposed statistical characterization."
+      },
+      {
+        "work": "Awad et al. (2020), Universals and variations in moral decisions made in 42 countries by 70,000 participants",
+        "identifier": "10.1073/pnas.1911517117",
+        "how_verified": "Crossref metadata verified; inspected the [full article](https://pmc.ncbi.nlm.nih.gov/articles/PMC7007553/) and the repository's deposited-data extraction.",
+        "relation": "Provides the trolley dataset and its original cross-country analysis. The connected-information estimate and three-way interaction analysis extend the inspected source."
+      },
+      {
+        "work": "Francken et al. (2022), An academic survey on theoretical foundations, common assumptions and the current state of consciousness science",
+        "identifier": "10.1093/nc/niac011",
+        "how_verified": "Crossref identity verified; inspected the [full article](https://pmc.ncbi.nlm.nih.gov/articles/PMC9374479/), especially participant exclusions, and counted eligibility flags in the supplied raw CSV.",
+        "relation": "Provides the consciousness survey and earlier correlation analyses. The higher-order analysis is an extension, but it restores submissions excluded for repeat participation and researcher eligibility."
+      }
+    ],
+    "strongest_feasible_extension": "Implement and evaluate certified bounds on joint-pattern probabilities from numerical pairwise marginals. For each pattern, maximize its probability subject to nonnegative joint probabilities, normalization and the observed pairwise tables; a zero optimum with a verified dual certificate proves exclusion. Compare these bounds with majority-hull predictions on exhaustive small examples and both public datasets, adding simultaneous uncertainty bounds for population claims. The existing state enumeration and SciPy tooling can handle the 11-item battery's 2,048 states. This would replace the false characterization with a precise, testable account of what survey maps actually establish."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocker",
+      "category": "correctness",
+      "location": "paper/PAPER.md:144–148; repeated in the abstract and introduction",
+      "passage": "A combination absent from the data is therefore certified absent by a pairwise map only when it lies outside the majority-closed hull of the observed profiles. Absences inside the hull are invisible to every pairwise statistic.",
+      "problem": "This converse is false. Pairwise support determines the majority hull, but the numerical values of pairwise marginals can force additional zeros inside it. Proposition 5 proves only that profiles outside the hull have zero probability.",
+      "evidence": "Ran `PYTHONDONTWRITEBYTECODE=1 python3 /tmp/bpd-referee/checks.py`. Give probability 1/6 to each of 001, 010, 011, 100, 101 and 110. Every pair table is [[1/6,1/3],[1/3,1/6]], and the paper's hull routines return all eight profiles. Nevertheless, writing T=X1+X2+X3, these pairwise moments imply E[(T−1)(T−2)]=0. This nonnegative expression equals 2 precisely at 000 and 111, forcing both probabilities to zero. Independent linear programs returned maximum probability 0 for both profiles. The code's hull checks test support closure, not this asserted converse. Numerical constraints of this kind belong to the marginal-polytope framework described by [Wainwright and Jordan](https://doi.org/10.1561/2200000001).",
+      "repair": "Remove the necessity claim and the word 'exactly' from corresponding summaries. Distinguish pairwise support from numerical pairwise marginals. State the valid one-way result, or replace it with a feasible-distribution characterization using marginal-polytope constraints. Cite the missing cornerstone literature.",
+      "confidence": "high"
+    },
+    {
+      "id": "F2",
+      "severity": "major",
+      "category": "correctness",
+      "location": "paper/PAPER.md:188; related claims at lines 9, 19 and 78",
+      "passage": "Profiles of categorical answers and of ranges on ordered scales have that order, which is why correlation maps and distance maps of survey answers are safe for reading off compatible combinations of answers.",
+      "problem": "The product-space theorem does not justify this blanket claim about empirical correlation or distance maps. It concerns actual compatibility of partial assignments on an unrestricted product space. Restricting admissibility or occupancy can create higher-order obstructions, as the paper itself subsequently proves.",
+      "evidence": "The product argument at lines 76–78 requires independently available coordinate values. Proposition 4 at lines 116–120 explicitly requires majority closure for pairwise sufficiency within an admissible Boolean set. For a concrete contradiction to the empirical interpretation, the uniform distribution on {000,011,101,110} and the uniform distribution on all eight profiles have identical pairwise tables and correlations, while their occupied combinations differ. This is also the paper's own example at line 148. Line 35 establishes a compatibility interpretation for a specific Jaccard distance between commitment sets, not arbitrary survey correlations or distances.",
+      "repair": "Restrict the completeness claim to compatibility graphs of partial assignments on the stated product domain, or to admissible domains satisfying the required closure condition. State separately what empirical correlations and respondent distances preserve.",
+      "confidence": "high"
+    },
+    {
+      "id": "F3",
+      "severity": "major",
+      "category": "statistics",
+      "location": "paper/PAPER.md:160, 172 and 192; simulation/fetch_data.py:125–137",
+      "passage": "Francken and colleagues analysed a subsample of conference attendees; this analysis uses every respondent with complete answers.",
+      "problem": "The difference from the source analysis includes restoring repeat submissions and responses from people who did not identify as consciousness researchers. Treating these rows as independent expert respondents compromises the sample description and inferential assumptions.",
+      "evidence": "The source's [Participants section](https://pmc.ncbi.nlm.nih.gov/articles/PMC9374479/) excludes previous participants and nonresearchers as well as restricting its principal sample to conference attendees; its unrestricted eligible sample contains 232 researchers. Counting `simulation/data/raw/survey_jasp.csv` with Python gives, among the 294 complete position rows, 18 with `before==1`, 36 with `consciousness==2`, and 17 with missing researcher status. Filtering `consciousness==1` and `before!=1` reproduces the source's 232 total eligible submissions and leaves 223 complete position responses. The extraction at fetch_data.py:129–135 discards these screening fields and copies every row; empirical.py:151–158 filters only missing item answers.",
+      "repair": "Retain and apply repeat-participation screening, define the target population, and rerun both batteries with eligible respondents. If broader submissions are substantively relevant, report them as a separate sensitivity analysis with an accurate population description.",
+      "confidence": "high"
+    },
+    {
+      "id": "F4",
+      "severity": "major",
+      "category": "statistics",
+      "location": "paper/PAPER.md:174–176; simulation/atlas/empirical.py:177–204",
+      "passage": "In the position battery the pairwise model improves held-out log-likelihood over independent answers by 0.235 bits per respondent (standard error 0.025), in 45 of 50 folds.",
+      "problem": "The reported standard errors treat 50 dependent fold scores as independent observations. The same respondents recur in five repetitions and training sets overlap extensively. These quantities lack a justified interpretation as sampling standard errors.",
+      "evidence": "empirical.py:183–194 constructs five repetitions of ten-fold cross-validation. Line 203 calculates `d.std(ddof=1) / math.sqrt(len(d))` over all 50 differences. This is the formula for independent observations and contains no covariance or repetition adjustment. The resulting 0.025, 0.008, 0.059 and 0.009 values reproduce the manuscript. The dependence problem is established in [Nadeau and Bengio, Inference for the Generalization Error](https://doi.org/10.1023/A:1024068626366), whose identity was verified through Crossref; that relevant methodological reference is absent.",
+      "repair": "Use an uncertainty method that accounts for resampling dependence, or resample independent respondents and repeat the full fitting and tuning pipeline. If retaining fold dispersion, label it descriptively rather than as an inferential standard error.",
+      "confidence": "high"
+    },
+    {
+      "id": "F5",
+      "severity": "major",
+      "category": "statistics",
+      "location": "paper/PAPER.md:9, 21 and 178; simulation/atlas/empirical.py:211–247 and 272–336",
+      "passage": "In the answers of 294 respondents to a survey on consciousness science none is detectable, at a sample size with power 0.29 for an effect of the trolley size.",
+      "problem": "The stated power is for an unadjusted, prespecified three-variable chi-square test, not the simulated 165-triplet discovery procedure used for the reported null result. Moreover, the implemented Monte Carlo resolution can prevent discovery of an isolated effect.",
+      "evidence": "run_all.py:67–70 uses 2,000 simulations per triplet. empirical.py:229 therefore has minimum p-value 1/2001=0.00049975, exceeding the first Benjamini–Hochberg threshold 0.05/165=0.00030303. Running the implemented correction on `[1/2001]+[1]*164` yields zero discoveries. The power routine instead projects each selected triplet onto a no-three-way-interaction model and compares simulated statistics with asymptotic chi-square cutoffs; it does not repeat the fitted-battery Monte Carlo/BH procedure. results.json reports unadjusted reference power 0.291979 and a Bonferroni counterpart of 0.013853.",
+      "repair": "Label 0.29 explicitly as prespecified, unadjusted-triplet power. Estimate discovery power by simulating and rerunning the actual analysis, including null fitting, Monte Carlo p-values and multiplicity correction. Increase simulation resolution sufficiently for the relevant tail probabilities; 3,299 simulations merely makes the first BH threshold attainable.",
+      "confidence": "high"
+    },
+    {
+      "id": "F6",
+      "severity": "major",
+      "category": "statistics",
+      "location": "paper/PAPER.md:178",
+      "passage": "The survey therefore rules out strong third-order structure among the positions it asks about. It cannot detect structure of the strength present in the trolley judgments.",
+      "problem": "Failure to reject is presented as exclusion without an equivalence test or simultaneous upper confidence bounds. An 80% prospective power threshold does not establish that effects above it are absent. 'Cannot detect' also contradicts the stated nonzero detection probability.",
+      "evidence": "The reported evidence consists of zero corrected discoveries and prospective simulations for eight selected triplets. empirical.py:272–336 calculates rejection probabilities under planted alternatives; it does not invert tests or calculate confidence bounds on the observed effects. Even the stated 80% threshold allows non-detection, and the reported 0.29 single-triplet power is a probability of detection, not impossibility.",
+      "repair": "Replace the exclusion claim with a statement of non-detection and limited sensitivity. To rule out scientifically meaningful structure, define an effect bound and compute multiplicity-adjusted upper confidence limits or perform a suitable equivalence analysis.",
+      "confidence": "high"
+    },
+    {
+      "id": "F7",
+      "severity": "minor",
+      "category": "correctness",
+      "location": "paper/PAPER.md:45–47, Proposition 3",
+      "passage": "Let $\\mathcal C$ be closed under finite intersections and let $\\mathrm{cl}(A)$ be the smallest member of $\\mathcal C$ containing $A$, or $\\Omega$ if there is none.",
+      "problem": "Finite-intersection closure does not ensure that the required smallest containing set exists on an infinite domain. Assigning the whole domain when it does not exist makes the stated characterization false.",
+      "evidence": "Take Ω=R and C consisting of all bounded open intervals, the empty set and R. This class is closed under finite intersections and has Helly number two. No nonempty finite set has a smallest containing open interval, so the stated fallback gives cl(A)=R for every such A. Consequently the displayed empty-intersection condition holds only for singleton F, giving one instead of two. The proof's assertion that cl({p_j:j≠i}) lies inside B_i fails. The finite computations do not encounter this example.",
+      "repair": "State Proposition 3 for finite domains, or require an actual closure system closed under arbitrary intersections. Also specify the convention for classes with no incompatible families.",
+      "confidence": "high"
+    },
+    {
+      "id": "F8",
+      "severity": "minor",
+      "category": "abstract",
+      "location": "paper/PAPER.md:9 and 19",
+      "passage": "On $n$ yes/no issues, implication rules and parity constraints have order $n+1$ and all two-literal clauses $2n$;",
+      "problem": "The abstract assigns implication rules the order of categorical answers combined with implications. Implications alone have order one, as the paper correctly states elsewhere.",
+      "evidence": "Table 1 distinguishes 'Implications alone' at line 62, order one, from 'Categorical answers and implications' at line 64, order n+1. Line 84 proves the distinction: all-yes and all-no profiles satisfy every implication. The abstract contains 246 whitespace-delimited words, so its length meets the stated limit.",
+      "repair": "Specify 'categorical answers together with implications' in the abstract and introduction, preserving the distinction already proved in the body.",
+      "confidence": "high"
+    }
+  ],
+  "checks_not_done": [
+    "Registry verification remained incomplete for Helly (1923) and Beeri et al. (1983) after unsuccessful endpoint/search attempts. The retrieved Nielsen–Parsons record did not independently establish its publication year. These are unresolved checks, not findings of fabrication.",
+    "Full-text sentence-level support was checked for the central accessible sources, but not exhaustively for every one of the 48 references or every cited book.",
+    "The external computer-assisted proof concerning empty hexagons was inspected through its publication, not independently rerun.",
+    "The repaired consciousness analyses, dependence-aware uncertainty estimates and full-procedure power simulations were not run. The findings identify defects without claiming that correction must reverse the numerical conclusions.",
+    "Unreleased PhilPapers individual responses, respondent identities and linkage between repeated survey submissions were unavailable.",
+    "The self-reference check found no prohibited title/slug matches or PIATRA-page citations in the inspected manuscript and supporting text. Other collection papers were not opened, so unmarked conceptual borrowing could not be assessed.",
+    "The novelty assessment is relative to the verified literature inspected; it is not an exhaustive priority search."
+  ]
+}

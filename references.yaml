@@ -451,6 +451,7 @@ references:
   title: 'A generalization of Dung''s abstract framework for argumentation: Arguing with sets of attacking arguments'
   container-title: 'Argumentation in Multi-Agent Systems: Third International Workshop, ArgMAS 2006'
   collection-title: Lecture Notes in Computer Science
+  collection-number: '4766'
   editor:
   - family: Maudet
     given: Nicolas
@@ -825,3 +826,103 @@ references:
     - - 1967
   ISBN: '9780199252862'
   DOI: 10.1093/0199252866.003.0002
+- id: wainwright2008
+  type: article-journal
+  author:
+  - family: Wainwright
+    given: Martin J.
+  - family: Jordan
+    given: Michael I.
+  title: Graphical models, exponential families, and variational inference
+  container-title: Foundations and Trends in Machine Learning
+  volume: '1'
+  issue: 1-2
+  page: 1-305
+  issued:
+    date-parts:
+    - - 2008
+  DOI: 10.1561/2200000001
+- id: fienberg2012
+  type: article-journal
+  author:
+  - family: Fienberg
+    given: Stephen E.
+  - family: Rinaldo
+    given: Alessandro
+  title: Maximum likelihood estimation in log-linear models
+  container-title: The Annals of Statistics
+  volume: '40'
+  issue: '2'
+  page: 996-1023
+  issued:
+    date-parts:
+    - - 2012
+  DOI: 10.1214/12-AOS986
+- id: eriksson2006
+  type: article-journal
+  author:
+  - family: Eriksson
+    given: Nicholas
+  - family: Fienberg
+    given: Stephen E.
+  - family: Rinaldo
+    given: Alessandro
+  - family: Sullivant
+    given: Seth
+  title: Polyhedral conditions for the nonexistence of the MLE for hierarchical log-linear models
+  container-title: Journal of Symbolic Computation
+  volume: '41'
+  issue: '2'
+  page: 222-233
+  issued:
+    date-parts:
+    - - 2006
+  DOI: 10.1016/j.jsc.2005.04.003
+- id: nadeau2003
+  type: article-journal
+  author:
+  - family: Nadeau
+    given: Claude
+  - family: Bengio
+    given: Yoshua
+  title: Inference for the generalization error
+  container-title: Machine Learning
+  volume: '52'
+  issue: '3'
+  page: 239-281
+  issued:
+    date-parts:
+    - - 2003
+  DOI: 10.1023/A:1024068626366
+- id: benjamini1995
+  type: article-journal
+  author:
+  - family: Benjamini
+    given: Yoav
+  - family: Hochberg
+    given: Yosef
+  title: 'Controlling the false discovery rate: A practical and powerful approach to multiple testing'
+  container-title: 'Journal of the Royal Statistical Society: Series B (Methodological)'
+  volume: '57'
+  issue: '1'
+  page: 289-300
+  issued:
+    date-parts:
+    - - 1995
+  DOI: 10.1111/j.2517-6161.1995.tb02031.x
+- id: benjamini2001
+  type: article-journal
+  author:
+  - family: Benjamini
+    given: Yoav
+  - family: Yekutieli
+    given: Daniel
+  title: The control of the false discovery rate in multiple testing under dependency
+  container-title: The Annals of Statistics
+  volume: '29'
+  issue: '4'
+  page: 1165-1188
+  issued:
+    date-parts:
+    - - 2001
+  DOI: 10.1214/aos/1013699998

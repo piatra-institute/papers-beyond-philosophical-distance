@@ -1,0 +1,549 @@
+{
+  "verdicts": [
+    {
+      "finding_id": "codex:F1",
+      "severity": "blocker",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:146–162 separates pairwise support from numerical marginals, replaces the false converse with Proposition 6, and supplies primal/dual LP bounds. The six-profile counterexample now correctly excludes 000 and 111 despite its full pairwise hull. The independent rerun reproduced the exhaustive comparisons and certificate checks."
+    },
+    {
+      "finding_id": "codex:F2",
+      "severity": "major",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:9,19,78–80 restricts the product-space result to domains where every answer combination is admissible. Line 206 explicitly distinguishes empirical correlation and respondent-distance maps from commitment compatibility graphs and explains their information loss."
+    },
+    {
+      "finding_id": "codex:F3",
+      "severity": "major",
+      "verdict": "closed",
+      "evidence": "simulation/fetch_data.py:136–156 retains screening fields; simulation/atlas/empirical.py:190–215 applies researcher and repeat-participation screening. The rerun reproduces 307 submissions, 232 eligible submissions, 166 eligible conference attendees, and 223 complete respondents in each battery, matching paper/PAPER.md:174."
+    },
+    {
+      "finding_id": "codex:F4",
+      "severity": "major",
+      "verdict": "closed",
+      "evidence": "simulation/atlas/empirical.py:32–49 replaces the independent-fold variance with (1/J + n_test/n_train) times the fold-score variance and uses t intervals. The corrected estimates at paper/PAPER.md:180,188,190 reproduce, including standard errors 0.061 and 0.178. This is an approximate resampling correction, appropriately attributed to Nadeau and Bengio."
+    },
+    {
+      "finding_id": "codex:F5",
+      "severity": "major",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:176,194 distinguishes prespecified-triplet power from discovery power. simulation/atlas/empirical.py:384–473 reruns penalty selection, fitting, Monte Carlo testing and multiplicity correction on simulated datasets. With 9,999 draws, the minimum p-value is 0.0001, below 0.05/165. The rerun reproduces zero planted-effect discoveries in 100 trolley-size simulations and the approximately 0.059-bit discovery threshold."
+    },
+    {
+      "finding_id": "codex:F6",
+      "severity": "major",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:9,21,192–194,210 replaces exclusion and impossibility claims with non-detection and limited sensitivity. It reports approximate simultaneous Wald intervals and simulated detection probabilities without treating prospective power as evidence that stronger effects are absent."
+    },
+    {
+      "finding_id": "codex:F7",
+      "severity": "minor",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:45–49 now requires an actual closure system containing the domain and closed under arbitrary intersections. The fallback closure is removed, the obstruction-free convention is explicit, and the open-interval counterexample is explained."
+    },
+    {
+      "finding_id": "codex:F8",
+      "severity": "minor",
+      "verdict": "closed",
+      "evidence": "paper/PAPER.md:9,19 assigns order n+1 to categorical answers together with implications. Line 86 retains the correct order-one statement for implications alone."
+    }
+  ],
+  "new_problems": [
+    {
+      "id": "closure:N1",
+      "severity": "major",
+      "location": "paper/PAPER.md:176,188; simulation/atlas/empirical.py:276–297,582–595",
+      "problem": "The new assertion that the harmonic-corrected screening is valid under any dependence overlooks calibration of the individual p-values. The correction requires valid null p-values; simulating from a penalized model fitted to the same observations does not establish that requirement. Retain a nominal description or establish calibration before claiming guaranteed FDR control.",
+      "evidence": "Rechecked Benjamini–Yekutieli Theorem 1.3 and its proof, including the null-p-value condition on pp. 1180–1182. An independent check used the manuscript's pairwise-battery null: H is Bernoulli(0.1), with three conditionally independent answers having endorsement probability 0.9 when H=1 and 0.1 otherwise. This four-variable distribution has only pairwise log-linear terms. Using 223 observations, the supplied penalty-selection and Monte Carlo routines, 9,999 draws, and the harmonic correction, 75 of 1,000 datasets produced a discovery: estimated error probability 0.075, Wilson 95% interval 0.0603–0.0930. Under the manuscript's stated global pairwise-null interpretation, these are false discoveries. Reproduction script: /tmp/bpd-review-round4/calibration_mc.py; seeds 750000–750999. [Source theorem](https://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_yekutieli_ANNSTAT2001.pdf)."
+    },
+    {
+      "id": "closure:N2",
+      "severity": "minor",
+      "location": "paper/PAPER.md:162; simulation/atlas/lpbounds.py:198–249",
+      "problem": "The enumeration description omits its symmetry reduction and incorrectly says that a second random distribution was checked on each support.",
+      "evidence": "For four issues the code solves 401 orbit representatives, then multiplies comparison and certificate counts by orbit sizes. results.json explicitly records methods_compared_on=401 and supports=65535. This legitimate reduction supports the totals, but the manuscript should describe exhaustive coverage up to symmetry rather than separate random-weight and certificate checks on every support."
+    },
+    {
+      "id": "closure:N3",
+      "severity": "minor",
+      "location": "claims.yaml; paper/PAPER.md:110,188–200",
+      "problem": "Quantity-level claims coverage remains incomplete. Some passages contain a bound estimate alongside other quantities that have no corresponding binding.",
+      "evidence": "For example, lp-ent-observed, lp-ent-added and lp-ent-possible bind 27 and 17 in the sentence containing 256 possible profiles, but do not bind 256. The repeated 50-fold denominators in the third-order comparison sentences also lack bindings to those passages. The coverage list records the remaining quantities; all 167 existing computation bindings nevertheless match their recorded values."
+    }
+  ],
+  "claims_coverage": {
+    "complete": false,
+    "unbound_numbers": [
+      "paper/PAPER.md:9,21,180,184,210: three trolley cases or answers.",
+      "paper/PAPER.md:61–74, Table 1: order 2 for categorical answers; degree 4 and order 2 for ordinal ranges; order 1 for implications alone; order 3 for categorical answers with exclusions; the occupied-position threshold of 6 and count of 30.",
+      "paper/PAPER.md:110: seven classes and three grid levels.",
+      "paper/PAPER.md:128: three and four issues.",
+      "paper/PAPER.md:150: three, four and five issues.",
+      "paper/PAPER.md:162: three and four issues in the enumeration-result sentences.",
+      "paper/PAPER.md:174: one transition question.",
+      "paper/PAPER.md:180: the 95% bootstrap level and one degree of freedom.",
+      "paper/PAPER.md:182: the two stated 95% interval levels.",
+      "paper/PAPER.md:184: the 0.05 testing threshold.",
+      "paper/PAPER.md:188: the corrected and simulation 95% levels, the second 50-fold denominator, and the 0.05 testing threshold.",
+      "paper/PAPER.md:190: the corrected and simulation 95% levels, the second 50-fold denominator, and 256 possible profiles.",
+      "paper/PAPER.md:192: the simultaneous 95% level, eight cells, and zero in the interval-containment statement.",
+      "paper/PAPER.md:194: the prespecified-triplet 80% power target, zero-effect baseline, one planted triplet, two largest effect sizes, the 95% Wilson level, and its lower endpoint 0.",
+      "paper/PAPER.md:200: the 80% power target and probability 0.8."
+    ],
+    "note": "All 356 claim passages match the manuscript, and all 167 computation entries match their JSON pointers with the declared scaling and rounding. Coverage was assessed per quantity: binding one estimate did not automatically bind every other number in its sentence. Identifiers, dates, structural labels, named model orders and mathematical constants were excluded. The full rerun passed 34 tests and reproduced every substantive result; differences were confined to timings."
+  },
+  "source_claims": [
+    {
+      "claim_id": "src-danzer-helly",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the finite-family Helly theorem on p. 102 of the [survey](https://www3.nd.edu/~andyp/teaching/2013SpringMath366/DanzerGruenbaumKlee.pdf). It supplies the d+1 bound; the standard simplex example supplies sharpness."
+    },
+    {
+      "claim_id": "src-averkov-def",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Definition 1.4 in [Averkov’s preprint](https://arxiv.org/pdf/1109.6179v3). It supports the identification, subject to the manuscript’s explicit convention for obstruction-free classes."
+    },
+    {
+      "claim_id": "src-averkov-bundling",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected equation (3.1), stating invariance under taking intersections. [Averkov](https://arxiv.org/pdf/1109.6179v3)."
+    },
+    {
+      "claim_id": "src-danzer-boxes",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the products and axis-parallel-box discussion on p. 144. It supports the pairwise-intersection property used here. [Danzer et al.](https://www3.nd.edu/~andyp/teaching/2013SpringMath366/DanzerGruenbaumKlee.pdf)."
+    },
+    {
+      "claim_id": "src-amenta-boxes",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 2.2: pairwise intersection suffices for axis-parallel boxes. [Amenta et al.](https://arxiv.org/pdf/1508.07606v2)."
+    },
+    {
+      "claim_id": "src-hoffman-char",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected [Amenta et al., Lemma 2.7](https://arxiv.org/pdf/1508.07606v2), stating Hoffman’s characterization. This checks the cited accessible presentation, not Hoffman’s original chapter."
+    },
+    {
+      "claim_id": "src-doignon",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Averkov’s lattice discussion and Remark 4.5. The lattice bound and unit-cell witness support the statement; Doignon’s original was not independently read. [Averkov](https://arxiv.org/pdf/1109.6179v3)."
+    },
+    {
+      "claim_id": "src-averkov-subset",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Proposition 3.1 and the lattice discussion: convex restriction cannot increase the Helly number, and the unit-cell construction attains the grid bound. [Averkov](https://arxiv.org/pdf/1109.6179v3)."
+    },
+    {
+      "claim_id": "src-empty-polytope",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Lemma 2.6, relating the discrete Helly number to empty convex polytopes. [Amenta et al.](https://arxiv.org/pdf/1508.07606v2)."
+    },
+    {
+      "claim_id": "src-harborth",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected p. 2 of [Heule and Scheucher’s preprint](https://arxiv.org/pdf/2403.00737v1): the definition of h(k), Harborth’s h(5)=10, and Theorem 1 support the passage. This checks the declared secondary source, not Harborth’s original article."
+    },
+    {
+      "claim_id": "src-heule",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 1 and its general-position hypothesis. It establishes the 30-point empty-hexagon threshold; I did not rerun the external computer-assisted proof. [Heule et al.](https://arxiv.org/pdf/2403.00737v1)."
+    },
+    {
+      "claim_id": "src-horton",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the opening result and construction: arbitrarily large general-position sets without empty convex heptagons exist. [Horton](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0E7C17D71D9FA4A08B265441FBEB32D7/S0008439500065176a.pdf/sets_with_no_empty_convex_7gons.pdf)."
+    },
+    {
+      "claim_id": "src-balogh",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 2. The growth rate holds in expectation and with high probability for independent uniform points in a bounded convex planar region; those sampling conditions should remain explicit. [Balogh et al.](https://arxiv.org/pdf/1206.0805v1)."
+    },
+    {
+      "claim_id": "src-larose",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 2.5 and the decidability statement. The equivalence is credited to Atserias; decidability is established separately, not by Theorem 2.5 alone. [Larose et al.](https://arxiv.org/pdf/0707.2562)."
+    },
+    {
+      "claim_id": "src-greenberg",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "Retrieved and read the [Econometric Society abstract](https://www.econometricsociety.org/publications/econometrica/1979/05/01/consistent-majority-rules-over-compact-sets-alternatives). It states the quota threshold for convex, continuous preferences on a compact convex domain. The revised passage includes these conditions."
+    },
+    {
+      "claim_id": "src-dietrich-quota",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Corollary 2: the uniform-quota consistency condition is exactly m > n − n/z under the paper’s agenda assumptions. [Dietrich and List](https://personal.lse.ac.uk/list/PDF-files/QuotaRules.pdf)."
+    },
+    {
+      "claim_id": "src-dietrich-preferences",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 3.3 on preference judgments and cycles. It supports the largest minimally inconsistent cycle and resulting quota threshold. [Dietrich and List](https://personal.lse.ac.uk/list/PDF-files/QuotaRules.pdf)."
+    },
+    {
+      "claim_id": "src-aspvall",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the implication-graph construction and Theorem 1, pp. 121–122. Mutual reachability of a literal and its negation characterizes unsatisfiability. [Aspvall et al.](https://mathweb.ucsd.edu/~sbuss/CourseWeb/Math268_2007WS/2SAT.pdf)."
+    },
+    {
+      "claim_id": "src-bourget2014-maps",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the correlation analysis and factor-analysis discussion in the [author manuscript](https://consc.net/papers/survey.pdf). They support this description of the survey maps."
+    },
+    {
+      "claim_id": "src-bourget2014-tables",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected p. 12, following Table 3: contingency tables are stated to be available for all answer pairs on the survey site. [Bourget and Chalmers](https://consc.net/papers/survey.pdf)."
+    },
+    {
+      "claim_id": "src-shi-aggregate",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 3.1. It reports no release of individual responses linked to demographics; this concerns the survey dataset, not the absence of all public individual answers. [Shi and Haupt](https://arxiv.org/pdf/2604.23575v2)."
+    },
+    {
+      "claim_id": "src-shi-benchmark",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the evaluation of simulated philosophers and cross-question correlation structure. [Shi and Haupt](https://arxiv.org/pdf/2604.23575v2)."
+    },
+    {
+      "claim_id": "src-bourget2023-questions",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "The publisher/Crossref abstract explicitly describes 100 philosophical questions. It does not supply the separate respondent count attributed to Shi. [Bourget and Chalmers](https://doi.org/10.3998/phimp.2109)."
+    },
+    {
+      "claim_id": "src-shi-n",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the abstract and survey description, explicitly giving N = 1,785. [Shi and Haupt](https://arxiv.org/pdf/2604.23575v2)."
+    },
+    {
+      "claim_id": "src-noichl",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the bibliographic-coupling and UMAP methods. Shared citations supply similarity, and Figure 2 is a two-dimensional representation. [Noichl](https://link.springer.com/content/pdf/10.1007/s11229-019-02390-8.pdf)."
+    },
+    {
+      "claim_id": "src-malaterre",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "The indexed abstract supports topic modelling during 1934–2015. This source covers 82 years; the sentence’s century-scale span is supported by co-cited Weatherson. [Malaterre et al.](https://doi.org/10.1086/704372)."
+    },
+    {
+      "claim_id": "src-weatherson",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the author’s introduction: topic models cover twelve journals during 1876–2013, supporting the century-scale description. [Weatherson](https://public.websites.umich.edu/~weath/lda/)."
+    },
+    {
+      "claim_id": "src-schneidman2003-def",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected equations (5)–(6): multi-information decomposes into the sum of connected-information terms. [Schneidman et al.](https://arxiv.org/pdf/physics/0307072)."
+    },
+    {
+      "claim_id": "src-amari",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section III.E, Theorem 8, and the triplewise example in Section IV. They support the hierarchical information decomposition. [Amari](https://people.csail.mit.edu/jrennie/trg/papers/amari-ig-hierarchy-01.pdf)."
+    },
+    {
+      "claim_id": "src-schneidman2006",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the ten-cell analysis and Figure 2 discussion. The pairwise model captures approximately 90% of multi-information. [Schneidman et al.](https://arxiv.org/pdf/q-bio/0512013)."
+    },
+    {
+      "claim_id": "src-schneidman2003-xor",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the XOR example and Figure 1: pairwise mutual informations vanish while multi-information is one bit. [Schneidman et al.](https://arxiv.org/pdf/physics/0307072)."
+    },
+    {
+      "claim_id": "src-darroch",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "Inspected the indexed abstract describing generalized iterative scaling under linear constraints. It supports the method, not the manuscript’s independently computed sample size or estimates. [Darroch and Ratcliff](https://doi.org/10.1214/aoms/1177692379)."
+    },
+    {
+      "claim_id": "src-awad-design",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Materials and Methods: the classic mode presents Switch, Loop and Footbridge in randomized order. [Awad et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7007553/)."
+    },
+    {
+      "claim_id": "src-awad-order",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the cross-country results: Switch exceeds Loop, which exceeds Footbridge, in every country. The manuscript’s particular percentages are its own reproduced calculations. [Awad et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC7007553/)."
+    },
+    {
+      "claim_id": "src-thomson",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Downloaded the [Yale repository scan](https://openyls.law.yale.edu/server/api/core/bitstreams/2549174b-4728-45bf-bf64-01384116e48c/content). Inspected pp. 1395, 1402 and 1409: Foot is credited, and the loop and footbridge cases are presented."
+    },
+    {
+      "claim_id": "src-foot",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the chapter reprint’s runaway-tram example, contrasting five people on one track with one on the other. It supports the historical attribution. [Foot](https://sites.pitt.edu/~mthompso/readings/foot.pdf)."
+    },
+    {
+      "claim_id": "src-francken-design",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Methods and Participants: recruitment focused on the 2018 and 2019 ASSC conferences, with other submissions also admitted. [Francken et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC9374479/)."
+    },
+    {
+      "claim_id": "src-liffiton-name",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 2.5 and Definition 2: a minimal unsatisfiable subset becomes satisfiable when any member is removed. [Liffiton and Sakallah](https://markliffiton.com/publications/jar_liffiton_CAMUS.pdf)."
+    },
+    {
+      "claim_id": "src-dietrich-mis",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the definition of minimally inconsistent subsets used in the quota-rule results. It matches the obstruction definition. [Dietrich and List](https://personal.lse.ac.uk/list/PDF-files/QuotaRules.pdf)."
+    },
+    {
+      "claim_id": "src-reiter",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 4.4: diagnoses are precisely minimal hitting sets of conflict sets. [Reiter](https://www.cs.ru.nl/~peterl/teaching/KeR/reiter.pdf)."
+    },
+    {
+      "claim_id": "src-liffiton-duality",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 3 and Theorem 1: minimal correction subsets and minimal unsatisfiable subsets are hitting-set duals. [Liffiton and Sakallah](https://markliffiton.com/publications/jar_liffiton_CAMUS.pdf)."
+    },
+    {
+      "claim_id": "src-schaefer",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 2.1 and the Horn, bijunctive and affine definitions. The operation-based formulation is supplied by co-cited Chen, not stated in this form by Schaefer. [Original paper](https://www.khoury.northeastern.edu/home/lieber/courses/csg260/f06/materials/papers/max-sat/p216-schaefer.pdf)."
+    },
+    {
+      "claim_id": "src-chen",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 3.20 and the polymorphism presentation: conjunction, majority and ternary parity give the claimed preservation and tractability cases. [Chen](https://arxiv.org/pdf/cs/0611018)."
+    },
+    {
+      "claim_id": "src-lee-2sat",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Proposition 1 and its implication-path proof, giving the 4n−2 upper bound. [Lee](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v16i1n3/pdf)."
+    },
+    {
+      "claim_id": "src-abbasizanjani",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the classification and singular DP reduction. The reduction and deficiency preservation support the stated 2n consequence. [Abbasizanjani and Kullmann](https://arxiv.org/pdf/2003.03639v3)."
+    },
+    {
+      "claim_id": "src-lee-k",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the construction and lower bound for fixed k ≥ 3. It supplies Ω(n^k); the matching counting upper bound is the manuscript’s elementary inference. [Lee](https://www.combinatorics.org/ojs/index.php/eljc/article/download/v16i1n3/pdf)."
+    },
+    {
+      "claim_id": "src-baker",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 6.1.2, Theorem 24 and its proof, pp. 28–29 of [Feder and Vardi’s manuscript](https://www.cs.rice.edu/~vardi/papers/stoc93rj.pdf). Its near-unanimity/Helly equivalence supports the projection consequence used here. This verifies the declared secondary source; Baker and Pixley’s original proof and priority attribution were not independently checked."
+    },
+    {
+      "claim_id": "src-feder-helly-def",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 6.1.2, defining the l-Helly property through partial assignments that cannot extend to solutions. [Feder and Vardi](https://www.cs.rice.edu/~vardi/papers/stoc93rj.pdf)."
+    },
+    {
+      "claim_id": "src-feder-helly-thm",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Theorem 24: the l-Helly property, near-unanimity polymorphisms and strict width are related as claimed in this setting. [Feder and Vardi](https://www.cs.rice.edu/~vardi/papers/stoc93rj.pdf)."
+    },
+    {
+      "claim_id": "src-nehring",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Proposition 4.1 and Theorem 4’s majority-voting corollary: binary critical families characterize median spaces and consistent issuewise majority. [Nehring and Puppe](https://micro.econ.kit.edu/downloads/Puppe_journal_23_The_Structure_of_Strategy-Proof_Social_Choice.pdf)."
+    },
+    {
+      "claim_id": "src-list-pettit",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the discursive-dilemma example and Table 1. The stated profile pattern reproduces majority inconsistency. [List and Pettit](https://ppettit.scholar.princeton.edu/sites/g/files/toruqf7426/files/documents/Aggregating_EconomicsandPhilosophy_2002.pdf)."
+    },
+    {
+      "claim_id": "src-jeavons",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "Inspected the publisher abstract, explicitly describing the algebraic characterization connecting strong local consistency with global consistency. [Jeavons et al.](https://doi.org/10.1016/S0004-3702(98)00022-8)."
+    },
+    {
+      "claim_id": "src-feder-count",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the Datalog/local-consistency results and treatment of equations over Abelian groups, including Theorem 30. [Feder and Vardi](https://www.cs.rice.edu/~vardi/papers/stoc93rj.pdf)."
+    },
+    {
+      "claim_id": "src-barto",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "The inspected publisher/Crossref abstract explicitly states that CSPs without the ability to count are solved by local consistency checking. [Barto and Kozik](https://doi.org/10.1145/2556646)."
+    },
+    {
+      "claim_id": "src-beeri",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Condition 3.7 and Theorem 3.4, especially conditions (1) and (7): acyclicity exactly characterizes pairwise-to-global consistency. [Beeri et al.](https://cse.unl.edu/~choueiry/Documents/jacm83a.pdf)."
+    },
+    {
+      "claim_id": "src-vorobev",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "Inspected the registry abstract’s characterization of regular complexes and extendability of consistent families of measures. [Vorob’ev](https://doi.org/10.1137/1107014)."
+    },
+    {
+      "claim_id": "src-abramsky",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Sections 3 and 6 of the [arXiv manuscript](https://arxiv.org/pdf/1102.0264), especially pp. 9–10 and 18 in this version. They distinguish failure of a global probability distribution from absence of every support-compatible global assignment. The revised passage makes that distinction correctly; pagination differs from the cited published version."
+    },
+    {
+      "claim_id": "src-dung",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Definitions 2 and 5: attacks are binary, and conflict-free sets contain no attacking pair. [Dung](https://cse-robotics.engr.tamu.edu/dshell/cs631/papers/dung95acceptability.pdf)."
+    },
+    {
+      "claim_id": "src-nielsen",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Visually inspected the opening pages and joint-attack discussion. The framework explicitly admits attacks by sets of arguments. This is the conference manuscript, not the later chapter layout. [Nielsen and Parsons](https://vbn.aau.dk/ws/files/3859779/NielsenParsons06.pdf)."
+    },
+    {
+      "claim_id": "src-wainwright-polytope",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "New reference identity matches Crossref. Inspected Section 3.4.1, equation (3.26), and Example 3.8: realizable mean parameters form the marginal polytope. [Wainwright and Jordan](https://www.cs.columbia.edu/~blei/fogm/2020F/readings/WainwrightJordan2008.pdf)."
+    },
+    {
+      "claim_id": "src-fienberg-facial",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "New reference identity matches Crossref. Inspected Definition 10 and Theorem 12, identifying likelihood zeros and extended-MLE facial support. [Fienberg and Rinaldo](https://arxiv.org/pdf/1104.3618v2)."
+    },
+    {
+      "claim_id": "src-eriksson-relint",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "New reference identity matches Crossref. Inspected Corollary 2: existence of the ordinary MLE corresponds to relative-interior marginal data. [Eriksson et al.](https://arxiv.org/pdf/math/0405044v1)."
+    },
+    {
+      "claim_id": "src-eriksson-lp",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Section 3’s linear-programming formulation for deciding MLE existence. It supports the attribution. [Eriksson et al.](https://arxiv.org/pdf/math/0405044v1)."
+    },
+    {
+      "claim_id": "src-eriksson-facets",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected the proof of Proposition 10: the three-binary-variable cone has the stated empty-margin-cell and opposite-corner facet types. [Eriksson et al.](https://arxiv.org/pdf/math/0405044v1)."
+    },
+    {
+      "claim_id": "src-nadeau",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "The 2003 journal identity matches Crossref. Inspected Section 3 of the authors’ 1999 conference version, including the corrected resampled variance. The method is approximate, not an exact coverage guarantee. [Conference version](https://papers.neurips.cc/paper/1999/file/7d12b66d3df6af8d429c1a357d8b9e1a-Paper.pdf)."
+    },
+    {
+      "claim_id": "src-benjamini",
+      "verdict": "supported",
+      "depth": "abstract",
+      "note": "Verified identity and read the abstract in the [Crossref record](https://api.crossref.org/works/10.1111/j.2517-6161.1995.tb02031.x). It supports the procedure’s attribution and the independence-qualified FDR result. The manuscript now describes its application’s level as nominal."
+    },
+    {
+      "claim_id": "src-by-prds",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Verified Crossref identity and inspected Theorem 1.2, p. 1168, and the independence discussion on p. 1167 of the [author-hosted article](https://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_yekutieli_ANNSTAT2001.pdf). These support the stated independence and PRDS guarantees."
+    },
+    {
+      "claim_id": "src-by-any",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Rechecked because the manuscript applies the theorem as an unconditional guarantee for its fitted-model screening. Inspected Theorem 1.3, p. 1169, and the null-p-value condition and proof on pp. 1180–1182 of the [article](https://www.math.tau.ac.il/~ybenja/MyPapers/benjamini_yekutieli_ANNSTAT2001.pdf). The general theorem and rejection-set inclusion are supported for valid null p-values. The theorem does not establish calibration of this manuscript's p-values; see closure:N1."
+    },
+    {
+      "claim_id": "src-francken-screening",
+      "verdict": "supported",
+      "depth": "fulltext",
+      "note": "Inspected Participants and the supplementary-sample description: exclusions give 166 conference respondents and 232 eligible submissions overall. The independent rerun reproduces these counts. [Francken et al.](https://pmc.ncbi.nlm.nih.gov/articles/PMC9374479/)."
+    }
+  ],
+  "visual": {
+    "page_count": 25,
+    "pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "all_pages_inspected": true,
+    "problems": []
+  },
+  "contribution_after": {
+    "verdict": "useful synthesis",
+    "assessment": "The paper connects established Helly, constraint-satisfaction, marginal-polytope and information-decomposition results, with reproducible descriptive reanalyses and exhaustive small-case comparisons. The LP extension correctly applies existing facial-set theory and repairs the central false claim; its computational comparisons add useful evidence, while the screening's claimed error-control guarantee still needs correction."
+  },
+  "summary": "All eight original findings are closed. The full rerun passes 34 tests and reproduces the substantive results, and all 25 pages are visually clean. A new major FDR-calibration overclaim and two minor reporting/coverage problems remain. The abstract has 246 words; the availability section is present and its repository resolves; no prohibited self-reference was found. All six added references were checked against Crossref. Of 69 source verdicts, 68 are preserved unchanged and one was rechecked as noted."
+}

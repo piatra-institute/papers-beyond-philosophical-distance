@@ -1,0 +1,59 @@
+{
+  "manuscript_sha256": "a8b3227e179a084e9f5b24abac01557405155bcfcb63ebcd7a71b66b1a0272db",
+  "reviewed": "2026-11-15",
+  "reviewer": {
+    "tool": "codex",
+    "model": "gpt-6-astra",
+    "family": "openai"
+  },
+  "authors": [
+    {
+      "tool": "claude-code",
+      "model": "claude-opus-5-5",
+      "family": "anthropic"
+    }
+  ],
+  "full_read": true,
+  "argument_review": true,
+  "structure_review": true,
+  "voice_review": true,
+  "source_review": true,
+  "final_read": true,
+  "open_findings": {
+    "blocker": 0,
+    "major": 0,
+    "minor": 1
+  },
+  "notes": "All eight referee findings are closed; one minor null-count interpretation needs correction. The full rerun passed 34 tests and reproduced every substantive result. All six added references match Crossref; 68 prior source verdicts are retained unchanged and the remaining claim is supported. Numerical coverage is complete and all 25 pages are visually clean. No prohibited self-reference or availability-section defect was found.",
+  "contribution": {
+    "verdict": "useful synthesis",
+    "assessment": "The paper connects established Helly, constraint-satisfaction, marginal-polytope and connected-information results around a clear question about philosophical maps. Its exhaustive support comparisons and public-data reanalyses add reproducible numerical results, while the principal structural characterizations are established theory now credited appropriately."
+  },
+  "reports": [
+    {
+      "path": "reviews/2026-11-referee-codex.json",
+      "sha256": "d969adbdd6c02c4b5690d4ceddedf6f1ff7cf73e4746b7aadfe56ec7ab81a008"
+    },
+    {
+      "path": "reviews/2026-11-closure-round1.json",
+      "sha256": "79718e5a8886439deccddf924c6340bd8fdbd086fd9c4cf79583f231a218bb24"
+    },
+    {
+      "path": "reviews/2026-11-closure-round2.json",
+      "sha256": "193cc37a88bdb599eb020a12652147455d04bced365a7616ea3876ed3966d3eb"
+    },
+    {
+      "path": "reviews/2026-11-closure-round3.json",
+      "sha256": "dd479dba156c286af800c2e01e62c63f4835bf80c0683eb54f9bbcfb0bce60bd"
+    },
+    {
+      "path": "reviews/2026-11-closure-round4.json",
+      "sha256": "310e24ceecfc5ce0a2c7259189a51e75ead758f7ef1a44638ba7215f70686ac9"
+    },
+    {
+      "path": "reviews/2026-11-closure-round5.json",
+      "sha256": "3afe7d049869808ebcc48a90e7302c1c997622c986d7ff94ca2e3987ff9530ef"
+    }
+  ],
+  "remaining": "1 minor items open; see reviews/."
+}
